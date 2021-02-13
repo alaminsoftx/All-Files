@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <style>
+      /***
+            * START GLOBAL CSS
+            *** */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-y: hidden;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .container {
+        max-width: 1240px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      /* root */
+      :root {
+        /***
+               *fonts size
+               ***/
+        --headerMetaLargeFonts: 11px;
+        --headerMetaSmallFonts: 10px;
+
+        /***
+               *text color
+               ***/
+        --headerMetaTextColor: rgb(75 83 97);
+        --textHoverColor: #f36f36;
+        /***
+               *bg color
+               ***/
+        --headerMetaBgColor: #ececec;
+      }
+      /* root */
+      /***
+            * END GLOBAL CSS
+            *** */
+
+      /***
+            * START HEADER CSS
+            *** */
+      .softx08022021HeaderMetaArea {
+        background-color: var(--headerMetaBgColor);
+        padding: 3px 0;
+        display: none;
+      }
+
+      .softx08022021HeaderMeta ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .softx08022021HeaderMeta ul li {
+        padding: 0px 10px;
+      }
+      .softx08022021HeaderMeta ul li:last-child {
+        padding-right: 0px;
+      }
+      .softx08022021HeaderMeta ul li a {
+        font-size: var(--headerMetaSmallFonts);
+        font-weight: bold;
+        color: var(--headerMetaTextColor);
+        text-transform: uppercase;
+        transition: all 0.3s;
+      }
+      .softx08022021HeaderMeta ul li a:hover {
+        color: var(--textHoverColor);
+      }
+
+      /* ======================= */
+      .softx08022021MainHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .softx08022021MainHeaderArea {
+        padding: 5px 0px 12px 0;
+      }
+
+      /* start logo */
+      .MainLogoSize {
+        width: 100px;
+      }
+      .softx08022021Logo {
+        width: 50%;
+      }
+      .softx08022021Logo,
+      .softx08022021ShopIcon {
+        height: 50px;
+        display: flex;
+        align-items: center;
+      }
+      /* end logo */
+      /* start cart */
+      .softx08022021ShopIcon {
+        width: 50%;
+      }
+      .softx08022021ShopIcon {
+        justify-content: flex-end;
+      }
+
+      /* end cart */
+
+      /* start search */
+      .softx08022021SearchArea {
+        width: 0;
+        opacity: 0;
+      }
+
+      .searchIcon i {
+        color: #fff;
+        font-weight: 400;
+      }
+      .searchFiled {
+        visibility: hidden;
+      }
+      .softx0802202App img {
+        display: none;
+      }
+      /* end search */
+
+      /* ======================= */
+      /***
+            * END HEADER CSS
+            *** */
+
+      /***
+            * FOR RESPONSIVE
+            *** */
+
+      @media (min-width: 600px) {
+        .softx08022021HeaderMetaArea {
+          display: block;
+        }
+        .MainLogoSize {
+          width: 100px;
+        }
+
+        .softx08022021SearchArea {
+          width: 65%;
+          position: relative;
+          opacity: 1;
+        }
+
+        .softx08022021ShopIcon i {
+          margin-left: 25px;
+        }
+
+        .searchFiled {
+          position: absolute;
+          width: 100%;
+          visibility: visible;
+        }
+        .searchFiled input[type="search"] {
+          width: 100%;
+          padding: 10px 19px;
+          background-color: #f5f5f5;
+          border: navajowhite;
+          outline: none;
+          border-radius: 3px;
+        }
+        .searchIcon {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: var(--textHoverColor);
+          height: 100%;
+          width: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+          cursor: pointer;
+        }
+        .searchIcon i {
+          color: #fff;
+          font-weight: 400;
+        }
+        .softx08022021MainHeaderArea {
+          padding: 8px 0;
+        }
+        .softx08022021Logo,
+        .softx08022021SearchArea,
+        .softx08022021ShopIcon,
+        .softx0802202App {
+          height: 50px;
+          display: flex;
+          align-items: center;
+        }
+        .softx08022021Logo {
+          width: 25%;
+        }
+        .softx08022021ShopIcon {
+          width: 10%;
+        }
+      }
+
+      @media (min-width: 991px) {
+        .softx08022021HeaderMeta ul li {
+          padding: 4px 15px;
+        }
+        .softx08022021HeaderMeta ul li a {
+          font-size: var(--headerMetaLargeFonts);
+        }
+        .softx08022021HeaderMeta ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        }
+        .softx0802202App img {
+          display: block;
+        }
+        .softx08022021HeaderMeta ul li {
+          padding: 0px 25px;
+        }
+        .softx08022021HeaderMeta ul {
+          justify-content: flex-end;
+        }
+        .MainLogoSize {
+          width: 120px;
+        }
+        .appDownLoadSize {
+          width: 188px;
+        }
+        .softx08022021MainHeader {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .softx08022021SearchArea {
+          width: 52%;
+          position: relative;
+        }
+        .softx08022021Logo {
+          width: 17%;
+        }
+        .softx08022021ShopIcon {
+          width: 10%;
+          justify-content: flex-start;
+        }
+        .softx08022021ShopIcon i {
+          margin-left: 46px;
+        }
+        .softx0802202App {
+          width: 20%;
+          justify-content: flex-end;
+        }
+        .searchFiled {
+          position: absolute;
+          width: 100%;
+        }
+        .searchFiled input[type="search"] {
+          padding: 13px 19px;
+          height: 45px;
+        }
+
+        .searchIcon i {
+          color: #fff;
+          font-weight: 400;
+        }
+        .softx08022021MainHeaderArea {
+          padding: 5px 0px 12px 0;
+        }
+      }
+      @media (min-width: 1366px) {
+      }
+    </style>
+  </head>
+  <body>
+    <!-- start header area -->
+    <header class="softx08022021HeaderSection">
+      <!--start header meta -->
+      <div class="softx08022021HeaderMetaArea">
+        <div class="container">
+          <div class="softx08022021HeaderMeta">
+            <ul>
+              <li><a href="#">SAVE MORE ON APP</a></li>
+              <li><a href="#">Sell on Daraz</a></li>
+              <li><a href="#">CUSTOMER CARE</a></li>
+              <li><a href="#">Track my order</a></li>
+              <li><a href="#">Signup / Login</a></li>
+              <li><a href="#">Daraz Affiliate Program</a></li>
+              <li><a href="#">ভাষা</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- end header meta -->
+      <!-- start main header -->
+      <div class="softx08022021MainHeaderArea">
+        <div class="container">
+          <div class="softx08022021MainHeader">
+            <div class="softx08022021Logo">
+              <a href="#">
+                <img
+                  class="MainLogoSize"
+                  src="https://i.ibb.co/JQm9zFC/softLogo.png"
+                  alt="softLogo"
+                />
+              </a>
+            </div>
+            <div class="softx08022021SearchArea">
+              <div class="searchFiled">
+                <input type="search" name="" placeholder="Search in SoftX" />
+                <div class="searchIcon">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="softx08022021ShopIcon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="softx0802202App">
+              <a href="#"
+                ><img
+                  class="appDownLoadSize"
+                  src="https://i.ibb.co/kDrjbYZ/TB1-Na-LBt-O-1g-K0j-SZFq-XXcpa-XXa.png"
+                  alt="TB1-Na-LBt-O-1g-K0j-SZFq-XXcpa-XXa"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end main header -->
+    </header>
+    <!-- end header area -->
+  </body>
+</html>

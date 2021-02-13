@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Footer</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+            <style>
+
+                /******************************
+                * Flash Sale Area Css
+                *******************************/
+                body{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+                ul{
+                    margin:0;
+                    padding:0;
+                    list-style:none;
+                }
+                .softX21012021FooterSection {
+                    padding: 50px 20px;
+                    background-color: #192a56;
+                }
+               
+                .softX21012021FooterInner{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: space-around;
+                }
+                .softX21012021FooterCol:not(:last-child){
+                    margin-bottom:40px;
+                }
+                .softX21012021FooterCol{
+                    text-align: center;
+                }
+                .softX21012021FooterCol h3 {
+                    color: #dcdde1;
+                    margin: 0;
+                    padding-bottom: 30px;
+                    font-size: 20px;
+                    font-family: Tahoma;
+                }
+                .softX21012021FooterCol nav ul li a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color:#c3c9dee0;
+                    font-family: Tahoma;
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+                /* column 1 */
+                .softX21012021FooterCategoryMenu ul li a{
+                    position: relative;
+                    overflow: hidden;
+                }
+                .softX21012021FooterCategoryMenu ul li a:hover{
+                    color:#dcdde1;
+                }
+                .softX21012021FooterCategoryMenu ul li a::after{
+                    content:"";
+                    position: absolute;
+                    width: 0%;
+                    left:0px;
+                    bottom: 5px;
+                    height: 1px;
+                    background-color:#c3c9dee0 ;
+                    transition:all .3s;
+                }
+                .softX21012021FooterCategoryMenu ul li a:hover::after,   
+                nav.softX21012021ContactList ul li a span:hover::after{
+                    width: 50%;
+                }
+                .softX21012021FooterCategoryMenu ul li a:hover::before,
+                 nav.softX21012021ContactList ul li a span:hover::before{
+                   width: 50%;
+                }
+                .softX21012021FooterCategoryMenu ul li a::before{
+                    content:"";
+                    position: absolute;
+                    width: 0%;
+                    right:0px;
+                    bottom: 5px;
+                    height: 1px;
+                    background-color:#c3c9dee0;
+                    transition:all .3s;
+                }
+                /* column 2 */
+               
+                nav.softX21012021ContactList ul li a{
+                    overflow: hidden;
+                }
+                nav.softX21012021ContactList ul li:not(:last-child){
+                    margin-bottom: 5px;
+                }
+                nav.softX21012021ContactList ul li a i{
+                    margin-right: 8px;
+                    color:#718093;
+                }
+                nav.softX21012021ContactList ul li a>span{
+                    display: inline-block;
+                    position: relative;
+                }
+                nav.softX21012021ContactList ul li a span::after{
+                    content:"";
+                    position: absolute;
+                    width: 0%;
+                    left:0px;
+                    bottom: 5px;
+                    height: 1px;
+                    background-color:#c3c9dee0 ;
+                    transition:all .3s;
+                }
+                nav.softX21012021ContactList ul li a span::before{
+                    content:"";
+                    position: absolute;
+                    width: 0%;
+                    right:0px;
+                    bottom: 5px;
+                    height: 1px;
+                    background-color:#c3c9dee0;
+                    transition:all .3s;
+                }
+
+               
+                .softX21012021FooterSocialLink {
+                    margin-top: 20px;
+                }
+                .softX21012021FooterSocialLink ul{
+                    display: flex;
+                    justify-content: center;
+                }
+                .softX21012021FooterSocialLink ul li:not(:last-child){ 
+                    margin-right:20px;
+                }
+                .softX21012021FooterSocialLink ul li a{
+                    display: inline-block;
+                }
+                .softX21012021FooterSocialLink ul li a i:hover {
+                    background-color: #576b86;
+                }
+                .softX21012021FooterSocialLink ul li a i {
+                        color:#c3c9dee0;
+                        font-size: 14px;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        background-color: #718093;
+                        text-align: center;
+                        border-radius: 3px;
+                        transition:.3s;
+                }
+                  /* column 3 */
+                .softX21012021FooterAddress p {
+                    margin: 0;
+                    color:#c3c9dee0;
+                    font-weight: normal;
+                    font-family: Tahoma;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                .softX21012021FooterMap {
+                    margin-top: 15px;
+                }
+                .gm-style .default-card {
+                    padding: 0px !important;
+                    display: none !important;
+                }
+                .softX21012021FooterAddress .softX21012021FooterMap iframe {
+                    border: navajowhite;
+                    width: 220px;
+                    height: 80px;
+                    filter: grayscale(.9);
+                    border-radius: 3px;
+                }
+                .softX21012021FooterSocket {
+                    text-align: center;
+                    font-size: 13px;
+                    border-top: 1px solid #f0f1f52b;
+                    background-color: #192A56;
+                    display: block;
+                    overflow: hidden;
+                    padding: 6px 20px;
+                }
+                .softX21012021FooterSocket p{
+                    color:#c3c9dee0;
+                }
+                .softX21012021FooterSocket a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #d0d0d0c7;
+                    font-weight: bold;
+                    transition:.3s;
+                }
+                .softX21012021FooterSocket a:hover {
+                    color: #b4bbc5;
+                }
+               /******************************
+                * Responsive Css
+                *******************************/
+
+               
+                /* for tablet Device (600px to 990px) */
+                @media(min-width:600px){
+                    .softX21012021FooterInner{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                    }
+                    .softX21012021FooterCol:not(:last-child){
+                         margin-bottom:0px;
+                    }
+                    .softX21012021FooterCol{
+                        text-align: left;
+                    }
+                    .softX21012021FooterColOne{
+                        width: calc(50% - 20px);
+                    }
+                    .softX21012021FooterColTwo{
+                        width: calc(50% - 20px);
+                    }
+                    .softX21012021FooterColThree{
+                        width: 100%;
+                        margin-top:40px;
+                    }
+                    .softX21012021FooterAddress .softX21012021FooterMap iframe {
+                        border: navajowhite;
+                        width: 100% !important;
+                        height: 200px;
+                        filter: grayscale(.9);
+                        border-radius: 3px;
+                    }
+                }
+
+                @media(min-width:767px){
+                    .softX21012021FooterInner{
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                    }
+                    .softX21012021FooterCol:not(:last-child){
+                         margin-bottom:0px;
+                    }
+                    .softX21012021FooterCol{
+                        text-align: left;
+                    }
+                    .softX21012021FooterColOne{
+                        width:unset;
+                    }
+                    .softX21012021FooterColTwo{
+                        width: unset;
+                    }
+                    .softX21012021FooterColThree{
+                        width: unset;
+                        margin-top:0px;
+                    }
+                    .softX21012021FooterAddress .softX21012021FooterMap iframe {
+                        border: navajowhite;
+                        width: 220px !important;
+                        height: 80px;
+                        filter: grayscale(.9);
+                        border-radius: 3px;
+                    }
+                }
+
+                /* for Desktop Device */
+              
+               
+               
+            </style>
+    </head>
+
+    <body>
+        <div class="softX21012021FooterSection">
+            <div class="softX21012021FooterInner">
+                <div class="softX21012021FooterCol softX21012021FooterColOne softX21012021FooterCategoryMenu">
+                    <h3>SoftX Menu</h3>
+                   <nav>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#"> Categories</a></li>
+                            <li><a href="#">Privacy & Policy </a></li>
+                            <li><a href="#">Business Solutions </a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                   </nav>
+                </div>
+                <div class="softX21012021FooterCol softX21012021FooterColTwo">
+                    <h3>Contact Us</h3>
+                    <nav class="softX21012021ContactList">
+                        <ul>
+                            <li><a href="mailto:softx@gmail.com"><i class="fas fa-envelope"></i> <span>softx@gmail.com </span></a></li>
+                            <li><a href="tel:01745852140"><i class="fas fa-phone-alt"></i></i> <span>01745852140 </span></a></li>
+                        </ul>
+                    </nav>
+                    <div class="softX21012021FooterSocialLink">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="softX21012021FooterCol softX21012021FooterColThree">
+                    <h3>Address</h3>
+                    <div class="softX21012021FooterAddress">
+                        <p>Flat #A5, House #668,<br> Road #9, Avenue #5, <br> Mirpur DOHS, Dhaka 1216</p>
+                        <div class="softX21012021FooterMap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.234110082732!2d90.35992861536343!3d23.810272792402376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1451be2b9c3%3A0x577a725ba23c1fa7!2ssoftXmagic!5e0!3m2!1sbn!2sbd!4v1611205536384!5m2!1sbn!2sbd" ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="softX21012021FooterSocket">
+            <p>All Right Reserved To <a href="http://www.softx.com.bd">SoftX.com.bd</a> from <span id="demo"></span> </p>
+        </div>
+
+            <script>
+                    var softX21012021FooterSocketShowYear  = new Date();
+                    var softX21012021FooterSocketShowFullYear = softX21012021FooterSocketShowYear.getFullYear();
+                    document.getElementById("demo").innerHTML = softX21012021FooterSocketShowFullYear;
+            </script>
+    </body>
+</html>

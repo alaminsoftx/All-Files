@@ -1,0 +1,120 @@
+/* ==================================================
+==================== Global Css =====================
+===================================================== */
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--color1);
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --color1: #eef5ff; 
+}
+:root {
+    --color2:  #ffff; 
+}
+:root {
+    --color3: #193b68; 
+}
+/* ==================================================
+================== Dashboard Css ====================
+===================================================== */
+.SoftX31012021MainThemeOneDashBoard {
+    max-width: 260px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color2);
+    box-sizing: border-box;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px;
+}
+.SoftX31012021MainThemeLogoArea{
+    margin-bottom: 30px;
+}
+.SoftX31012021MainThemeNavigationItem{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* navigation */
+.SoftX31012021MainThemeNavigationItem ul{}
+.SoftX31012021MainThemeNavigationItem ul li {
+    position: relative;
+    z-index: 999 !important;
+}
+.addBgColor {
+    background-color: #EEF5FF !important;
+    width: calc(100% + 60px);
+    padding-left: 30px;
+    left: -30px;
+    box-sizing: border-box;
+    padding-right: 30px;
+    border-left: 3px solid #1479FF;
+}
+.SoftX31012021MainThemeNavigationSubMenu{
+    position: absolute;
+    visibility: hidden;
+}
+.addBgColor .SoftX31012021MainThemeNavigationSubMenu {
+    display: block !important;
+    background: #fff !important;
+    width: calc(100% + 63px);
+    position: relative;
+    padding-left: 60px;
+    left: -33px;
+    box-sizing: border-box;
+    border-left: 3px solid #fff !important;
+    z-index: 999 !important;
+    visibility: visible;
+}
+
+.SoftX31012021MainThemeNavigationItem ul li a{
+    padding: 11px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color3);
+    line-height: 21px;
+    display: block;
+}
+.SoftX31012021MainThemeNavigationItem ul li a.hasSubmenu{
+    position: relative;
+}
+.SoftX31012021MainThemeNavigationItem ul li a.hasSubmenu::before{
+    content:"\eab8";
+    position: absolute;
+    right:0;
+    font-family: IcoFont;
+    font-size: 15px;
+}
+.addBgColor  a.hasSubmenu::before{
+    content:"\eab2" !important;
+    position: absolute;
+    right:0;
+    font-family: IcoFont;
+    font-size: 15px;
+    background-color: #EEF5FF;
+    z-index: 999;
+}
+.SoftX31012021MainThemeNavigationItem ul li a span{}
+.SoftX31012021MainThemeNavigationItem ul li a span i{
+    color: var(--color3);
+    font-size: 14px;
+    line-height: 15px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* submenu */
+.hasSubmenuItem{
+    position: relative;
+}
+

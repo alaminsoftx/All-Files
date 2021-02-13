@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Latest Product</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+            <style>
+
+                /******************************
+                * Flash Sale Area Css
+                *******************************/
+                body{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+                .softX21012021LatestProductSection{
+                    padding: 0 20px;
+                }
+                .softX21012021LatestProductTitle h3{
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+                .softX21012021LatestProductTitle h3 a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color:#000;
+                }
+                
+                .softX21012021LatestProduct {
+                    overflow: auto;
+                    white-space: nowrap;
+                }
+
+                .softX21012021LatestProduct .softX21012021LatestProductItem {
+                    width: calc(50% - 24px);
+                    display: inline-block;
+                    overflow: hidden;
+                    margin: 12px;
+                    box-shadow: 0 0 2px 0 rgba(0,0,0,.1);
+                }
+                                                
+                .softX21012021LatestProductImg img{
+                    width: 100%;
+                }
+                .softX21012021LatestProductItem .softX21012021LatestProductText {
+                    padding: 15px 10px 15px 10px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .softX21012021LatestProductText .softX21012021LatestProductHeading h4 {
+                    font-size: 12px;
+                    margin: 5px;
+                    font-family: Tahoma;
+                    color: #192a56;
+                    text-transform: uppercase;
+                }
+                .softX21012021LatestProductPrice span.softX21012021LatestProductCurency {
+                    font-size: 14px;
+                    margin-right: -5px;
+                }
+                .softX21012021LatestProductPrice span.softX21012021LatestProductCurency {
+                    font-size: 12px;
+                }
+                .softX21012021LatestProductPrice {
+                    font-size: 15px !important;
+                    font-weight: bold;
+                    font-family: Tahoma;
+                    color: #172853;
+                }
+                .softX21012021LatestProductAddToCard a {
+                    display: inline-block;
+                    text-decoration: none;
+                    font-size: 13px;
+                    color: #ee5253;
+                    padding: 7px 8px;
+                    border-radius: 3px;
+                    margin-top: 10px;
+                    border: 1px solid #9fa4b08f;
+                    transition: .3s;
+                    font-weight: bold;
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+                .softX21012021LatestProductAddToCard a:hover{
+                    background-color: #172853ba;
+                    border: 1px solid #172853ba;
+                    color:#fff;
+                }
+
+
+                .softX21012021LatestProduct::-webkit-scrollbar {
+                    width: 12px !important;
+                    height: 10px;
+                }
+ 
+                .softX21012021LatestProduct::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+                    border-radius: 10px;
+                }
+                
+                .softX21012021LatestProduct::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+                }
+               /******************************
+                * Responsive Css
+                *******************************/
+
+               
+                /* for Small Device */
+              
+                @media(max-width: 599px){
+                    .softX21012021LatestProduct {
+                        overflow-y: scroll !important;
+                        height: 306px;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                    }
+                    .softX21012021LatestProductText .softX21012021LatestProductHeading h4 {
+                        font-size: 11px;
+                        margin: 5px;
+                        margin-left:0px;
+                    }
+                    .softX21012021LatestProductPrice {
+                        font-size: 13px !important;
+                    }
+                    .softX21012021LatestProductAddToCard a {
+                        padding: 7px 2px;
+                        font-size:11px;
+                    }
+                }
+
+                @media(min-width: 600px){
+                    .softX21012021LatestProduct .softX21012021LatestProductItem {
+                        width: calc(33.33% - 28px);
+                        display: inline-block;
+                        overflow: hidden;
+                        margin: 12px;
+                    }
+                }
+               
+               
+                
+                /* for Tablet Device */
+                @media(min-width: 782px){
+                    .softX21012021LatestProduct .softX21012021LatestProductItem {
+                        width: calc(25% - 28px);
+                        overflow: hidden;
+                        margin: 12px;
+                    }
+                }
+                @media(min-width: 991px){
+                    .softX21012021LatestProduct .softX21012021LatestProductItem {
+                        width: calc(20% - 28px);
+                        overflow: hidden;
+                        margin: 12px;
+                    }
+                }
+                    /* for mobile  Device*/
+                @media(min-width: 1024px){
+                
+                }
+                @media(min-width: 1199px){
+                
+                }
+                @media(min-width: 1366px){
+                
+                }
+               
+               
+            </style>
+    </head>
+
+    <body>
+        <div class="softX21012021LatestProductSection">
+            <!-- flash sale title -->
+            <div class="softX21012021LatestProductTitle">
+                <h3><a href="#">Latest Product</a></h3>
+            </div>
+                <!-- flash sale product area -->
+            <div class="softX21012021LatestProduct">
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- flash sale single product -->
+                <div class="softX21012021LatestProductItem">
+                    <!-- flash sale product image -->
+                    <div class="softX21012021LatestProductImg">
+                        <img src="image/flash.png" alt="flash sale prodcut">
+                    </div>
+                    <!-- flash sale product info text -->
+                    <div class="softX21012021LatestProductText">
+                        <div class="softX21012021LatestProductHeading">
+                            <h4>Test Product 5</h4>
+                        </div>
+                        <div class="softX21012021LatestProductPrice">
+                            <span class="softX21012021LatestProductPrice"> <span class="softX21012021LatestProductCurency">$</span> 100</span>
+                        </div>
+                        <div class="softX21012021LatestProductTextButton">
+                            <div class="softX21012021LatestProductAddToCard">
+                                <a href="#">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

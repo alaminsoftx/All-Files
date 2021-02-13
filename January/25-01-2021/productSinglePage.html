@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Single Page</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <style>
+            body{
+                margin:0;
+                padding:0;
+                font-family: Tahoma;
+            }
+            .clearFix::before{
+                content:"";
+                display: block;
+                clear: both;
+            }
+            .softX24012021ProductSinglePageImageAndInfo{
+                padding:20px 20px;
+            }
+            .softX24012021ProductSinglePageImageAndInfoInner {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                max-width: 1140px;
+                width: 100%;
+                margin: 0 auto;
+                align-content: center;
+            }
+            /* left */
+            .softX24012021ProductSinglePageImageAndInfoLeft{
+                max-width: calc(670px - 40px);
+                width:100%;
+                margin:20px;
+            }
+            
+            .softX24012021ProductSinglePageImageAndInfoLeft img{
+                width:100%;
+            }
+            .softX24012021ProductSinglePageImageAndInfoLeftLargeImage {
+                height: 440px;
+                overflow: hidden;
+                max-width: 580px;
+                width: 100%;
+                margin: 0 auto;
+            }
+            .softX24012021ProductSinglePageImageAndInfoLeft img {
+                width: 100%;
+                height: 100%;
+            }
+            .softX24012021ProductSinglePageImageAndInfoLeftGalleryImage {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 2px !important;
+                max-width: 580px;
+                width: 100%;
+                margin:0 auto;
+            }
+            .softx25012021PorductSinglePageImageGalleryItem {
+                width: calc(20% - 6px);
+                cursor: pointer;
+                margin: 3px;
+                border: 1px solid #6161614a;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+            
+            /* middle */
+
+            .softX24012021ProductSinglePageImageAndInfoMiddle {
+                max-width: 580px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .softX24012021TopInfoToggle {
+                display: block;
+                width: 100%;
+                padding: 10px 10px;
+                background: #4D4D4D;
+                border-radius: 3px;
+                color: #fff;
+            }
+
+            /* heading */
+            h2.softX24012021ProductSinglePageImageAndInfoMiddleHeading {
+                font-size: 25px;
+                color: #616161e8;
+                margin: 0px;
+                line-height: 35px;
+                margin-top:15px;
+            }
+           
+            .softX24012021ProductSinglePageSKUarea p {
+                color: #616161e8;
+                margin-bottom: 0px;
+            }
+            .softX24012021ProductSinglePageSKUarea p .softX24012021ProductSKUTEXT{
+                font-size: 13px;
+            }
+            .softX24012021ProductSinglePageSKUarea p .softX24012021ProductSKUCODE{
+                font-size: 13px;
+            }
+            .softX24012021ProductSinglePageSKUareaProdcutBrand .softX24012021ProdcutBrandText {
+                color: #616161e8;
+                font-size: 13px;
+            }
+            .softX24012021ProdcutBrandLink {
+                color: #616161;
+                font-size: 12px;
+                display: inline-block;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            /* rating */
+            /* .softX24012021ProductSinglePgeProdcutRatingArea {
+                display: flex;
+                margin-top: 8px;
+            }
+            .softX24012021ProductSinglePgeProdcutIcon{
+                margin-right: 10px;
+            }
+            .softX24012021ProductSinglePgeProdcutIcon a i {
+                color: #dcbc0e;
+                font-size: 14px;
+            }
+            .softX24012021ProductSinglePgeProdcutText small{
+                color: #616161e8;
+            } */
+
+
+            /* price */
+            .softX24012021ProductSinglePgeProdcutArea {
+                margin: 25px 0 30px 0;
+            }
+            .softX24012021ProductSinglePgeProdcutArea h2 {
+                font-size: 22px;
+                font-weight: 400;
+                color: #292828e8;
+                margin: 0;
+            }
+            .softX24012021ProductSinglePgeProdcutArea h2 span{
+                color: #292828e8;
+            }
+            .softX24012021ProductSinglePgeProdcutArea span {
+                color: #616161b8;
+                font-size: 12px;
+            }
+
+            /* Varitaion */
+            .softX25012021ProductSinglePgeProdcutVaritaion{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .softX25012021ProductSinglePgeProdcutVaritaionItem {
+                width: 35px;
+                height: 35px;
+                overflow: hidden;
+                margin-right: 5px;
+                cursor: pointer;
+                margin-bottom: 20px;
+                border: 1px solid #6161614a;
+                padding: 2px;
+                border-radius: 3px;
+            }
+            .softX25012021ProductSinglePgeProdcutVaritaionItem img{
+                width: 100%;
+            }
+            .softX25012021VariationTitle {
+                display: inline-block;
+                color: #616161b8;
+                font-size: 12px;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+            }
+            /* quantity */
+            .softX24012021ProductSinglePgeProdcutQuantityInner {
+                display: flex;
+                padding: 10px 10px;
+                border: 1px solid #6161614a;
+                border-radius: 3px;
+                max-width: 140px;
+                width: 100%;
+                justify-content: space-between;
+            }
+            .softX24012021ProductSinglePgeProdcutArea h2 span{
+                font-size: 18px;
+            }
+            .softX24012021ProductSinglePgeProdcutQuantity label {
+                font-size: 13px;
+                color: #616161e8;
+                margin-bottom: 6px;
+                display: block;
+                text-transform: uppercase;
+            }
+            .softX24012021ProductSinglePgeProdcutQuantityInner #softX24012021BtnDecrement{
+                border:none;
+                background-color: transparent;
+                outline: none;
+                color:#616161;
+                font-weight: 500;
+                font-size: 15px;
+            }
+            .softX24012021ProductSinglePgeProdcutQuantityInner #softX24012021BtnIncrement{
+                border:none;
+                background-color: transparent;
+                outline: none;
+                color:#616161;
+                font-weight: 500;
+                font-size: 15px;
+            }
+           
+            .softX24012021ProductSinglePgeProdcutQuantityInner #softX24012021IncreaseAndDecreaseQuantity{
+                
+            }
+
+            /* checkout button */
+            .softX24012021ProductSinglePgeProdcutButton{
+                margin-top:24px;
+            }
+            .softX24012021ProductSinglePgeProdcutButton button {
+                outline: none;
+                border: none;
+                background-color: #333333de;
+                padding: 12px 12px;
+                width: 100%;
+                color: #fff;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+            .softX24012021ProductSinglePgeProdcutButton button span {
+                font-size: 12px;
+            }
+            .softX24012021ProductSinglePgeProdcutButton button span i{
+                font-weight: 16px !important;
+            }
+
+
+            /* questions  */
+            .softX24012021ProductSinglePgeProdcutHavAnyQuestions {
+                border-top: 1px solid #6161614a;
+                border-bottom: 1px solid #6161614a;
+                padding: 20px 0 20px 0;
+                margin: 20px 0 20px 0;
+            }
+            .softX24012021ProductSinglePgeProdcutHavAnyQuestions p {
+                font-size: 12px;
+                color: #616161e8;
+                margin: 0;
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+            .softX24012021ProductSinglePgeProdcutHavAnyQuestions h3{
+               margin:0;
+            }
+            .softX24012021ProductSinglePgeProdcutHavAnyQuestions h3 span{}
+            .softX24012021ProductSinglePgeProdcutHavAnyQuestions h3 span i {
+                color: #333333de;
+                font-size: 14px;
+            }
+            .softX24012021ProductSinglePgeProdcutHavAnyQuestions h3 span a {
+                color: #333333de;
+                display: inline-block;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+
+            /* down toggle */
+            .softX25012021ProductSinglePageProductDetailsSectionInnerDescription {
+            }
+            .softX25012021ProductSinglePageProductDetailsSectionInnerTitle h2 {
+                font-size: 20px;
+                color: #616161e8;
+                margin: 0px;
+                line-height: 30px;
+                font-weight: normal;
+                margin-top:15px;
+            }
+            .softX25012021ProductSinglePageProductDetailsSectionInnerDescription ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            .softX25012021ProductSinglePageProductDetailsSectionInnerDescription ul li {
+                font-size: 13px;
+                line-height: 25px;
+                color: #3c3a3ae8;
+            }
+
+            .softX25012021ProductSinglePageImageAndInforMiddleToggleDown {
+                margin-top: 6px;
+            }
+           
+            .softX25012021DisplayNone{
+                display: none !important;
+            }
+           .softX25012021DisplayNone2{
+               display: none;
+           }
+            .softX25012021Displayblock{
+                display: block !important;
+            }
+            .softX25012021Displayblock2{
+                display: block !important;
+            }
+            .softX25012021ProductSinglePageProductDetailsSectionInner{
+                display: none;
+            }
+
+
+            /* small device */
+            @media(min-width:600px){
+              
+            }
+            /* medium device */
+            @media(min-width:782px){
+                
+                
+            }
+            @media(min-width:991px){
+                .softX24012021ProductSinglePageImageAndInfoInner {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+                .softX24012021ProductSinglePageImageAndInfoLeft {
+                    max-width: calc(50% - 40px);
+                    margin: 20px;
+                }
+                .softX24012021ProductSinglePageImageAndInfoMiddle {
+                    max-width: calc(50% - 40px);
+                    width: 100%;
+                    margin: 20px;
+                }
+            }
+            @media(min-width:1024px){
+                
+            }
+            /* large device */
+            @media(min-width:1366px){
+                
+               
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="softX24012021ProductSinglePageImageAndInfo">
+            <div class="softX24012021ProductSinglePageImageAndInfoInner">
+                <!-- left -->
+                <div class="softX24012021ProductSinglePageImageAndInfoLeft">
+                    <div class="softX24012021ProductSinglePageImageAndInfoLeftLargeImage">
+                        <img id="softX24012021ProductSinglePageLargImage" src="image/softX25012021ProductSinglePage3.jpg" alt="">
+                    </div>
+                    <div class="softX24012021ProductSinglePageImageAndInfoLeftGalleryImage">
+                        <div class="softx25012021PorductSinglePageImageGalleryItem" >
+                            <img src="image/softX25012021ProductSinglePage3.jpg" alt="" id="softX24012021ProductSinglePageSmallImageOne">
+                        </div>
+                        <div class="softx25012021PorductSinglePageImageGalleryItem" >
+                            <img src="image/softX25012021ProductSinglePage1.jpg" alt="" id="softX24012021ProductSinglePageSmallImageTwo">
+                        </div>
+                        <div class="softx25012021PorductSinglePageImageGalleryItem" >
+                            <img src="image/softX25012021ProductSinglePage2.jpg" alt="" id="softX24012021ProductSinglePageSmallImageThree">
+                        </div>
+                        <div class="softx25012021PorductSinglePageImageGalleryItem" >
+                            <img src="image/softX25012021ProductSinglePage5.jpg" alt="" id="softX24012021ProductSinglePageSmallImageFour">
+                        </div>
+                        <div class="softx25012021PorductSinglePageImageGalleryItem" >
+                            <img src="image/softX25012021ProductSinglePage6.jpg" alt="" id="softX24012021ProductSinglePageSmallImageFive">
+                        </div>
+                    </div>
+                </div>
+                <!-- middle -->
+                <div class="softX24012021ProductSinglePageImageAndInfoMiddle">
+                    <div class="softX24012021ProductSinglePageImageAndInfoMiddleToggleTop">
+                        <span class="softX24012021TopInfoToggle" id="softX25012021ToggleTop">Info</span>
+                        <div class="softX24012021ProductSinglePageImageAndInfoMiddleToggleInfo" id="topToggle">
+                            <h2 class="softX24012021ProductSinglePageImageAndInfoMiddleHeading">Beef Chilli Onion - Cooked - 500gm</h2>
+                            <div class="softX24012021ProductSinglePageSKUarea">
+                                <p><span class="softX24012021ProductSKUTEXT">SKU:</span> <span class="softX24012021ProductSKUCODE">0X67B8E</span></p>
+                                <div class="softX24012021ProductSinglePageSKUareaProdcutBrand">
+                                    <span class="softX24012021ProdcutBrandText">BRAND:</span>
+                                    <span >
+                                        <a class="softX24012021ProdcutBrandLink" href="#">Bengal Meat</a>
+                                        <a class="softX24012021ProdcutBrandLink" href="#">More Others Frozen Food from Bengal Meat</a>
+                                    </span>
+                                </div>
+                                <!-- rating -->
+                                <!-- <div class="softX24012021ProductSinglePgeProdcutRatingArea">
+                                    <div class="softX24012021ProductSinglePgeProdcutIcon">
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                        <a href="#"><i class="far fa-star"></i></a>
+                                    </div>
+                                    <div class="softX24012021ProductSinglePgeProdcutText">
+                                        <small>No Ratings</small>
+                                    </div>
+                                </div> -->
+                                <!-- price -->
+                                <div class="softX24012021ProductSinglePgeProdcutArea">
+                                    <h2><span>৳</span> 690.00</h2>
+                                    <span>Starting price</span>
+                                </div>
+
+                                <!-- Variation -->
+                                <div class="softX25012021ProductSinglePgeProdcutVaritaionArea">
+                                    <span class="softX25012021VariationTitle">Variation</span>
+                                    <div class="softX25012021ProductSinglePgeProdcutVaritaion ">
+                                        <div class="softX25012021ProductSinglePgeProdcutVaritaionItem">
+                                            <img src="image/variation1.jpg" alt="">
+                                        </div>
+                                        <div class="softX25012021ProductSinglePgeProdcutVaritaionItem">
+                                            <img src="image/variation1.jpg" alt="">
+                                        </div>
+                                        <div class="softX25012021ProductSinglePgeProdcutVaritaionItem">
+                                            <img src="image/variation1.jpg" alt="">
+                                        </div>
+                                        <div class="softX25012021ProductSinglePgeProdcutVaritaionItem">
+                                            <img src="image/variation1.jpg" alt="">
+                                        </div>
+                                        <div class="softX25012021ProductSinglePgeProdcutVaritaionItem">
+                                            <img src="image/variation1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- quantity -->
+                                <div class="softX24012021ProductSinglePgeProdcutQuantity">
+                                    <label for="">Quantity</label>
+                                    <div class="softX24012021ProductSinglePgeProdcutQuantityInner">
+                                        <button id="softX24012021BtnDecrement"><i class="fas fa-minus"></i></button>
+                                        <span id="softX24012021IncreaseAndDecreaseQuantity">0</span>
+                                        <button id="softX24012021BtnIncrement"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <!-- checkout button -->
+                                <div class="softX24012021ProductSinglePgeProdcutButton">
+                                    <button>
+                                        <span><i class="fas fa-shopping-cart"></i></span>
+                                        <span>Check Avaliable Shop</span>
+                                    </button>
+                                </div>
+                                <!--  any questions for product-->
+                                <div class="softX24012021ProductSinglePgeProdcutHavAnyQuestions">
+                                    <p>Have questions about this product (SKU: 0X2E615)</p>
+                                    <h3><span><i class="fas fa-phone-alt"></i></span> <span><a href="tel:01700000000">01700000000</a></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="softX25012021ProductSinglePageImageAndInforMiddleToggleDown">
+                        <span class="softX24012021TopInfoToggle" id="softX25012021ToggleBottom">Description</span>
+                        <div class="softX25012021ProductSinglePageProductDetailsSectionInner" id="bottomToggle">
+                            <div class="softX25012021ProductSinglePageProductDetailsSectionInnerTitle">
+                                <h2>Product details of Fire Proof heavy weight strong big Locker/Security Safe</h2>
+                            </div>
+                            <div class="softX25012021ProductSinglePageProductDetailsSectionInnerDescription" >
+                                <ul>
+                                    <li><span>Model:-</span>LB-42</li>
+                                    <li>5 YEARS WARRANTY FOR LOCK FREE OF COST</li>
+                                    <li><span>Size:-:</span>Height 42 inch*Wide 23.5 inch*Deep 22 inch. Thickness:- Door-40-50mm,Body-55-65mm.</li>
+                                    <li>30 diameter bolts</li>
+                                    <li>Gross Weight=260 kgs.Digit lock+master key+emergency key lock. Alarming system,</li>
+                                    <li>High Security System</li>
+                                    <li>Fire Proof</li>
+                                    <li>Removable shelf</li>
+                                    <li>Password change system</li>
+                                    <li>LED Screen </li>
+                                    <li>High Quality lock</li>
+                                    <li>High quality colour</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+              /*****************
+             *  Start toggle
+             * **************/ 
+             let softX25012021ToggleTopItem = document.getElementById("softX25012021ToggleTop");
+             let softX25012021ToggleBottomItem = document.getElementById("softX25012021ToggleBottom");
+
+             let  softX25012021topToggle = document.getElementById("topToggle");
+             let  softX25012021bottomToggle = document.getElementById("bottomToggle");
+
+             softX25012021ToggleTopItem.addEventListener("click", function(){
+                //  alert("top");
+                softX25012021topToggle.style.display = "block"; 
+                softX25012021bottomToggle.style.display = "none"; 
+             });
+             softX25012021ToggleBottomItem.addEventListener("click", function(){
+                //  alert("bottom");
+                softX25012021topToggle.style.display = "none"; 
+                softX25012021bottomToggle.style.display = "block";
+             })
+            
+              /*****************
+             *  End toggle
+             * **************/ 
+
+
+
+             /***************************
+             *  Start prodcut Gallery
+             * *************************/ 
+                var softX24012021ProductSinglePageLargImTag = document.getElementById("softX24012021ProductSinglePageLargImage");
+                var softX24012021ProductSinglePageSmallImageOneImgTag = document.getElementById("softX24012021ProductSinglePageSmallImageOne");
+                var softX24012021ProductSinglePageSmallImageTwoImgTag = document.getElementById("softX24012021ProductSinglePageSmallImageTwo");
+                var softX24012021ProductSinglePageSmallImageThreeImgTag = document.getElementById("softX24012021ProductSinglePageSmallImageThree");
+                var softX24012021ProductSinglePageSmallImageFourImgTag = document.getElementById("softX24012021ProductSinglePageSmallImageFour");
+                var softX24012021ProductSinglePageSmallImageFiveImgTag = document.getElementById("softX24012021ProductSinglePageSmallImageFive");
+
+                softX24012021ProductSinglePageSmallImageOneImgTag.addEventListener("click", function(){
+                    softX24012021ProductSinglePageLargImTag.src = "image/softX25012021ProductSinglePage3.jpg";
+                });
+                softX24012021ProductSinglePageSmallImageTwoImgTag.addEventListener("click", function(){
+                    softX24012021ProductSinglePageLargImTag.src = "image/softX25012021ProductSinglePage1.jpg";
+                });
+                softX24012021ProductSinglePageSmallImageThreeImgTag.addEventListener("click", function(){
+                    softX24012021ProductSinglePageLargImTag.src = "image/softX25012021ProductSinglePage2.jpg";
+                });
+                softX24012021ProductSinglePageSmallImageFourImgTag.addEventListener("click", function(){
+                    softX24012021ProductSinglePageLargImTag.src = "image/softX25012021ProductSinglePage5.jpg";
+                });
+                softX24012021ProductSinglePageSmallImageFiveImgTag.addEventListener("click", function(){
+                    softX24012021ProductSinglePageLargImTag.src = "image/softX25012021ProductSinglePage6.jpg";
+                });
+
+
+             /***************************
+             *  End prodcut Gallery
+             * *************************/ 
+
+
+            /*****************
+             * Start Quantity
+             * **************/ 
+                var softX24012021BtnDecrementButton = document.getElementById("softX24012021BtnDecrement");
+                var softX24012021BtnIncrementButton = document.getElementById("softX24012021BtnIncrement");
+                var softX24012021IncreaseAndDecreaseQuantityDigit = document.getElementById("softX24012021IncreaseAndDecreaseQuantity");
+                var softX24012021QuantityCount;
+                softX24012021BtnDecrementButton.addEventListener("click",function(){
+                if( softX24012021IncreaseAndDecreaseQuantityDigit.innerText <= 0){
+                        parseInt(softX24012021IncreaseAndDecreaseQuantityDigit.innerText);
+                }else{
+                        softX24012021IncreaseAndDecreaseQuantityDigit.innerText = parseInt(softX24012021IncreaseAndDecreaseQuantityDigit.innerText) - 1;
+                
+                }
+                    
+                });
+                softX24012021BtnIncrementButton.addEventListener("click",function(){
+                    softX24012021IncreaseAndDecreaseQuantityDigit.innerText = parseInt(softX24012021IncreaseAndDecreaseQuantityDigit.innerText) + 1;
+                    
+                });
+
+             /*****************
+             *  End Quantity
+             * **************/ 
+        </script>
+    </body>
+</html>

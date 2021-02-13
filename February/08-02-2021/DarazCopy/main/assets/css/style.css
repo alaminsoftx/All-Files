@@ -1,0 +1,76 @@
+/***
+      * START GLOBAL CSS
+      *** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.container {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  /***
+         *fonts size
+         ***/
+  --headerMetaLargeFonts: 11px;
+  --headerMetaSmallFonts: 10px;
+
+  /***
+         *text color
+         ***/
+  --headerMetaTextColor: rgb(75 83 97);
+  --textHoverColor: #f36f36;
+  /***
+         *bg color
+         ***/
+  --headerMetaBgColor: #ececec;
+}
+
+/***
+      * END GLOBAL CSS
+      *** */
+
+/***
+      * START HEADER CSS
+      *** */
+.softx08022021HeaderMetaArea {
+  background-color: var(--headerMetaBgColor);
+  padding: 3px 0;
+}
+.softx08022021HeaderMeta {
+}
+.softx08022021HeaderMeta ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.softx08022021HeaderMeta ul li {
+  padding: 0px 10px;
+}
+.softx08022021HeaderMeta ul li:last-child {
+  padding-right: 0px;
+}
+.softx08022021HeaderMeta ul li a {
+  font-size: var(--headerMetaSmallFonts);
+  font-weight: bold;
+  color: var(--headerMetaTextColor);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.softx08022021HeaderMeta ul li a:hover {
+  color: var(--textHoverColor);
+}

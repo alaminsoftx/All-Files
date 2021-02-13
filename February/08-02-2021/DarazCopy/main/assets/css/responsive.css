@@ -1,0 +1,27 @@
+/***
+      * FOR RESPONSIVE
+      *** */
+@media (min-width: 600px) {
+  .softx08022021HeaderMeta ul li {
+    padding: 4px 15px;
+  }
+  .softx08022021HeaderMeta ul li a {
+    font-size: var(--headerMetaLargeFonts);
+  }
+  .softx08022021HeaderMeta ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 991px) {
+}
+@media (min-width: 1366px) {
+  .softx08022021HeaderMeta ul li {
+    padding: 0px 25px;
+  }
+  .softx08022021HeaderMeta ul {
+    justify-content: flex-end;
+  }
+}

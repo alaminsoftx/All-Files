@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Header</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+        <style>
+            body{
+                margin:0;
+                padding:0;
+            }
+           
+            a{
+                text-decoration: none;
+                display: inline-block;
+            }
+            .headerSection {
+                box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 10%);
+                border-radius: 5px;
+                padding: 10px 15px;
+            }
+            .headerInner {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                line-height: 0px;
+            }
+
+            .headerLeft {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .logoSize{
+                width:35px;
+            }
+            .headerLeft .logo a{
+                display: flex;
+                align-items: center;
+            }
+            .headerRight {
+                display: flex;
+                align-items: center;
+            }
+            .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                display: inline-block;
+                color: #2B3361;
+                font-weight: 500;
+                font-size: 15px;
+                margin-left:15px;
+            }
+
+
+            .searchIcon {
+              display: flex;
+              align-items: center;
+              position: relative;
+            }
+            .softX28012021SearchIconItemColumn2 {
+                position: absolute;
+                visibility: visible;
+                right:-7px;
+               
+            }
+            .softX28012021SearchIconItemColumn2Visible{
+                visibility: visible;
+                right:-7px;
+            }
+
+            div#softX28012021SearchIconArea {
+                position: relative;
+                z-index: 999;
+            }
+            .softX28012021SearchIconItemColumn2 .softX28012021SearchFormInputField input[type="search"] {
+                height: 30px;
+                line-height: 30px;
+                padding: 2px 10px;
+                outline: none;
+                background-color: transparent;
+                border: 1px solid #545D70;
+                border-radius: 3px;
+                width: 173px;
+            }
+            .softX28012021SearchIconItemColumn2 .softX28012021SearchFormInputField input[type="search"]::placeholder{
+                font-size: 13px;
+                font-family:  Tahoma !important;
+                font-weight: normal;
+            }
+          
+           /*Responsive  for mobile Device */
+           @media(min-width:600px){
+                .headerSection {
+                    padding: 12px 25px;
+                }
+                .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                    font-size: 16px;
+                    margin-left: 20px;
+                }
+                .logoSize{
+                    width:42px;
+                }
+                .softX28012021SearchIconItemColumn2 .softX28012021SearchFormInputField input[type="search"] {
+               
+                    width: 200px;
+                }
+            }
+            
+              /*Responsive  for Desktop Device */
+              @media(min-width:991px){
+                .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                    font-size: 17px;
+                    margin-left: 20px;
+                }
+                .logoSize{
+                    width:45px;
+                }
+            }   
+
+
+             /*Responsive  for Desktop Device */
+             @media(min-width:1366px){
+            }
+            
+             
+
+
+        </style>
+    </head>
+    <body>
+        <section class="headerSection">
+            <div class="headerInner">
+                <div class="headerLeft">
+                    <div class="logo">
+                        <a href="#"><img class="logoSize" src="image/logo.png" alt=""></a>
+                    </div>
+                </div>
+                
+                <div class="headerRight">
+                    <div class="searchIcon">
+                      
+                       <div class="softX28012021SearchIconItemColumn2" id="softX28012021SearchInputField">
+                           <form action="#" method="POST">
+                               <div class="softX28012021SearchFormInputField">
+                                   <input type="search" name="search" placeholder="Search here...">
+                               </div>
+                           </form>
+                       </div>
+
+                        <div class="softX28012021SearchIconItemColumn1" id="softX28012021SearchIconArea">
+                            <a href="#"><i class="fas fa-search"></i></a>
+                        </div>
+
+                    </div>
+                    <div class="singUp">
+                        <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+                    </div>
+                    <div class="cartIcon">
+                        <a href="#"><i class="fas fa-cart-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <script>
+
+            let softX28012021SelectSearchIcon = document.getElementById("softX28012021SearchIconArea");
+            let softX28012021SelectSearchInputField = document.getElementById("softX28012021SearchInputField");
+            softX28012021SelectSearchIcon.addEventListener("click", function(){
+                softX28012021SelectSearchInputField.classList.toggle("softX28012021SearchIconItemColumn2Visible");
+            });
+        </script> -->
+    </body>
+</html>

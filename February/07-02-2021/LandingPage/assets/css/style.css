@@ -1,0 +1,148 @@
+/***
+* start global css
+***/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+/***
+* end global css
+***/
+
+/***
+* start cahs on delivery area css
+***/
+.cashOnDeliveryBannerArea {
+  width: 100%;
+  background-image: url(../images/Shape.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  background-size: 100%;
+}
+/***
+* end cahs on delivery area css
+***/
+
+/***
+* start cahs on delivery header css
+***/
+
+.cashOnDeliveryBannerHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+/* header left */
+.cashOnDeliveryBannerHeaderLeft {
+}
+.cashOnDeliveryBannerHeaderLeft .logo {
+  width: 100px;
+}
+.cashOnDeliveryBannerHeaderLeft .logo a {
+}
+.cashOnDeliveryBannerHeaderLeft .logo a img {
+  width: 100%;
+}
+
+/* header right */
+.cashOnDeliveryBannerHeaderRight {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.cashOnDeliveryBannerHeaderRight .signInSignOutButton {
+}
+.cashOnDeliveryBannerHeaderRight .signInSignOutButton a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fa8231;
+  display: inline-block;
+  border: 1px solid #fa8231;
+  border-radius: 8px;
+  padding: 12px 30px;
+  transition: all 0.3s;
+}
+.cashOnDeliveryBannerHeaderRight .signInSignOutButton a:hover {
+  background-color: #fa8231;
+  color: #fff;
+}
+.cashOnDeliveryBannerHeaderRight .signInSignOutButton a.LoginButton {
+  background-color: #fa8231;
+  color: #fff;
+  margin-left: 20px;
+  border: 1px solid #fa8231;
+}
+.cashOnDeliveryBannerHeaderRight .signInSignOutButton a.LoginButton:hover {
+  background-color: transparent;
+  color: #fa8231;
+}
+/***
+* end cahs on delivery header css
+***/
+
+/***
+* start cahs on delivery body content css
+***/
+.cashOnDeliveryBodyContent {
+  margin-top: 80px;
+}
+.cashOnDeliveryBodyContent .cashOnDeliveryBodyContentInner {
+  max-width: 480px;
+  width: 100%;
+}
+.cashOnDeliveryBodyContent .cashOnDeliveryHeading {
+}
+.cashOnDeliveryBodyContent .cashOnDeliveryHeading h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+  color: #1b1464;
+}
+
+.cashOnDeliveryBodyContent .cashOnDeliverySubHeading {
+  margin: 35px 0px;
+}
+.cashOnDeliveryBodyContent .cashOnDeliverySubHeading h5 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #fa8231;
+}
+
+.cashOnDeliveryBodyContent .cashOnDeliveryDescription p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #778ca3;
+  line-height: 26px;
+}
+/***
+* end cahs on delivery body content css
+***/

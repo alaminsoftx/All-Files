@@ -1,0 +1,229 @@
+@media (min-width: 600px) {
+  /* start header */
+  .softx08022021HeaderMetaArea {
+    display: block;
+  }
+  .MainLogoSize {
+    width: 100px;
+  }
+
+  .softx08022021SearchArea {
+    width: 65%;
+    position: relative;
+    opacity: 1;
+  }
+
+  .softx08022021ShopIcon i {
+    margin-left: 25px;
+  }
+
+  .searchFiled {
+    position: absolute;
+    width: 100%;
+    visibility: visible;
+  }
+  .searchFiled input[type="search"] {
+    width: 100%;
+    padding: 10px 19px;
+    background-color: #f5f5f5;
+    border: navajowhite;
+    outline: none;
+    border-radius: 3px;
+  }
+  .searchIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: var(--textHoverColor);
+    height: 100%;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+  }
+  .searchIcon i {
+    color: #fff;
+    font-weight: 400;
+  }
+  .softx08022021MainHeaderArea {
+    padding: 8px 0;
+  }
+  .softx08022021Logo,
+  .softx08022021SearchArea,
+  .softx08022021ShopIcon,
+  .softx0802202App {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .softx08022021Logo {
+    width: 25%;
+  }
+  .softx08022021ShopIcon {
+    width: 10%;
+  }
+  /* end header */
+
+  /* start flash sale */
+  .softx09022021FlashSaleProductItem {
+    width: calc(33.33% - 16px);
+    margin: 8px;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .softx09022021FlashSaleProductImg {
+    height: 188px;
+  }
+  .softx0922021OnsaleNow {
+    width: 16%;
+  }
+  .softx0922021OnsaleEnding {
+    width: 60%;
+  }
+  .softx0922021OnsaleEndingRight ul li {
+    width: 30px;
+    height: 30px;
+    line-height: 22px;
+    margin-right: 7px;
+  }
+  /* end flash sale */
+}
+
+@media (min-width: 991px) {
+  /* start header */
+  .softx08022021HeaderMeta ul li {
+    padding: 4px 15px;
+  }
+  .softx08022021HeaderMeta ul li a {
+    font-size: var(--headerMetaLargeFonts);
+  }
+  .softx08022021HeaderMeta ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .softx0802202App img {
+    display: block;
+  }
+  .softx08022021HeaderMeta ul li {
+    padding: 0px 25px;
+  }
+  .softx08022021HeaderMeta ul {
+    justify-content: flex-end;
+  }
+  .MainLogoSize {
+    width: 120px;
+  }
+  .appDownLoadSize {
+    width: 188px;
+  }
+  .softx08022021MainHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .softx08022021SearchArea {
+    width: 52%;
+    position: relative;
+  }
+  .softx08022021Logo {
+    width: 17%;
+  }
+  .softx08022021ShopIcon {
+    width: 10%;
+    justify-content: flex-start;
+  }
+  .softx08022021ShopIcon i {
+    margin-left: 46px;
+  }
+  .softx0802202App {
+    width: 20%;
+    justify-content: flex-end;
+  }
+  .searchFiled {
+    position: absolute;
+    width: 100%;
+  }
+  .searchFiled input[type="search"] {
+    padding: 13px 19px;
+    height: 45px;
+  }
+
+  .searchIcon i {
+    color: #fff;
+    font-weight: 400;
+  }
+  .softx08022021MainHeaderArea {
+    padding: 5px 0px 12px 0;
+  }
+  /* end header */
+}
+@media (min-width: 768px) {
+  /* start flash sale */
+  .softx09022021FlashSaleProductItem {
+    width: calc(25% - 16px);
+    margin: 8px;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .softx09022021FlashSaleProductImg {
+    height: 188px;
+  }
+  /* end flash sale */
+}
+@media (min-width: 991px) {
+  /* start flash sale */
+  .softx09022021FlashSaleProductItem {
+    width: calc(20% - 16px);
+    margin: 8px;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  .softx0922021OnsaleEnding {
+    width: 75%;
+  }
+  .softx0922021OnsaleNow {
+    width: 10%;
+  }
+  .softx0922021OnsaleNow p {
+    font-size: 14px;
+  }
+  .softx0922021OnsaleEndingLeft p {
+    font-size: 14px;
+  }
+  .softx0922021OnsaleEndingRight ul li {
+    width: 35px;
+    height: 35px;
+    line-height: 26px;
+    font-size: 14px;
+  }
+  .softx0922021OnsaleEndingLeft {
+    margin-right: 15px;
+  }
+  .softx0922021OnsaleEndingRight ul li {
+    margin-right: 8px;
+  }
+  .softx0922021OnsaleShopNow a {
+    font-size: 12px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  /* end flash sale */
+}
+@media (min-width: 1366px) {
+  /* start flash sale */
+  /* single item */
+  .softx09022021FlashSaleProductItem {
+    width: calc(16.6% - 16px);
+    margin: 8px;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  /* end flash sale */
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+      }
+      .container {
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .headerSection {
+        box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 10%);
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .headerInner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        line-height: 0px;
+      }
+
+      .headerLeft {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logoSize {
+        width: 35px;
+      }
+      .headerLeft .logo a {
+        display: flex;
+        align-items: center;
+      }
+      .headerRight {
+        display: flex;
+        align-items: center;
+      }
+      .searchIcon i,
+      .headerRight .singUp i,
+      .headerRight .cartIcon a i {
+        display: inline-block;
+        color: #2b3361;
+        font-weight: 500;
+        font-size: 15px;
+        margin-left: 15px;
+      }
+
+      .searchIcon {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .softX28012021SearchIconItemColumn2 {
+        position: absolute;
+        visibility: visible;
+        right: -7px;
+      }
+      .softX28012021SearchIconItemColumn2Visible {
+        visibility: visible;
+        right: -7px;
+      }
+
+      div#softX28012021SearchIconArea {
+        position: relative;
+        z-index: 999;
+      }
+
+      /*Responsive  for mobile Device */
+      @media (min-width: 600px) {
+        .searchIcon i,
+        .headerRight .singUp i,
+        .headerRight .cartIcon a i {
+          font-size: 16px;
+          margin-left: 20px;
+        }
+        .logoSize {
+          width: 42px;
+        }
+      }
+
+      /*Responsive  for Desktop Device */
+      @media (min-width: 991px) {
+        .searchIcon i,
+        .headerRight .singUp i,
+        .headerRight .cartIcon a i {
+          font-size: 17px;
+          margin-left: 18px;
+        }
+        .logoSize {
+          width: 45px;
+        }
+        .container {
+          padding: 0 50px;
+        }
+      }
+
+      /*Responsive  for Desktop Device */
+      @media (min-width: 1366px) {
+      }
+    </style>
+  </head>
+  <body>
+    <section class="headerSection">
+      <div class="container">
+        <div class="headerInner">
+          <div class="headerLeft">
+            <div class="logo">
+              <a href="#"
+                ><img
+                  class="logoSize"
+                  src="https://i.ibb.co/SX9sSjd/logo.png"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+
+          <div class="headerRight">
+            <div class="searchIcon">
+              <div class="softX28012021SearchIconItemColumn1">
+                <a href="#"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+            <div class="singUp">
+              <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+            <div class="cartIcon">
+              <a href="#"><i class="fas fa-cart-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

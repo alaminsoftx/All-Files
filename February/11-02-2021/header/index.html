@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+      }
+      .container {
+        max-width: 1240px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .headerSection {
+        box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 10%);
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .headerInner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        line-height: 0px;
+      }
+
+      .headerLeft {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logoSize {
+        width: 35px;
+      }
+      .headerLeft .logo a {
+        display: flex;
+        align-items: center;
+      }
+      .headerRight {
+        display: flex;
+        align-items: center;
+      }
+
+      .cartIcon a i {
+        display: inline-block;
+        color: #2f3542;
+        font-weight: 500;
+        font-size: 17px;
+        margin-left: 6px;
+      }
+      .searchIcon i {
+        color: #a4b0be;
+        font-weight: 500;
+        font-size: 13px;
+      }
+      .searchIcon {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      input[type="text"] {
+        height: 30px;
+        display: block;
+        padding: 5px 10px;
+        line-height: 30px;
+        border: 1px solid #dfe4ea;
+        border-radius: 3px;
+        outline: none;
+      }
+      input[type="text"]::placeholder {
+        font-size: 13px;
+      }
+      .softX28012021SearchIconItemColumn1 {
+        position: absolute;
+        display: flex;
+        right: 1px;
+        z-index: 99;
+        height: 30px;
+        width: 30px;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #dfe4ea;
+        cursor: pointer;
+      }
+      .softX28012021SearchIconItemColumn2 {
+        position: absolute;
+        right: 0;
+      }
+      .softX28012021SearchIconItemColumn2Visible {
+        visibility: visible;
+        right: -7px;
+      }
+
+      div#softX28012021SearchIconArea {
+        position: relative;
+        z-index: 999;
+      }
+      /* ============================== */
+      .autocomplete {
+        position: relative;
+        display: inline-block;
+      }
+
+      .autocomplete-items {
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        top: 100%;
+        left: 0;
+        right: 0;
+      }
+
+      .autocomplete-items div {
+        padding: 17px 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+        font-size: 13px;
+      }
+      /* ============================== */
+      @media (min-width: 600px) {
+        .searchIcon i {
+          font-size: 14px;
+        }
+        .cartIcon a i {
+          margin-left: 15px;
+          font-size: 16px;
+        }
+        .logoSize {
+          width: 42px;
+        }
+        input[type="text"] {
+          width: 300px;
+          height: 35px;
+          line-height: 35px;
+        }
+        .softX28012021SearchIconItemColumn1 {
+          height: 35px;
+          width: 41px;
+        }
+      }
+
+      @media (min-width: 991px) {
+        .cartIcon a i {
+          font-size: 20px;
+          margin-left: 18px;
+        }
+        .searchIcon i {
+          font-size: 16px;
+        }
+        .logoSize {
+          width: 45px;
+        }
+        .container {
+          padding: 0 50px;
+        }
+
+        input[type="text"] {
+          height: 38px;
+          line-height: 38px;
+          width: 400px;
+        }
+        .softX28012021SearchIconItemColumn1 {
+          height: 38px;
+          width: 41px;
+        }
+      }
+
+      @media (min-width: 1366px) {
+        .headerRight .cartIcon a i {
+          margin-left: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="headerSection">
+      <div class="container">
+        <div class="headerInner">
+          <div class="headerLeft">
+            <div class="logo">
+              <a href="#"
+                ><img
+                  class="logoSize"
+                  src="https://i.ibb.co/SX9sSjd/logo.png"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+
+          <div class="headerRight">
+            <div class="searchIcon">
+              <div class="softX28012021SearchIconItemColumn1">
+                <a href="#"><i class="fas fa-search"></i></a>
+              </div>
+              <div class="softX28012021SearchIconItemColumn2">
+                <form autocomplete="off" action="">
+                  <div class="autocomplete">
+                    <input
+                      id="myInput"
+                      type="text"
+                      name=""
+                      placeholder="Search..."
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="cartIcon">
+              <a href="#"><i class="fas fa-cart-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function autocomplete(inp, arr) {
+        var currentFocus;
+        inp.addEventListener("input", function (e) {
+          var a, b, i, m;
+          val = this.value;
+          closeAllLists();
+          if (!val) {
+            return false;
+          }
+          currentFocus = -1;
+
+          a = document.createElement("DIV");
+          a.setAttribute("id", this.id + "autocomplete-list");
+          a.setAttribute("class", "autocomplete-items");
+
+          this.parentNode.appendChild(a);
+          for (i = 0; i < arr.length; i++) {
+            if (
+              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+            ) {
+              b = document.createElement("DIV");
+              b.innerHTML =
+                "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+              b.innerHTML += arr[i].substr(val.length);
+              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+              b.addEventListener("click", function (e) {
+                inp.value = this.getElementsByTagName("input")[0].value;
+                closeAllLists();
+              });
+              a.appendChild(b);
+            }
+          }
+        });
+
+        inp.addEventListener("keydown", function (e) {
+          var x = document.getElementById(this.id + "autocomplete-list");
+          if (x) x = x.getElementsByTagName("div");
+          if (e.keyCode == 40) {
+            currentFocus++;
+
+            addActive(x);
+          } else if (e.keyCode == 38) {
+            currentFocus--;
+
+            addActive(x);
+          } else if (e.keyCode == 13) {
+            e.preventDefault();
+            if (currentFocus > -1) {
+              if (x) x[currentFocus].click();
+            }
+          }
+        });
+        function addActive(x) {
+          if (!x) return false;
+
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = x.length - 1;
+
+          x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+              x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+        document.addEventListener("click", function (e) {
+          closeAllLists(e.target);
+        });
+      }
+
+      var countries = [
+        "Fahmid",
+        "Zahid",
+        "Ashad",
+        "Ruhin",
+        "Estiak",
+        "Al-Amin",
+        "Pappu",
+        "Siyam",
+        "Jueal",
+        "Istiak",
+        "Soikot",
+        "Saima",
+        "bangladesh",
+        "Cat",
+        "DOHS",
+        "Furniture",
+        "Game",
+        "Hello",
+        "Jim",
+        "Kafi",
+        "Laxmir",
+        "Mango",
+        "Napa",
+        "Orange",
+        "Potato",
+        "Queue",
+        "Rate",
+        "Tomato",
+        "U",
+        "Vanila",
+        "wow",
+        "x-ray",
+        "Yoo",
+        "Zoo",
+      ];
+
+      autocomplete(document.getElementById("myInput"), countries);
+    </script>
+  </body>
+</html>

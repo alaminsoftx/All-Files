@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+/*start  body left header */
+      .softx1102021CheckOutBodyLeftHeader {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: #FAFAFA;
+        padding: 15px 9px;
+        border-radius: 3px;
+      }
+      .softx1102021CheckOutBodyLeftcol1 {
+        width: 60%;
+      }
+      .softx1102021CheckOutBodyLeftcol1 span, .softx1102021CheckOutBodyLeftcol2 span, .softx1102021CheckOutBodyLeftcol3 span {
+          color: #8e8d8c;
+          font-size: 11px;
+          text-transform: uppercase;
+      }
+      .softx1102021CheckOutBodyLeftcol2 {
+        width: 20%;
+      }
+
+      .softx1102021CheckOutBodyLeftcol3 {
+        width: 20%;
+        text-align: right;
+      }
+/*end  body left header */
+
+
+/* start package title */
+.softx1102201CheckOutBodyLeftPackageTitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #FAFAFA;
+        padding: 12px 10px;
+        margin-top: 15px;
+    }
+    .softx1102201CheckOutBodyLeftPackageTitleLeft span, 
+    .softx1102201CheckOutBodyLeftPackageTitleRight span{
+        font-size:12px;
+      
+    }
+    .softx11022021PackageTitleRightTips span{
+        color: #2c3e50;
+    }
+    .softx11022021PackageTitleRightBrand{
+      color: #757575 ;
+    }
+/* end package title */
+
+/* start delivary box */
+.softx11022021headerBottomBody {
+    background: #fff;
+    padding: 10px;
+}
+.softx11022021DeliveryOption {
+ margin-bottom:15px;
+    background: #fff;
+}
+.softx11022021DeliveryProductBox {
+    max-width: 300px;
+    border: 1px solid #4AA085;
+  padding:10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.softx11022021DeliveryProductBoxTop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.sfotx11022021DeliveryOptionsText {
+    font-size: 12px;
+}
+.softx11022021EstArvl {
+    font-size: 12px;
+    color: #202020;
+}
+.softx11022021CheckMarkIcon {
+    margin-right: 10px;
+}
+.softx11022021CheckMarkIcon i {
+    color: #16a085;
+}
+.dollerSign i {
+    font-size: 12px;
+    font-weight: 400;
+    color: #202020;
+    
+}
+.softx11022021DeliveryMoney {
+    font-size: 13px;
+    font-weight: bold;
+}
+.softx11022021HomeDeliveryText {
+    font-size: 12px;
+    color: #202020;
+    margin-top: 10px;
+    line-height: 12px;
+    margin-bottom: 4px;
+}
+/* end delivary box */
+
+/* start checkout cart item */
+.softx1102201CechOutCartItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top:15px;
+}
+/* left */
+.softx1102201CechOutCartItemLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.softx1102201CechOutCartLeftImg {
+    width: 60px;
+}
+.softx1102201CechOutCartLeftImg img{
+    width: 100%;
+}
+.softx1102201CechOutCartItemInnerHead {
+    font-size: 13px;
+    display: block;
+    color: #212121;
+}
+.softx1102201CechOutCartItemInnerSubHead {
+    font-size: 11px;
+    display: block;
+    color: #757575;
+    margin-top: 4px;
+}
+.softx1102201CechOutCartItemLeftContent {
+    margin-top: 5px;
+}
+/* middle */
+.softx1102201CechOutCartItemMiddle {
+    width: 25%;
+}
+.softx11022021InnerCpDollerSign i{
+    font-size: 12px;
+}
+.softx11022021InnerCpMoney {
+    font-size: 12px;
+}
+.softx1102201CechOutCartItemRightQtyInner p{
+  font-size:12px; 
+}
+.softx1102201CechOutCartItemRight {
+    width: 25%;
+    text-align: right;
+}
+/* right */
+/* end checkout cart item */
+
+/* start cart body right */
+.softx1102021CheckOutBodyRight {
+    background: #fff;
+    padding: 10px;
+    margin-top: 15px;
+}
+/* proceed to pay */
+
+.softx11022021TopProcessToPay a {
+    background-color: #f57224;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 8px 2px;
+    border-radius: 2px;
+    transition: all .3s;
+}
+.softx11022021TopProcessToPay a:hover{
+  background-color: #D0611E;
+}
+
+/* checkout address */
+.softx1102021CheckOutBodyRightMainAddress {
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.softx1102021CheckOutBodyRightMainATitle {
+  margin-bottom: 10px;
+}
+.softx11022021SummaryTitle p, 
+.softx1102021CheckOutBodyRightMainATitle p {
+    font-size: 14px;
+    color: #212121;
+    font-weight: bold;
+}
+ 
+.softx11022021EmailArea, 
+.softx11022021BillingAddress, 
+.softx11022021PhoneNumberArea, 
+.softx1102021CheckOutBodyRightAddressMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:15px;
+}
+.softx11022021AddressMainitem1 i {
+    font-size: 12px;
+    color: #4AA085;
+}
+
+.softx11022021PhoneNumber a, 
+.softx11022021BillingAddressInfo, 
+.softx11022021AddressMainitem2 {
+    font-size: 12px;
+}
+
+.softx11022021AddressMainitem3 a {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #4AA085;
+}
+
+
+.softx1102021CheckOutBodyRightMainAddressVal {
+    margin-top: 15px;
+}
+.softx1102021AddressValItemText {
+    background: #FF734C;
+    font-size: 12px;
+    padding: 5px 19px;
+    border-radius: 15px;
+    color: #fff;
+    line-height: 26px;
+}
+.softx1102021AddressValText {
+    font-size: 12px;
+}
+
+
+/* phone */
+
+.softx11022021PhoneNumber a{
+  color: #212121;
+}
+/* email */
+
+
+/* summary */
+.softx11022021CheckOutSummaryArea {
+    margin-top: 15px;
+}
+
+
+.softx11022021ShippingLeft span, 
+.softx11022021SubtotalLeft span{
+  font-size: 12px;
+}
+.softx11022021TotalRightDlrIcon i, 
+.softx11022021Shippingdolr i, 
+.softx11022021Subtotaldolr i{
+  font-size: 12px;
+}
+.softx11022021TotalRightNum, 
+.softx11022021ShippingNum, 
+.softx11022021SubtotalNum{
+  font-size: 12px;
+}
+/* shipping price */
+
+.softx11022021ShippingTitle p{
+  font-size: 14px;
+    color: #212121;
+
+}
+.softx11022021SubtotalItem, 
+.softx11022021ShippingItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* .softx11022021Shippingdolr i{
+  font-size: 12px;
+} */
+/* .softx11022021ShippingNum{
+  font-size: 12px;
+} */
+
+/* voucher */
+.softx11022021VoucherInput input[type="text"] {
+    border: 1px solid #dfe4ea;
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 7px;
+    border-radius: 2px;
+    width: 100%;
+}
+.softx11022021VoucherInput form  span{
+  width: 100%;
+  text-align: center;
+
+}
+
+.softx11022021VoucherInput input[type="text"]::placeholder{
+  font-size: 12px;
+}
+.softx11022021ApplyButton {
+    height: 30px;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 12px;
+    padding: 2px 20px;
+    box-sizing: border-box;
+    background: #F57224;
+    border-radius: 2px;
+    color: #fff;
+    width: 100%;
+    margin-top: 10px;
+}
+.softx11022021VoucherInput form {
+    margin-top:10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+/* total */
+.softx11022021TotalPriceArea{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top:10px;
+}
+.softx11022021TotalLeft span{
+  font-size: 14px;
+    color: #212121;
+}
+
+.softx11022021PorceedToPayBottom{
+  margin-top:15px;
+}
+.sfotx11022021TotalRighttop{
+  text-align: right;
+  line-height: 25px;
+}
+.sfotx11022021TotalRighttop p{
+  font-size: 12px;
+}
+/* end cart body right */
+/* ==================== */
+      @media (min-width: 600px) {
+          .softx11022021CheckOutBody {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: space-between;
+          }
+          .softx1102021CheckOutBodyLeft {
+              width: calc(60% - 10px);
+          }
+          .softx1102021CheckOutBodyRight {
+              width: calc(40% - 10px);
+              margin-top:0px;
+          }
+          .softx11022021SummaryTitle p, .softx1102021CheckOutBodyRightMainATitle p {
+              font-size: 15px;
+          }
+          .softx11022021PhoneNumber a, 
+          .softx11022021BillingAddressInfo, 
+          .softx11022021AddressMainitem2 {
+              font-size: 14px;
+          }
+          .softx11022021ShippingLeft span, 
+          .softx11022021SubtotalLeft span {
+              font-size: 14px;
+          }
+          .softx11022021TotalRightNum, 
+          .softx11022021ShippingNum, 
+          .softx11022021SubtotalNum {
+              font-size: 14px;
+          }
+          .softx1102021CheckOutBodyLeftcol1 span, 
+          .softx1102021CheckOutBodyLeftcol2 span, 
+          .softx1102021CheckOutBodyLeftcol3 span {
+              font-size: 14px;
+          }
+          .sfotx11022021DeliveryOptionsText {
+              font-size: 14px;
+          }
+          .softx11022021HomeDeliveryText {
+            font-size: 14px;
+        }
+        .softx1102201CechOutCartItemInnerSubHead {
+            font-size: 12px;
+            margin-top: 5px;
+            line-height: 19px;
+        }
+        .softx11022021InnerCpMoney {
+            font-size: 14px;
+        }
+        .softx1102201CechOutCartItemRightQtyInner p {
+            font-size: 14px;
+        }
+        .softx1102201CechOutCartItemLeft {
+            width: 60%;
+        }
+        .softx1102201CechOutCartItemMiddle {
+            width: 20%;
+        }
+        .softx1102201CechOutCartItemRight {
+            width: 20%;
+        }
+        .softx11022021PhoneNumberArea, .softx1102021CheckOutBodyRightAddressMain {
+            margin-top: 20px;
+        }
+        .softx11022021TopProcessToPay a {
+            padding: 11px 2px;
+            font-size: 15px;
+        }
+        .softx11022021ApplyButton {
+            height: 40px;
+            font-size: 15px;
+        }
+        .softx11022021VoucherInput input[type="text"] {
+            height: 40px;
+            line-height: 40px;
+        }
+        .softx11022021AddressMainitem1 i {
+            font-size: 14px;
+            color: #4AA085;
+        }
+        .softx1102201CechOutCartItemInnerHead {
+            font-size: 14px;
+        }
+      }
+      @media (min-width: 991px) {
+        .container {
+          padding: 0 50px;
+        }
+          .softx1102021CheckOutBodyLeft {
+              width: calc(100% - 400px);
+          }
+          .softx1102021CheckOutBodyRight {
+              width: 380px;
+              padding: 15px;
+          }
+          .softx1102021CheckOutBodyLeftcol1 span, 
+          .softx1102021CheckOutBodyLeftcol2 span, 
+          .softx1102021CheckOutBodyLeftcol3 span {
+              font-size: 13px;
+          }
+          .softx1102201CheckOutBodyLeftPackageTitleLeft span, 
+          .softx1102201CheckOutBodyLeftPackageTitleRight span {
+              font-size: 14px;
+          }
+          .softx1102201CechOutCartItemLeft {
+            width: 80%;
+        }
+        .softx1102201CechOutCartItemMiddle {
+            width: 10%;
+        }
+        .softx1102201CechOutCartItemRight {
+            width: 10%;
+        }
+        .softx1102201CechOutCartLeftImg {
+            width: 90px;
+        }
+        .softx1102201CechOutCartItemLeftContent {
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        .softx1102201CheckOutBodyLeftPackageTitle, 
+        .softx1102021CheckOutBodyLeftHeader {
+            padding: 15px 15px;
+        }
+        .softx11022021headerBottomBody {
+            padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+<div class="softx11022021CheckOutSection">
+  <div class="container">
+    <div class="softx11022021CheckOutBody">
+      <div class="softx1102021CheckOutBodyLeft">
+        <div class="softx1102021CheckOutBodyLeftHeader">
+          <div class="softx1102021CheckOutBodyLeftcol1">
+            <span class="softx11022021ItemNumberHeading">1</span>
+            <span class="softx11022021ItemTextHeading">Items</span>
+          </div>
+
+
+          <div class="softx1102021CheckOutBodyLeftcol2">
+             <span class="softx110220221PriceHeading">Price</span>
+          </div>
+
+
+          <div class="softx1102021CheckOutBodyLeftcol3">
+            <span class="softx11022021QuantityHeading">Quantity</span>
+          </div>
+        </div>
+
+        <div class="softx11020221HeaderBottom">
+          <div class="softx1102201CheckOutBodyLeftPackageTitle">
+            <div class="softx1102201CheckOutBodyLeftPackageTitleLeft">
+              <span>Package 1 of 1</span>
+            </div>
+  
+            <div class="softx1102201CheckOutBodyLeftPackageTitleRight">
+              <span class="softx11022021PackageTitleRightBrand">Shipped by</span>
+              <span class="softx11022021PackageTitleRightTips">Icon Fashion BD</span>
+            </div>
+  
+          </div>
+          <div class="softx11022021headerBottomBody">
+            <div class="softx11022021DeliveryOption">
+              <p class="sfotx11022021DeliveryOptionsText">Delivery Option</p>
+              <div class="softx11022021DeliveryProductBox">
+               <div class="softx11022021DeliveryProductBoxTop">
+                 <p class="softx11022021CheckMarkIcon"><i class="fas fa-check-circle"></i></p>
+                  <p>
+                    <span class="dollerSign"><i class="fas fa-dollar-sign"></i></span>
+                    <span class="softx11022021DeliveryMoney"> 65</span>
+                  </p>
+               </div>
+                <p class="softx11022021HomeDeliveryText">Home Delivery</p>
+                <p class="softx11022021EstArvl"><span>Est. Arrival:</span> <span>22-02-2021</span> </p>
+              </div>
+            </div>
+            <div class="softx1102201CechOutCartItem">
+              <div class="softx1102201CechOutCartItemLeft">
+                <div class="softx1102201CechOutCartLeftImg">
+                  <a href="#">
+                    <img src="https://i.ibb.co/GTdh8CH/b677601a70d4d080e1dfbc0b32d6e28e.jpg" alt="">
+                  </a>
+                </div>
+                <div class="softx1102201CechOutCartItemLeftContent">
+                  <a href="#" class="softx1102201CechOutCartItemInnerHead">Winter Cap for men</a>
+                  <a href="#" class="softx1102201CechOutCartItemInnerSubHead">Icon Fashion BD, Color Family:Lite Navy, Size:Int:XL</a>
+                </div>
+              </div>
+              <div class="softx1102201CechOutCartItemMiddle">
+                <div class="softx1102201CechOutCartItemMiddleInner">
+                  <div class="softx1102201CechOutCartItemMiddleInnerCP">
+                    <span class="softx11022021InnerCpDollerSign"><i class="fas fa-dollar-sign"></i></span>
+                    <span class="softx11022021InnerCpMoney">96</span>
+                  </div>
+                </div>
+              </div>
+              <div class="softx1102201CechOutCartItemRight">
+                <div class="softx1102201CechOutCartItemRightQtyInner">
+                  <p><span class="softx11022021InnerQtyText">Qty:</span><span class="softx11022021RightQtyInnerQtyNumber">1</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="softx1102021CheckOutBodyRight">
+          <div class="softx11022021TopProcessToPay">
+            <a href="#">Proceed to Pay</a>
+          </div>
+          <!-- check info -->
+          <div class="softx1102021CheckOutBodyRightCheckOutInfo">
+            <div class="softx1102021CheckOutBodyRightMainAddress">
+              <!-- title -->
+              <div class="softx1102021CheckOutBodyRightMainATitle">
+                <p>Shipping & Billing</p>
+              </div>
+              <div class="softx1102021CheckOutBodyRightAddressMain">
+                <div class="softx1102021CheckOutBodyRightAddressMainTop">
+                  <span class="softx11022021AddressMainitem1"><i class="fas fa-map-marker-alt"></i></span>
+                  <span class="softx11022021AddressMainitem2">Jone Doe</span>
+                </div>
+                <div class="softx1102021CheckOutBodyRightAddressMainBottom">
+                  <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+                </div>
+               
+              </div>
+              <!--  -->
+              <div class="softx1102021CheckOutBodyRightMainAddressVal">
+                <div class="softx1102021AddressValItem">
+                  <span class="softx1102021AddressValItemText">Home</span>
+                  <span class="softx1102021AddressValText">bandarban, Bandarban Sadar, Bandarban, Chattogram</span>
+                </div>
+              </div>
+            </div>
+            <!-- billing address -->
+            <div class="softx11022021BillingAddress">
+              <div class="softx11022021BillingAddressLeft">
+                <span class="softx11022021AddressMainitem1"><i class="fas fa-map-marker-alt"></i></span>
+                <span class="softx11022021BillingAddressInfo">Bill to the same address</span>
+              </div>
+              <div class="softx11022021BillingAddressRight">
+                <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+              </div>
+            </div>
+            <!-- phone -->
+            <div class="softx11022021PhoneNumberArea">
+              <div class="softx11022021BillingAddressLeft">
+                <span class="softx11022021AddressMainitem1"><i class="fas fa-map-marker-alt"></i></span>
+                <span class="softx11022021PhoneNumber"><a href="tel:01780000000">01780000000</a></span>
+              </div>
+              <div class="softx11022021BillingAddressRight">
+                <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+              </div>
+            </div>
+            <!-- email -->
+            <div class="softx11022021EmailArea">
+              <div class="softx11022021BillingAddressLeft">
+                <span class="softx11022021AddressMainitem1"><i class="fas fa-map-marker-alt"></i></span>
+                <span class="softx11022021PhoneNumber"><a href="mailto:test@gmail.com">test@gmail.com</a></span>
+              </div>
+              <div class="softx11022021BillingAddressRight">
+                <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+              </div>
+            </div>
+          </div>
+          <!-- checkout summery -->
+          <div class="softx11022021CheckOutSummaryArea">
+            <div class="softx11022021SummaryTitle">
+              <p>Order Summary</p>
+            </div>
+            <!-- subtotal -->
+            <div class="softx11022021SubtotalItem">
+              <div class="softx11022021SubtotalLeft">
+                <span> Subtotal(1 item)</span>
+              </div>
+              <div class="softx11022021SubtotalRight">
+                <span class="softx11022021Subtotaldolr"><i class="fas fa-dollar-sign"></i></span>
+                <span class="softx11022021SubtotalNum">56</span>
+              </div>
+            </div>
+            <!-- shipping price -->
+            <div class="softx11022021ShippingItem">
+              <div class="softx11022021ShippingLeft">
+                <span> Shipping Price</span>
+              </div>
+              <div class="softx11022021ShippingRight">
+                <span class="softx11022021Shippingdolr"><i class="fas fa-dollar-sign"></i></span>
+                <span class="softx11022021ShippingNum">56</span>
+              </div>
+            </div>
+            <!-- voucher input -->
+            <div class="softx11022021VoucherInputArea">
+              <div class="softx11022021VoucherInput">
+                <form action="#">
+                 <span>
+                  <input type="text" placeholder="Enter Voucher Code">
+                 </span>
+                  <span>
+                    <button class="softx11022021ApplyButton" type="button">Apply</button>
+                  </span>
+                </form>
+              </div>
+            </div>
+            <!-- total -->
+            <div class="softx11022021TotalPriceArea">
+              <div class="softx11022021TotalLeft">
+                <span>Total:</span>
+              </div>
+              <div class="softx11022021TotalRight">
+                 <div class="sfotx11022021TotalRighttop">
+                    <span class="softx11022021TotalRightDlrIcon"><i class="fas fa-dollar-sign"></i></span>
+                    <span class="softx11022021TotalRightNum">56</span>
+                    <p>VAT included, where applicable</p>
+                 </div>
+                 
+              </div>
+              
+            </div>
+            <div class="softx11022021PorceedToPayBottom">
+              <div class="softx11022021TopProcessToPay">
+                <a href="#">Proceed to Pay</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+  </body>
+</html>

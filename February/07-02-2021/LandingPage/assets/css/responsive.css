@@ -1,0 +1,69 @@
+@media (max-width: 1199px) {
+  .cashOnDeliveryBodyContent .cashOnDeliveryHeading h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliverySubHeading {
+    margin: 30px 0px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliverySubHeading h5 {
+    font-size: 16px;
+  }
+  .cashOnDeliveryBannerHeaderRight .signInSignOutButton a {
+    padding: 11px 29px;
+  }
+}
+@media (max-width: 991px) {
+  .cashOnDeliveryBannerHeaderRight .signInSignOutButton a {
+    padding: 8px 25px;
+    font-size: 14px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliveryHeading h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliverySubHeading h5 {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliveryDescription p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .cashOnDeliveryBannerHeaderLeft .logo {
+    width: 90px;
+  }
+  .cashOnDeliveryBodyContent {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .cashOnDeliveryBannerHeaderRight .signInSignOutButton a {
+    padding: 9px 18px;
+    font-size: 12px;
+  }
+  .cashOnDeliveryBannerHeaderRight .signInSignOutButton a.LoginButton {
+    margin-left: 4px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliveryHeading h2 {
+    font-size: 29px;
+    line-height: 39px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliveryDescription p {
+    font-size: 13px;
+    line-height: 23px;
+  }
+  .cashOnDeliveryBodyContent .cashOnDeliverySubHeading {
+    margin: 18px 0px;
+  }
+  .cashOnDeliveryBodyContent {
+    margin-top: 40px;
+  }
+  .cashOnDeliveryBannerHeaderLeft .logo {
+    width: 80px;
+  }
+}

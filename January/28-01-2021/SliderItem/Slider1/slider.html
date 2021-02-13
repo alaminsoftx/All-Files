@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <style>
+
+            /******************************
+            * Start Slider Area Css
+            *******************************/
+            body{
+                margin:0;
+                padding: 0;
+            }
+            .softX2021SliderContainerWidth {
+                max-width: 1600px;
+                margin: 0 auto;
+            }
+            .softX24012021sliderWrapper{
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+            }
+            .softX24012021sliderInner {
+                position: relative;
+            }
+            .softX24012021sliderArrowButton {
+                height: 500px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                padding: 0 20px !important;
+                box-sizing: border-box;
+                align-items: center;
+            }
+            .softX24012021sliderImage{
+                width: 100%;
+                height: 400px;
+            }
+            .softX24012021sliderImage img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .softX24012021sliderArrowButton button{
+                background: transparent;
+                border: none;
+                color: #fff;
+                font-size: 35px;
+                cursor: pointer;
+                outline: none;
+            }
+            .softX24012021sliderArrowButton button i{
+                font-weight: 300;
+            }
+
+
+           /******************************
+            * Start Category Menu Area Css
+            *******************************/
+          
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                padding-top:0px;
+                height: 500px;
+                overflow-y: scroll;
+                background-color: rgba(106, 176, 76,1.0);
+            }
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul li {
+                line-height: 40px;
+                margin: 0 20px;
+                transition: .1s;
+            }
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul li:not(:last-child){
+                border-bottom: 1px solid rgba(236, 240, 241, 0.39);
+            }
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul li a {
+                display: flex;
+                text-decoration: none;
+                font-family: arial;
+                color: #ffffffe8;
+                font-size: 14px;
+                justify-content: space-between;
+                font-weight: bold;
+            }
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul li:hover{
+                background-color: #0000000f;
+                padding: 0 5px;
+            }
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul li a span i{
+                font-weight: 400;
+                font-size:12px;
+            }
+            .softX24012021categoryNavArea .softX24012021categoryNavInner ul li a span{
+                margin-right:5px;
+            }
+
+            /* new */
+            .softX24012021categoryNavArea{
+             max-width: 250px;
+             width: 100%;
+             margin-left:-250px;
+             transition: .3s;
+           }
+           .softX24012021mainSlider {
+               width:100% !important;
+               position:relative;
+               transition: all .3s;
+               margin-right: -250px;
+           }
+           #softX24012021menu .active {
+               max-width: 0;
+               transition:.6s;
+           }
+           .active .softX24012021categoryNavArea{
+               margin-left:0px;
+           }
+           .active .softX24012021mainSlider {
+               transition: all .3s;
+           }
+           #softX24012021btn {
+               position: fixed;
+               left: 18px;
+               top: 18px;
+               cursor: pointer;
+               z-index: 99;
+           }
+      
+           #softX24012021btn span a{
+               position:relative;
+               width:30px;
+               height:2px;
+               background:#000;
+               margin:5px;
+               display:block;
+               transition:.3s;
+           }
+           .active #softX24012021btn {
+               position: fixed;
+               top: 18px;
+               padding-bottom: 4px;
+               left: 265px;
+           }
+           .active #softX24012021btn span{
+               
+           }
+           .active #softX24012021btn span a{
+               background:#000;
+               display:block;
+           }
+           .active #softX24012021btn span:nth-child(1) a {
+               transform: rotate(140deg);
+               position: relative;
+               top: 14px;
+               left: 1px;
+           }
+           .active #softX24012021btn span:nth-child(2) a{
+               visibility:hidden;
+               transition: none;
+           }
+           .active #softX24012021btn span:nth-child(3) a {
+               transform: rotate(-140deg);
+               position: relative;
+               top: 0;
+           }
+           .softX24012021sliderArrowButton, 
+            .softX24012021sliderImage, 
+            .softX24012021categoryNavArea{
+                height: 400px;
+            }
+
+
+
+
+
+                    /*
+        *  STYLE 4
+        */
+        .scrollbar
+        {
+            margin-left: 30px;
+            float: left;
+            height: 300px;
+            width: 65px;
+            background: #F5F5F5;
+            overflow-y: scroll;
+            margin-bottom: 25px;
+        }
+        ::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar
+        {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(55 109 32 / 74%);
+            border: transparent;
+            width: 5px;
+            border-radius: 10px;
+        }
+
+         /* Responsive css */
+
+         /* small device */
+         @media(min-width:600px){
+            
+         }
+         /* medium device */
+         @media(min-width:991px){
+            .softX24012021categoryNavArea{
+                max-width: 270px;
+                width: 100%;
+                margin-left:0px;
+                transition: .3s;
+           }
+           .softX24012021mainSlider {
+                    width: calc(100% - 270px);
+                    margin-right:0px;
+            }
+           #softX24012021btn {
+                visibility: hidden;;
+            }
+            .softX24012021sliderArrowButton, 
+            .softX24012021sliderImage, 
+            .softX24012021categoryNavArea{
+                height: 500px;
+            }
+            .softX24012021sliderImage{
+                width: 100%;
+                height: 500px;
+            }
+         }
+         /* large device */
+         @media(min-width:1366px){
+
+         }
+        </style>
+</head>
+
+<body>
+    <div class="softX2021SliderContainerWidth">
+        <div class="softX24012021sliderWrapper " id="softX24012021menu">
+            <!-- category -->
+            <div class="softX24012021categoryNavArea" >
+                <div class="softX24012021categoryNavInner">
+                    <ul>
+                        <li><a href="#">Electronic Device <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Electronic Accessories <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Kids Collection <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Women Collection <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Men Collection <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">TV And Home Application <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Sports And Outdoors <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                        <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- slider -->
+            <div id="softX24012021arraySlider" class="softX24012021mainSlider">
+                <div id="softX24012021btn">
+                    <span><a href="#"></a></span>
+                    <span><a href="#"></a></span>
+                    <span><a href="#"></a></span>
+                    
+                </div>
+                <div class="softX24012021sliderInner">
+                    <div class="softX24012021sliderArrowButton">
+                        <button id="softX24012021prev"><i class="fas fa-angle-left"></i></button>
+                        <button id="softX24012021next"><i class="fas fa-angle-right"></i></button>
+                    </div>
+                   <div class="softX24012021sliderImage">
+                        <img src="image/newSlier1.jpg" alt="">
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+
+
+
+    <script>
+        var photos = ['image/newSlier1.jpg', 'image/newSlier2.jpg', 'image/newSlier3.jpg'];
+        var selectImgTag = document.querySelector('img');
+        var counterItem = 0;
+
+
+        document.getElementById("softX24012021arraySlider").addEventListener("load", autoPlay());
+
+        document.getElementById('softX24012021next').addEventListener("click", function () {
+            counterItem++;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem >= photos.length) {
+                counterItem = 0;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        document.getElementById('softX24012021prev').addEventListener("click", function () {
+            counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        function autoPlay(){
+            setInterval(function (){
+                counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+            }, 3000);
+        }
+
+        document.getElementById('softX24012021btn').addEventListener("click", function(){
+            document.getElementById('softX24012021menu').classList.toggle('active');
+        });
+				
+				
+			
+
+    </script>
+</body>
+
+</html>

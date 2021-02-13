@@ -1,0 +1,4 @@
+1.    	background: rgb(253, 232, 231);
+2.	background: rgb(150, 192, 204);
+3.	background: rgb(120, 44, 192);
+4.	background: rgb(252, 228, 202);

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <style>
+
+            /******************************
+            * Start Slider Area Css
+            *******************************/
+            body{
+                margin:0;
+                padding: 0;
+            }
+            .sliderWrapper{
+                display: flex;
+                flex-direction: row;
+            }
+            .mainSlider{
+                width: calc(100% - 270px);
+            }
+            .sliderInner {
+                position: relative;
+            }
+            .sliderArrowButton {
+                height: 500px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                padding: 0 20px !important;
+                box-sizing: border-box;
+                align-items: center;
+            }
+            .sliderImage{
+                width: 100%;
+                height: 500px;
+            }
+            .sliderImage img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .sliderArrowButton button{
+                background: transparent;
+                border: none;
+                color: #fff;
+                font-size: 48px;
+                cursor: pointer;
+            }
+            .sliderArrowButton button i{
+                font-weight: 300;
+            }
+
+
+           /******************************
+            * Start Category Menu Area Css
+            *******************************/
+  
+            .categoryNavArea {
+                max-width: 270px;
+                width: 100%;
+                background: #fff;
+                height: 500px;
+                box-shadow: 0px 0px 2px 0px rgb(0, 0, 0,.1);
+            }
+          
+            .categoryNavArea .categoryNavInner ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                padding-top:30px;
+            }
+            .categoryNavArea .categoryNavInner ul li {
+                line-height: 40px;
+                margin: 0 20px;
+                transition: .1s;
+            }
+            .categoryNavArea .categoryNavInner ul li:not(:last-child){
+                border-bottom: 1px solid #DBDBE1B3;
+            }
+            .categoryNavArea .categoryNavInner ul li a {
+                display: flex;
+                text-decoration: none;
+                font-family: arial;
+                color: #000;
+                font-size: 14px;
+                justify-content: space-between;
+            }
+            .categoryNavArea .categoryNavInner ul li:hover{
+                background-color: #0000000f;
+                padding: 0 5px;
+            }
+            .categoryNavArea .categoryNavInner ul li a span i{
+                font-weight: 400;
+            }
+            .categoryNavArea .categoryNavInner ul li a span{
+                margin-right:10px;
+            }
+
+             /******************************
+            * Start Category Menu Area Css
+            *******************************/
+            @media(max-width: 1366px){
+                .categoryNavArea{
+                    max-width: 270px;
+                }
+            .mainSlider {
+                    width: calc(100% - 270px);
+                }
+            }
+
+            @media(max-width: 991px){
+                .categoryNavArea{
+                max-width: 250px;
+            }
+            .mainSlider {
+                    width: calc(100% - 250px);
+                }
+            }
+            
+            @media(min-width: 600px){
+                .categoryNavArea{
+                     max-width: 250px;
+                }
+                .mainSlider {
+                    width: calc(100% - 250px);
+                }
+            }
+         @media(max-width: 600px){
+           
+            .categoryNavArea{
+              max-width: 250px;
+              width: 100%;
+              margin-left:-250px;
+              transition: .3s;
+            }
+            .mainSlider {
+                width: 100% !important;
+				position:relative;
+            }
+            #menu .active {
+                max-width: 0;
+                transition:.6s;
+            }
+            .active .categoryNavArea{
+                max-width: 250px;
+                width: 100%;
+                margin-left:0px;
+            }
+            .active .mainSlider {
+                width: calc(100% - 250px) !important;
+                transition: all .3s;
+            }
+            #btn {
+                position: fixed;
+                left: 18px;
+                top: 18px;
+                cursor: pointer;
+                z-index: 99;
+            }
+       
+            #btn span a{
+                position:relative;
+                width:30px;
+                height:2px;
+                background:#000;
+                margin:5px;
+                display:block;
+                transition:.3s;
+            }
+            .active #btn {
+                position: fixed;
+                top: 18px;
+                padding-bottom: 4px;
+                left: 265px;
+            }
+            .active #btn span{
+                
+            }
+            .active #btn span a{
+                background:#000;
+                display:block;
+            }
+            .active #btn span:nth-child(1) a {
+                transform: rotate(140deg);
+                position: relative;
+                top: 14px;
+                left: 1px;
+            }
+            .active #btn span:nth-child(2) a{
+                visibility:hidden;
+                transition: none;
+            }
+            .active #btn span:nth-child(3) a {
+                transform: rotate(-140deg);
+                position: relative;
+                top: 0;
+            }
+            .sliderArrowButton, 
+            .sliderImage, 
+            .categoryNavArea{
+                height: 400px;
+            }
+         }
+        </style>
+</head>
+
+<body>
+    <div class="sliderWrapper " id="menu">
+        <!-- category -->
+        <div class="categoryNavArea" >
+            <div class="categoryNavInner">
+                <ul>
+                    <li><a href="#">Electronic Device <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">Electronic Accessories <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">Kids Collection <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">Women Collection <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">Men Collection <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">TV And Home Application <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">Sports And Outdoors <span><i class="fas fa-angle-right"></i></span></a></li>
+                    <li><a href="#">Health And Beauty <span><i class="fas fa-angle-right"></i></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- slider -->
+        <div id="arraySlider" class="mainSlider">
+            <div class="">
+				<div id="btn">
+					<span><a href="#"></a></span>
+					<span><a href="#"></a></span>
+					<span><a href="#"></a></span>
+					
+				</div>
+			</div>
+            <div class="sliderInner">
+                <div class="sliderArrowButton">
+                    <button id="prev"><i class="fas fa-angle-left"></i></button>
+                    <button id="next"><i class="fas fa-angle-right"></i></button>
+                </div>
+               <div class="sliderImage">
+                    <img src="image/3.jpg" alt="">
+               </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+
+
+
+    <script>
+        var photos = ['image/3.jpg', 'image/2.jpg', 'image/3.jpg'];
+        var selectImgTag = document.querySelector('img');
+        var counterItem = 0;
+
+
+        document.getElementById("arraySlider").addEventListener("load", autoPlay());
+
+        document.getElementById('next').addEventListener("click", function () {
+            counterItem++;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem >= photos.length) {
+                counterItem = 0;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        document.getElementById('prev').addEventListener("click", function () {
+            counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        function autoPlay(){
+            setInterval(function (){
+                counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+            }, 3000);
+        }
+
+        document.getElementById('btn').addEventListener("click", function(){
+            document.getElementById('menu').classList.toggle('active');
+        });
+				
+				
+			
+
+    </script>
+</body>
+
+</html>

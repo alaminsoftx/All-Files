@@ -1,0 +1,169 @@
+/****
+** START GLOBAL CSS
+*** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.mainSlider {
+  height: 350px;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+/****
+** END GLOBAL CSS
+*** */
+
+/****
+** START SLIDER CSS
+*** */
+.slider {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+.top {
+  z-index: 3;
+  transition: 0.5s ease transform;
+}
+.slide.active {
+  z-index: 3;
+  transform: translateX(0);
+}
+.slide.transition {
+  transition: 0.5s ease;
+}
+.slide-1 {
+  background-color: rgb(253, 232, 231);
+}
+.slide-2 {
+  background-color: rgb(150, 192, 204);
+}
+.slide-3 {
+  background-color: rgb(120, 44, 192);
+}
+.slide-4 {
+  background-color: rgb(252, 228, 202);
+}
+
+.dots {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dots .dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(6 6 6 / 19%);
+  border-radius: 10px;
+  margin: 10px 5px 10px 5px;
+  transition: 0.3s ease width;
+  cursor: pointer;
+}
+.dots .dot.active {
+  background-color: white;
+  width: 40px;
+}
+
+.slide {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+.sliderContentArea {
+  display: flex;
+}
+.sliderRightContent {
+  width: calc(100% - 210px);
+  margin-left: 210px;
+  height: 350px;
+}
+.content {
+  height: 350px;
+}
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/****
+** END SLIDER CSS
+*** */
+
+/****
+** START CATEGORY MENU CSS
+*** */
+
+.categoryMenuContaine {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* category Menu */
+.categoryMenu {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  background: #fff;
+  height: 350px;
+  width: 210px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+.categoryMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.categoryMenu ul li {
+  padding: 1px 10px;
+}
+.categoryMenu ul li:not(:last-child) {
+  margin-bottom: 1px;
+}
+.categoryMenu ul li a {
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 26px;
+  color: #757575;
+}
+/****
+** END CATEGORY MENU CSS
+*** */

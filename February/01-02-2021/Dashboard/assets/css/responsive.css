@@ -1,0 +1,40 @@
+@media(max-width:991px){
+    .SoftX31012021MainThemeOneDashBoard {   
+        left:-100%;
+        top:0px;
+        transition: all .1s;
+    }
+    .SoftX01022021ToggleAddClass .SoftX01022021ToggleButtonArea{
+        left: -30px;
+        z-index: 983;
+    }
+    .SoftX01022021ToggleButtonArea{
+        display: block;
+    }
+    .SoftX01022021ToggleAddClass .SoftXToggleDashBoardButtonItem1::after{
+        transform: rotate(44deg);
+        top: 7px !important;
+    }
+    .SoftX01022021ToggleAddClass .SoftXToggleDashBoardButtonItem2::after{
+        visibility: hidden;
+    }
+    .SoftX01022021ToggleAddClass .SoftXToggleDashBoardButtonItem3::after{
+        transform: rotate(-44deg);
+        top:-2px !important;
+    }
+    .SoftX01022021ToggleAddClass .SoftX31012021MainThemeOneDashBoard{
+        left:0px;
+    }
+    .SoftX31012021MainThemeOneDashBoard{
+        height: 100vh;
+        border-radius: 0px !important;
+    }
+
+    .SoftX01022021ToggleAddClass .SoftX01022021MinThemeOneHeaderArea{
+        width: calc(100% - 260px) ;
+        margin-left: auto;
+       
+        
+    }
+
+}

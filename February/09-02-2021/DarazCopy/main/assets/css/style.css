@@ -1,0 +1,483 @@
+/***
+* START GLOBAL CSS
+*** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 1240px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.mainSlider {
+  height: 350px;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+/* root */
+:root {
+  /***
+*fonts size
+***/
+  --headerMetaLargeFonts: 11px;
+  --headerMetaSmallFonts: 10px;
+
+  /***
+*text color
+***/
+  --headerMetaTextColor: rgb(75 83 97);
+  --textHoverColor: #f36f36;
+  /***
+*bg color
+***/
+  --headerMetaBgColor: #ececec;
+}
+/* root */
+/***
+* END GLOBAL CSS
+*** */
+
+/***
+* START HEADER CSS
+*** */
+.softx08022021HeaderMetaArea {
+  background-color: var(--headerMetaBgColor);
+  padding: 3px 0;
+  display: none;
+}
+
+.softx08022021HeaderMeta ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.softx08022021HeaderMeta ul li {
+  padding: 0px 10px;
+}
+.softx08022021HeaderMeta ul li:last-child {
+  padding-right: 0px;
+}
+.softx08022021HeaderMeta ul li a {
+  font-size: var(--headerMetaSmallFonts);
+  font-weight: bold;
+  color: var(--headerMetaTextColor);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.softx08022021HeaderMeta ul li a:hover {
+  color: var(--textHoverColor);
+}
+
+.softx08022021MainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.softx08022021MainHeaderArea {
+  padding: 5px 0px 12px 0;
+  background-color: #fff;
+}
+
+/* start logo */
+.MainLogoSize {
+  width: 100px;
+}
+.softx08022021Logo {
+  width: 50%;
+}
+.softx08022021Logo,
+.softx08022021ShopIcon {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+/* end logo */
+/* start cart */
+.softx08022021ShopIcon {
+  width: 50%;
+}
+.softx08022021ShopIcon {
+  justify-content: flex-end;
+}
+
+/* end cart */
+
+/* start search */
+.softx08022021SearchArea {
+  width: 0;
+  opacity: 0;
+}
+
+.searchIcon i {
+  color: #fff;
+  font-weight: 400;
+}
+.searchFiled {
+  visibility: hidden;
+}
+.softx0802202App img {
+  display: none;
+}
+/* end search */
+
+/***
+* END HEADER CSS
+*** */
+
+/****
+** START SLIDER CSS
+*** */
+.slider {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+.top {
+  z-index: 3;
+  transition: 0.5s ease transform;
+}
+.slide.active {
+  z-index: 3;
+  transform: translateX(0);
+}
+.slide.transition {
+  transition: 0.5s ease;
+}
+.slide-1 {
+  background-color: rgb(253, 232, 231);
+}
+.slide-2 {
+  background-color: rgb(150, 192, 204);
+}
+.slide-3 {
+  background-color: rgb(120, 44, 192);
+}
+.slide-4 {
+  background-color: rgb(252, 228, 202);
+}
+.buttons div {
+  cursor: pointer;
+  pointer-events: all;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.582);
+}
+.buttons div:hover {
+  background-color: gray;
+}
+.dots {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dots .dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(6 6 6 / 19%);
+  border-radius: 10px;
+  margin: 10px 5px 10px 5px;
+  transition: 0.3s ease width;
+  cursor: pointer;
+}
+.dots .dot.active {
+  background-color: white;
+  width: 40px;
+}
+.buttons {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  color: black;
+  display: flex;
+  flex-direction: row-reverse;
+  width: auto;
+  font-size: 50px;
+}
+.slide {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+.sliderContentArea {
+  display: flex;
+}
+.sliderRightContent {
+  width: calc(100% - 210px);
+  margin-left: 210px;
+  height: 350px;
+}
+.content {
+  height: 350px;
+}
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slide h1 {
+  font-size: 50px;
+}
+.slide p {
+  font-size: 15px;
+  margin-top: 20px;
+  line-height: 24px;
+}
+.content button {
+  display: inline-block;
+  padding: 13px 46px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+/****
+** END SLIDER CSS
+*** */
+
+/****
+** START CATEGORY MENU CSS
+*** */
+
+.categoryMenuContaine {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* category Menu */
+.categoryMenu {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  background: #fff;
+  height: 350px;
+  width: 210px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+.categoryMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.categoryMenu ul li {
+  padding: 1px 10px;
+}
+.categoryMenu ul li:not(:last-child) {
+  margin-bottom: 1px;
+}
+.categoryMenu ul li a {
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 26px;
+  color: #757575;
+}
+/****
+** END CATEGORY MENU CSS
+*** */
+
+/****
+** START FLAS SALE CSS
+*** */
+
+/* start flash sale product css */
+.softx09022021FlashSaleProductArea {
+  padding: 30px 0;
+}
+.softx09022021FlashSaleProduct {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 5px 0;
+}
+/* title */
+.softx09022021FlashSaleTitle {
+  margin-bottom: 8px;
+}
+.softx09022021FlashSaleTitle h3 {
+  font-family: sans-serif;
+  color: rgba(47, 53, 66, 1);
+}
+
+.softx0922021OnsaleArea {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 10px 8px 10px 8px;
+  justify-content: space-between;
+  border-bottom: 1px solid #1d1b1b36;
+}
+.softx0922021OnsaleEnding {
+  display: flex;
+}
+.softx0922021OnsaleEndingRight ul {
+  display: flex;
+  flex-direction: row;
+}
+.softx0922021OnsaleNow p {
+  color: #f57224;
+  font-size: 13px;
+}
+.softx0922021OnsaleEndingLeft p {
+  color: #202020;
+  font-size: 13px;
+}
+.softx0922021OnsaleEndingRight ul li {
+  width: 25px;
+  height: 25px;
+  background: #ff6801;
+  line-height: 18px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 12px;
+  margin-right: 5px;
+  border-radius: 2px;
+  color: #fff;
+}
+.softx0922021OnsaleEndingLeft {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.softx0922021OnsaleNow {
+  align-items: center;
+  display: flex;
+}
+.softx0922021OnsaleShopNow {
+  display: flex;
+  align-items: center;
+}
+.softx0922021OnsaleShopNow a {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ff6801;
+  border: 1px solid #ff6801;
+  padding: 4px 7px;
+  border-radius: 2px;
+}
+/* single item */
+.softx09022021FlashSaleProductItem {
+  width: calc(50% - 16px);
+  margin: 8px;
+  border-radius: 2px;
+  transition: 0.3s;
+  /* border: 1px solid #eee; */
+}
+
+.softx09022021FlashSaleProductItem:hover {
+  box-shadow: 0px 4px 4px 0px rgb(197 198 204);
+  /* border: 1px solid transparent; */
+}
+/* product img */
+.softx09022021FlashSaleProductImg {
+  height: 180px;
+}
+.softx09022021FlashSaleProductImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* product text */
+.softx09022021FlashSaleProductText {
+  padding: 10px;
+}
+.softx09022021FlashSaleProductText h4 {
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: normal;
+  color: rgba(87, 96, 111, 1);
+  line-height: 24px;
+}
+.softx09022021FlashSaleProductPrice {
+  line-height: 28px;
+}
+.softx09022021FlashSaleProductPrice span {
+  color: #f57224;
+}
+/* curency */
+.softx09022021FlashSaleProductPrice .moneySign i {
+  font-size: 12px;
+  font-weight: 400;
+}
+.softx09022021FlashSaleProductPrice .money {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: -2px;
+}
+/*view button*/
+.viewMoreButton {
+  text-align: right;
+}
+.viewMoreButton a {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgba(47, 53, 66, 1);
+  transition: all 0.3s;
+  display: inline-block;
+  margin-top: 7px;
+}
+.viewMoreButton a:hover {
+  color: #f57224;
+}
+.viewMoreButton a i {
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+/* end flash sale product css */
+
+/****
+** END FLAS SALE CSS
+*** */

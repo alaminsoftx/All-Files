@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+	<style>
+	/****
+** START GLOBAL CSS
+*** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.mainSlider {
+  height: 350px;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+/****
+** END GLOBAL CSS
+*** */
+
+/****
+** START SLIDER CSS
+*** */
+.slider {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+.top {
+  z-index: 3;
+  transition: 0.5s ease transform;
+}
+.slide.active {
+  z-index: 3;
+  transform: translateX(0);
+}
+.slide.transition {
+  transition: 0.5s ease;
+}
+.slide-1 {
+  background-color: rgb(253, 232, 231);
+}
+.slide-2 {
+  background-color: rgb(150, 192, 204);
+}
+.slide-3 {
+  background-color: rgb(120, 44, 192);
+}
+.slide-4 {
+  background-color: rgb(252, 228, 202);
+}
+
+.dots {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dots .dot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(6 6 6 / 19%);
+  border-radius: 10px;
+  margin: 10px 5px 10px 5px;
+  transition: 0.3s ease width;
+  cursor: pointer;
+}
+.dots .dot.active {
+  background-color: white;
+  width: 40px;
+}
+
+.slide {
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+.sliderContentArea {
+  display: flex;
+}
+.sliderRightContent {
+  width: calc(100% - 210px);
+  margin-left: 210px;
+  height: 350px;
+}
+.content {
+  height: 350px;
+}
+.content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/****
+** END SLIDER CSS
+*** */
+
+/****
+** START CATEGORY MENU CSS
+*** */
+
+.categoryMenuContaine {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* category Menu */
+.categoryMenu {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  background: #fff;
+  height: 350px;
+  width: 210px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+.categoryMenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.categoryMenu ul li {
+  padding: 1px 10px;
+}
+.categoryMenu ul li:not(:last-child) {
+  margin-bottom: 1px;
+}
+.categoryMenu ul li a {
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 26px;
+  color: #757575;
+}
+/****
+** END CATEGORY MENU CSS
+*** */
+
+	</style>
+  </head>
+  <body>
+    <section class="mainSlider">
+      <div class="slider">
+        <div class="slide slide-1 active">
+          <div class="container">
+            <div class="sliderContentArea">
+              <div class="sliderLeftContent"></div>
+              <div class="sliderRightContent">
+                <div class="content">
+                  <img src="https://i.ibb.co/SdrRWRr/1.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-2">
+          <div class="container">
+            <div class="sliderContentArea">
+              <div class="sliderLeftContent"></div>
+              <div class="sliderRightContent">
+                <div class="content">
+                  <img src="https://i.ibb.co/6sz7Yjh/2.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-3">
+          <div class="container">
+            <div class="sliderContentArea">
+              <div class="sliderLeftContent"></div>
+              <div class="sliderRightContent">
+                <div class="content">
+                  <img src="https://i.ibb.co/GWVQPCV/3.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide slide-4">
+          <div class="container">
+            <div class="sliderContentArea">
+              <div class="sliderLeftContent"></div>
+              <div class="sliderRightContent">
+                <div class="content">
+                  <img src="https://i.ibb.co/S74tSvx/4.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--start category menu -->
+      <div class="categoryMenuContaine">
+        <div class="categoryMenu">
+          <ul>
+            <li><a href="#">Electronic Devices</a></li>
+            <li><a href="#">Electronic Accessories</a></li>
+            <li><a href="#">TV & Home Appliances</a></li>
+            <li><a href="#">Health & Beauty</a></li>
+            <li><a href="#">Babies & Toys</a></li>
+            <li><a href="#">Groceries & Pets</a></li>
+            <li><a href="#">Home & Lifestyle</a></li>
+            <li><a href="#">Women's Fashion</a></li>
+            <li><a href="#">Men's Fashion</a></li>
+            <li><a href="#">Watches & Accessories</a></li>
+            <li><a href="#">Sports & Outdoor</a></li>
+          </ul>
+        </div>
+      </div>
+      <!--end category menu -->
+      <div class="dots"></div>
+    </section>
+
+    <!-- scripts -->
+    <script>
+	const slides = Array.from(document.querySelectorAll(".slide"));
+const slider = document.querySelectorAll(".slider");
+const buttons = document.querySelectorAll(".buttons div");
+const dotsEl = document.querySelector(".dots");
+let timeoutId;
+
+function getNextPrev() {
+  const activeSlide = document.querySelector(".slide.active");
+  const activeIndex = slides.indexOf(activeSlide);
+  let next, prev;
+  if (activeIndex === slides.length - 1) {
+    next = slides[0];
+  } else {
+    next = slides[activeIndex + 1];
+  }
+  if (activeIndex === 0) {
+    prev = slides[slides.length - 1];
+  } else {
+    prev = slides[activeIndex - 1];
+  }
+  return [next, prev];
+}
+
+function getPosition() {
+  const activeSlide = document.querySelector(".slide.active");
+  const activeIndex = slides.indexOf(activeSlide);
+  const [next, prev] = getNextPrev();
+  slides.forEach((slide, index) => {
+    if (index === activeIndex) {
+      slide.style.transform = "translateX(0)";
+    } else if (slide === prev) {
+      slide.style.transform = "translateX(-100%)";
+    } else if (slide === next) {
+      slide.style.transform = "translateX(100%)";
+    } else {
+      slide.style.transform = "translateX(100%)";
+    }
+    slide.addEventListener("transitionend", () => {
+      slide.classList.remove("top");
+    });
+  });
+}
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.classList.contains("next")) getNextSlide();
+    else if (button.classList.contains("prev")) getPrevSlide();
+  });
+});
+
+function getNextSlide() {
+  clearInterval(timeoutId);
+  const current = document.querySelector(".slide.active");
+  const [next, prev] = getNextPrev();
+  if (current.classList.contains("top")) {
+    return;
+  }
+
+  current.classList.add("top");
+  next.classList.add("top");
+  current.style.transform = "translate(-100%)";
+  current.classList.remove("active");
+  next.style.transform = "translateX(0)";
+  next.classList.add("active");
+  getPosition();
+  getActiveDot();
+  autoLoop();
+}
+
+function getPrevSlide() {
+  clearInterval(timeoutId);
+  const current = document.querySelector(".active");
+  const [next, prev] = getNextPrev();
+  current.classList.add("top");
+  prev.classList.add("top");
+  current.style.transform = "translate(100%)";
+  current.classList.remove("active");
+  prev.style.transform = "translateX(0)";
+  prev.classList.add("active");
+  getPosition();
+  getActiveDot();
+  autoLoop();
+}
+getPosition();
+
+// dots
+slides.forEach((slide) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  dotsEl.appendChild(dot);
+});
+
+function getActiveDot() {
+  const allDots = document.querySelectorAll(".dots .dot");
+  allDots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  const activeSlide = document.querySelector(".slide.active");
+  const activeIndex = slides.indexOf(activeSlide);
+  allDots[activeIndex].classList.add("active");
+}
+
+function functionalDots() {
+  const allDots = document.querySelectorAll(".dots .dot");
+  allDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      getDotSlide(index);
+    });
+  });
+}
+
+function getDotSlide(index) {
+  clearTimeout(timeoutId);
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  const current = slides[index];
+  current.classList.add("active");
+  getPosition();
+  getActiveDot();
+  autoLoop();
+}
+
+function autoLoop() {
+  timeoutId = setTimeout(() => {
+    getNextSlide();
+  }, 6000);
+}
+
+getActiveDot();
+functionalDots();
+autoLoop();
+	</script>
+  </body>
+</html>

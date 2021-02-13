@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page slider</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <style>
+
+            /******************************
+            * Start Slider Area Css
+            *******************************/
+            body{
+                margin:0;
+                padding: 0;
+                font-family: Tahoma;
+            }
+            .softX24012021sliderWrapper{
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+            }
+            .softX24012021sliderInner {
+                position: relative;
+            }
+            .softX24012021sliderArrowButton {
+                height: 400px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                padding: 0 20px !important;
+                box-sizing: border-box;
+                align-items: center;
+                z-index: 99;
+            }
+            .softX24012021sliderImage{
+                width: 100%;
+                height: 400px;
+            }
+            .softX24012021sliderImage img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .softX24012021sliderArrowButton button{
+                background: transparent;
+                border: none;
+                color: #fff;
+                font-size: 40px;
+                cursor: pointer;
+                outline:none !important;
+            }
+            .softX24012021sliderArrowButton button i{
+                font-weight: 300;
+            }
+
+
+            /* Slider text */
+            .softX27012021AboutSliderText{
+                position:absolute;
+                width:100%;
+                height: 100%;
+                left:0;
+                top:0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .softX27012021AboutSliderText h2{
+                font-size: 25px;
+                font-weight: bold;
+                color:#f5f6fa;
+            }
+
+         /* Responsive css */
+
+         /* small device */
+         @media(min-width:600px){
+            .softX27012021AboutSliderText h2{
+                font-size: 30px;
+            }
+         }
+         /* medium device */
+         @media(min-width:991px){
+            .softX27012021AboutSliderText h2{
+                font-size: 40px;
+            }
+         }
+         /* large device */
+         @media(min-width:1366px){
+
+         }
+        </style>
+</head>
+
+<body>
+        <!-- slider -->
+    <div id="softX24012021arraySlider" class="softX24012021mainSlider">
+        <div class="softX24012021sliderInner">
+            <div class="softX24012021sliderArrowButton">
+                <button id="softX24012021prev"><i class="fas fa-angle-left"></i></button>
+                <button id="softX24012021next"><i class="fas fa-angle-right"></i></button>
+            </div>
+            <div class="softX24012021sliderImage">
+                <img src="image/aboutPageSlider1.jpg" alt="">
+                <div class="softX27012021AboutSliderText">
+                    <h2>About SoftX</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+
+
+
+    <script>
+        var photos = ['image/aboutPageSlider1.jpg', 'image/aboutPageSlider2.jpg', 'image/aboutPageSlider3.jpg'];
+        var selectImgTag = document.querySelector('img');
+        var counterItem = 0;
+
+
+        document.getElementById("softX24012021arraySlider").addEventListener("load", autoPlay());
+
+        document.getElementById('softX24012021next').addEventListener("click", function () {
+            counterItem++;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem >= photos.length) {
+                counterItem = 0;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        document.getElementById('softX24012021prev').addEventListener("click", function () {
+            counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        function autoPlay(){
+            setInterval(function (){
+                counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+            }, 3000);
+        }
+				
+				
+    </script>
+</body>
+
+</html>

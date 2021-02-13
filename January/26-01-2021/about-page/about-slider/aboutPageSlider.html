@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page slider</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+        <style>
+
+            /******************************
+            * Start Slider Area Css
+            *******************************/
+            body{
+                margin:0;
+                padding: 0;
+            }
+            .softX24012021sliderWrapper{
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+            }
+            .softX24012021sliderInner {
+                position: relative;
+            }
+            .softX24012021sliderArrowButton {
+                height: 400px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: absolute;
+                width: 100%;
+                padding: 0 20px !important;
+                box-sizing: border-box;
+                align-items: center;
+            }
+            .softX24012021sliderImage{
+                width: 100%;
+                height: 400px;
+            }
+            .softX24012021sliderImage img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .softX24012021sliderArrowButton button{
+                background: transparent;
+                border: none;
+                color: #fff;
+                font-size: 48px;
+                cursor: pointer;
+            }
+            .softX24012021sliderArrowButton button i{
+                font-weight: 300;
+            }
+
+
+         /* Responsive css */
+
+         /* small device */
+         @media(min-width:600px){
+            
+         }
+         /* medium device */
+         @media(min-width:991px){
+            .softX24012021sliderImage{
+                width: 100%;
+                height: 400px;
+            }
+         }
+         /* large device */
+         @media(min-width:1366px){
+
+         }
+        </style>
+</head>
+
+<body>
+    <div class="softX24012021sliderWrapper">
+        <!-- slider -->
+        <div id="softX24012021arraySlider" class="softX24012021mainSlider">
+            <div id="softX24012021btn">
+                <span><a href="#"></a></span>
+                <span><a href="#"></a></span>
+                <span><a href="#"></a></span>
+                
+            </div>
+            <div class="softX24012021sliderInner">
+                <div class="softX24012021sliderArrowButton">
+                    <button id="softX24012021prev"><i class="fas fa-angle-left"></i></button>
+                    <button id="softX24012021next"><i class="fas fa-angle-right"></i></button>
+                </div>
+               <div class="softX24012021sliderImage">
+                    <img src="image/3.jpg" alt="">
+               </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+
+
+
+    <script>
+        var photos = ['image/3.jpg', 'image/2.jpg', 'image/3.jpg'];
+        var selectImgTag = document.querySelector('img');
+        var counterItem = 0;
+
+
+        document.getElementById("softX24012021arraySlider").addEventListener("load", autoPlay());
+
+        document.getElementById('softX24012021next').addEventListener("click", function () {
+            counterItem++;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem >= photos.length) {
+                counterItem = 0;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        document.getElementById('softX24012021prev').addEventListener("click", function () {
+            counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+        });
+
+        function autoPlay(){
+            setInterval(function (){
+                counterItem--;
+            selectImgTag.src = photos[counterItem];
+            if (counterItem < 0) {
+                counterItem = photos.length - 1;
+                selectImgTag.src = photos[counterItem];
+            } else {
+                selectImgTag.src = photos[counterItem];
+            }
+            }, 3000);
+        }
+				
+				
+    </script>
+</body>
+
+</html>

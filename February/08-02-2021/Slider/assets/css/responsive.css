@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+  .content {
+    left: 20px;
+  }
+  .dots {
+    left: 0;
+    transform: translateX(0);
+  }
+}

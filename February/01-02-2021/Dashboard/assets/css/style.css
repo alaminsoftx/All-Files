@@ -1,0 +1,218 @@
+/* ==================================================
+==================== Global Css =====================
+===================================================== */
+body{
+    margin:0;
+    padding:0;
+    background-color: var(--color1);
+    font-family: 'Poppins', sans-serif;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+:root {
+    --color1: #eef5ff; 
+}
+:root {
+    --color2:  #ffff; 
+}
+:root {
+    --color3: #193b68; 
+}
+/* ==================================================
+================== Header Css ====================
+===================================================== */
+.SoftX01022021MinThemeOneHeaderArea{
+    width: 100%;
+    padding: 0px 30px;
+    background-color: var( --color2);
+    height: 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+   
+}
+.SoftX01202021HeaderLeftArea{
+    max-width: 260px;
+    width: 100%;
+    position: relative;
+    height: 60px;
+}
+.SoftX01202021HeaderLeftArea ul{
+    cursor: pointer;
+}
+.SoftX01202021HeaderLeftArea ul li.SoftXToggleDashBoardButtonItem1{
+    position: relative;
+}
+.SoftX01202021HeaderLeftArea ul li.SoftXToggleDashBoardButtonItem2{
+    position: relative;
+}
+.SoftX01202021HeaderLeftArea ul li.SoftXToggleDashBoardButtonItem3{
+    position: relative;
+}
+.SoftX01202021HeaderLeftArea ul li.SoftXToggleDashBoardButtonItem1::after{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width:25px;
+    height: 2px;
+    background-color: var(--color3);
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
+    transition:all .3s;
+}
+.SoftX01202021HeaderLeftArea ul li.SoftXToggleDashBoardButtonItem2::after{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width:25px;
+    height: 2px;
+    background-color: var(--color3);
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
+    transition:all .3s;
+}
+.SoftX01202021HeaderLeftArea ul li.SoftXToggleDashBoardButtonItem3::after{
+    content: "";
+    position: absolute;
+    left:0;
+    top:0;
+    width:25px;
+    height: 2px;
+    background-color: var(--color3);
+    -webkit-transition:all .3s;
+    -o-transition:all .3s;
+    transition:all .3s;
+}
+.SoftX01202021HeaderLeftArea ul li{
+   padding-bottom:5px;
+}
+
+
+.SoftX01022021ToggleButtonArea {
+	width: 30px;
+	padding: 5px;
+	position: absolute;
+	top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    display: none;
+}
+/* ==================================================
+================== Dashboard Css ====================
+===================================================== */
+.SoftX31012021MainThemeOneDashBoard {
+    max-width: 260px;
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    background-color: var(--color2);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 30px;
+    position: fixed;
+    left:0;
+    top:60px;
+    overflow-y: scroll;
+    
+}
+.SoftX31012021MainThemeLogoArea{
+    margin-bottom: 30px;
+}
+.SoftX31012021MainThemeNavigationItem{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+}
+/* navigation */
+.SoftX31012021MainThemeNavigationItem ul{}
+.SoftX31012021MainThemeNavigationItem ul li {
+    position: relative;
+    z-index: 999 !important;
+    border-left: 3px solid transparent;
+}
+.addBgColor {
+    background-color: var( --color1) !important;
+    width: calc(100% + 60px);
+    padding-left: 30px;
+    left: -30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 30px;
+    border-left: 3px solid #1479FF !important;
+}
+.SoftX31012021MainThemeNavigationSubMenu{
+    position: absolute;
+    visibility: hidden;
+}
+.addBgColor .SoftX31012021MainThemeNavigationSubMenu {
+    display: block !important;
+    background: var( --color2) !important;
+    width: calc(100% + 63px);
+    position: relative;
+    padding-left: 60px;
+    left: -33px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-left: 3px solid var( --color2) !important;
+    z-index: 999 !important;
+    visibility: visible;
+}
+
+.SoftX31012021MainThemeNavigationItem ul li a{
+    padding: 11px 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color3);
+    line-height: 21px;
+    display: block;
+}
+.SoftX31012021MainThemeNavigationItem ul li a.hasSubmenu{
+    position: relative;
+}
+.SoftX31012021MainThemeNavigationItem ul li a.hasSubmenu::before{
+    content:"\eab8";
+    position: absolute;
+    right:0;
+    font-family: IcoFont;
+    font-size: 14px;
+}
+.addBgColor  a.hasSubmenu::before{
+    content:"\eab2" !important;
+    position: absolute;
+    right:0;
+    font-family: IcoFont;
+    font-size: 15px;
+    background-color: var( --color1);
+    z-index: 999;
+}
+.SoftX31012021MainThemeNavigationItem ul li a span{}
+.SoftX31012021MainThemeNavigationItem ul li a span i{
+    color: var(--color3);
+    font-size: 14px;
+    line-height: 15px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* submenu */
+.hasSubmenuItem{
+    position: relative;
+}
+

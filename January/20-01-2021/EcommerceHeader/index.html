@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Header</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    
+        <style>
+            body{
+                margin:0;
+                padding:0;
+            }
+           
+            a{
+                text-decoration: none;
+                display: inline-block;
+            }
+            .headerSection {
+                box-shadow: -2px 2px 45px -20px rgba(0,0,0,.3);
+                border-radius: 5px;
+                padding: 10px 15px;
+            }
+            .headerInner {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                line-height: 0px;
+            }
+
+            .headerLeft {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .logoSize{
+                width:35px;
+            }
+            .headerLeft .logo a{
+                display: flex;
+                align-items: center;
+            }
+            .headerRight {
+                display: flex;
+                align-items: center;
+            }
+            .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                display: inline-block;
+                color: #2B3361;
+                font-weight: 500;
+                font-size: 15px;
+                margin-left:15px;
+            }
+
+           
+
+          
+           /*Responsive  for mobile Device */
+           @media(min-width:600px){
+                .headerSection {
+                    padding: 15px 25px;
+                }
+                .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                    font-size: 16px;
+                    margin-left: 20px;
+                }
+                .logoSize{
+                    width:45px;
+                }
+            }
+            
+              /*Responsive  for Desktop Device */
+              @media(min-width:991px){
+                .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                    font-size: 17px;
+                    margin-left: 20px;
+                }
+                .logoSize{
+                    width:50px;
+                }
+            }   
+
+
+             /*Responsive  for Desktop Device */
+             @media(min-width:1366px){
+                .searchIcon i, .headerRight .singUp i, .headerRight .cartIcon a i {
+                    font-size: 23px;
+                }
+                .logoSize{
+                    width:60px !important;
+                }
+            }
+            
+             
+
+
+        </style>
+    </head>
+    <body>
+        <section class="headerSection">
+            <div class="headerInner">
+                <div class="headerLeft">
+                    <div class="logo">
+                        <a href="#"><img class="logoSize" src="image/logo.png" alt=""></a>
+                    </div>
+                </div>
+                
+                <div class="headerRight">
+                    <div class="searchIcon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="singUp">
+                        <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+                    </div>
+                    <div class="cartIcon">
+                        <a href="#"><i class="fas fa-cart-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
