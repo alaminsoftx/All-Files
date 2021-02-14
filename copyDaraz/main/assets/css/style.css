@@ -753,7 +753,7 @@ a {
 *** */
 .softx14022021FooterTop {
   background-color: #2e2e54;
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 /* column flex */
@@ -768,16 +768,15 @@ a {
 .softx14022021FooterColumn1Inner p {
   font-size: 15px;
   color: rgba(241, 242, 246, 1);
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .softx14022021FooterColumn1Inner {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
-
 .softx14022021FooterColumn1Inner ul li a {
   font-size: 12px;
   color: rgba(220, 221, 225, 1);
-  line-height: 25px;
+  line-height: 19px;
 }
 
 /* qr */

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoppiyaMall</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* start global css */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 1210px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      a {
+        text-decoration: none;
+      }
+      /* end global css */
+
+      /* start flash sale product css */
+      .softx13022021SoppiyaMallArea {
+        padding: 30px 0;
+      }
+      .softx13022021SoppiyaMall {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      /* title */
+      .softx13022021FlashSaleTitle {
+        margin-bottom: 8px;
+      }
+      .softx13022021FlashSaleTitle h3 {
+        font-family: sans-serif;
+        color: rgba(47, 53, 66, 1);
+      }
+      /* single item */
+      .softx13022021SoppiyaMallItem {
+        width: calc(50% - 10px);
+        margin: 5px;
+        border-radius: 2px;
+        transition: 0.3s;
+        background-color: #fff;
+      }
+
+      .softx13022021SoppiyaMallItem:hover {
+        box-shadow: 0px 4px 4px 0px rgb(197 198 204);
+        /* border: 1px solid transparent; */
+      }
+      /* product img */
+      .softx13022021SoppiyaMallImg {
+        height: 180px;
+      }
+      .softx13022021SoppiyaMallImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      /* product text */
+      .softx13022021SoppiyaMallText {
+        padding: 10px;
+      }
+      .softx13022021SoppiyaMallText h4 {
+        font-size: 14px;
+        font-family: sans-serif;
+        font-weight: normal;
+        color: rgba(87, 96, 111, 1);
+        line-height: 24px;
+      }
+      .softx13022021SoppiyaMallPrice {
+        line-height: 28px;
+      }
+      .softx13022021SoppiyaMallPrice span {
+        color: #f57224;
+      }
+      /* curency */
+      .softx13022021SoppiyaMallPrice .moneySign i {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .softx13022021SoppiyaMallPrice .money {
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: -2px;
+      }
+
+      /*view button*/
+      .viewMoreButton {
+        text-align: right;
+      }
+      .viewMoreButton a {
+        text-decoration: none;
+        font-size: 14px;
+        color: rgba(47, 53, 66, 1);
+        transition: all 0.3s;
+        display: inline-block;
+        margin-top: 7px;
+      }
+      .viewMoreButton a:hover {
+        color: #f57224;
+      }
+      .viewMoreButton a i {
+        font-size: 11px;
+        font-weight: 400;
+        margin-left: 5px;
+      }
+      /* end flash sale product css */
+
+      /* for responsive */
+
+      @media (min-width: 600px) {
+        .softx13022021SoppiyaMallItem {
+          width: calc(33.33% - 10px);
+          margin: 5px;
+        }
+        .softx13022021SoppiyaMallImg {
+          height: 188px;
+        }
+      }
+      @media (min-width: 768px) {
+        .softx13022021SoppiyaMallItem {
+          width: calc(25% - 10px);
+          margin: 5px;
+          border-radius: 2px;
+          transition: 0.3s;
+        }
+        .softx13022021SoppiyaMallImg {
+          height: 188px;
+        }
+        .container {
+          max-width: 1220px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 30px;
+        }
+      }
+      @media (min-width: 991px) {
+        .softx13022021SoppiyaMallItem {
+          width: calc(20% - 10px);
+          margin: 5px;
+          border-radius: 2px;
+          transition: 0.3s;
+        }
+        .container {
+          max-width: 1240px;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0 50px;
+        }
+      }
+      @media (min-width: 1366px) {
+        /* single item */
+        .softx13022021SoppiyaMallItem {
+          width: calc(16.6% - 10px);
+          margin: 5px;
+          border-radius: 2px;
+          transition: 0.3s;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- flas Sale -->
+    <section class="softx13022021SoppiyaMallSection">
+      <div class="container">
+        <!-- Flash Sale Product area -->
+        <div class="softx13022021SoppiyaMallArea">
+          <!-- Flash sale Product title -->
+          <div class="softx13022021FlashSaleTitle">
+            <h3>SoppiyaMall</h3>
+          </div>
+          <!-- flash sale Proudcut -->
+          <div class="softx13022021SoppiyaMall">
+            <!-- single item -->
+            <div class="softx13022021SoppiyaMallItem">
+              <a href="#">
+                <!-- product img -->
+                <div class="softx13022021SoppiyaMallImg">
+                  <img
+                    src="https://i.ibb.co/mH208BZ/ezgif-com-gif-maker.jpg"
+                    alt="ezgif-com-gif-maker"
+                  />
+                </div>
+                <!-- product text -->
+                <div class="softx13022021SoppiyaMallText">
+                  <!-- product title -->
+                  <div class="softx13022021SoppiyaMallHeading">
+                    <h4>Ifad Salt 1kg</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- single item -->
+            <div class="softx13022021SoppiyaMallItem">
+              <a href="#">
+                <!-- product img -->
+                <div class="softx13022021SoppiyaMallImg">
+                  <img
+                    src="https://i.ibb.co/GTdh8CH/b677601a70d4d080e1dfbc0b32d6e28e.jpg"
+                    alt="ezgif-com-gif-maker"
+                  />
+                </div>
+                <!-- product text -->
+                <div class="softx13022021SoppiyaMallText">
+                  <!-- product title -->
+                  <div class="softx13022021SoppiyaMallHeading">
+                    <h4>Ifad Salt 1kg</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- single item -->
+            <div class="softx13022021SoppiyaMallItem">
+              <a href="#">
+                <!-- product img -->
+                <div class="softx13022021SoppiyaMallImg">
+                  <img
+                    src="https://i.ibb.co/4VM2Pdt/74c489f1c9ffe206c215756dc77f4dbf.jpg"
+                    alt="ezgif-com-gif-maker"
+                  />
+                </div>
+                <!-- product text -->
+                <div class="softx13022021SoppiyaMallText">
+                  <!-- product title -->
+                  <div class="softx13022021SoppiyaMallHeading">
+                    <h4>Ifad Salt 1kg</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- single item -->
+            <div class="softx13022021SoppiyaMallItem">
+              <a href="#">
+                <!-- product img -->
+                <div class="softx13022021SoppiyaMallImg">
+                  <img
+                    src="https://i.ibb.co/RcbQ92Y/7346282cfea1b4f094afd21d0d1aa399.png"
+                    alt="ezgif-com-gif-maker"
+                  />
+                </div>
+                <!-- product text -->
+                <div class="softx13022021SoppiyaMallText">
+                  <!-- product title -->
+                  <div class="softx13022021SoppiyaMallHeading">
+                    <h4>Ifad Salt 1kg</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- single item -->
+            <div class="softx13022021SoppiyaMallItem">
+              <a href="#">
+                <!-- product img -->
+                <div class="softx13022021SoppiyaMallImg">
+                  <img
+                    src="https://i.ibb.co/TkR4LBH/ac7d27be8aef069d57fbfb0915c61cd5.jpg"
+                    alt="ezgif-com-gif-maker"
+                  />
+                </div>
+                <!-- product text -->
+                <div class="softx13022021SoppiyaMallText">
+                  <!-- product title -->
+                  <div class="softx13022021SoppiyaMallHeading">
+                    <h4>Ifad Salt 1kg</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- single item -->
+            <div class="softx13022021SoppiyaMallItem">
+              <a href="#">
+                <!-- product img -->
+                <div class="softx13022021SoppiyaMallImg">
+                  <img
+                    src="https://i.ibb.co/5xvfR26/69c406f30887ff3f7315cffc72747973.jpg"
+                    alt="ezgif-com-gif-maker"
+                  />
+                </div>
+                <!-- product text -->
+                <div class="softx13022021SoppiyaMallText">
+                  <!-- product title -->
+                  <div class="softx13022021SoppiyaMallHeading">
+                    <h4>Ifad Salt 1kg</h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="viewMoreButton">
+            <a href="#">View More<i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
