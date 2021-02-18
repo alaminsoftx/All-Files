@@ -1,0 +1,21 @@
+:root {
+  --primaryColor: #00a5ff;
+  --seconderyColor: #01126c;
+  --color3: #3e5570;
+  --color4: #95afc0;
+  --color5: #d1d8e0;
+  --white: #ffffff;
+  --borderColor: #707070;
+  --fontSize14: 14px;
+  --fontSize15: 15px;
+  --buttonGradient: linear-gradient(
+    to right top,
+    #00a5ff,
+    #10aaff,
+    #1eafff,
+    #2ab4ff,
+    #36b9ff
+  );
+  --BoxShadowForBoxes: -3px 0px 15px rgba(243px, 61px, 100px, 0.1);
+  --activecolor: #00a5ff;
+}

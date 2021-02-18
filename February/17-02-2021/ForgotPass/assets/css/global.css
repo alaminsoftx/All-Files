@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #f1f5ff;
+}
+a {
+  text-decoration: none;
+}
+::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color4);
+}
+/* button */
+.softx16022021Button {
+  border: none;
+  background-image: var(--buttonGradient);
+  font-size: var(--fontSize14);
+  font-weight: 500;
+  font-family: "Montserrat";
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  margin-top: 15px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 0px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+@media (min-width: 768px) {
+  .softx16022021Button {
+    font-size: var(--fontSize16);
+  }
+}
+/* button */
+
+/*start input field */
+.softXInputField {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color5);
+  margin-bottom: 20px !important;
+  background-color: transparent;
+}
+.softxActiveColor {
+  color: var(--activecolor) !important;
+}
+/* end input field */
