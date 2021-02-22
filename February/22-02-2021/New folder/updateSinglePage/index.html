@@ -1,0 +1,191 @@
+<body>
+    <div class="softx24012021ProductSinglePage">
+      <div class="container">
+        <div class="softx24012021SinglePageInner">
+          <!-- left -->
+          <div class="softx24012021SinglePageLeft">
+            <div
+              class="softx24012021LargeImage"
+              id="softx24012021LargeImg"
+            ></div>
+            <div class="softx24012021GalleryImage" id="softx22022021GellaryImage">
+              <div
+                class="softx25012021GalleryItem"
+                id="softx25012021GalleryItem"
+              ></div>
+            </div>
+          </div>
+          <!-- middle -->
+          <div class="softx24012021SinglePageRight">
+            <div class="softx24012021ProductInfo">
+              <span class="softx24012021InfoTitle" id="softx25012021InfoHeading"
+                >Info</span
+              >
+              <div
+                class="softx24012021ProductInfoArea"
+                id="softx17022021topToggle"
+              >
+                <h2 class="softx24012021ProductHeading">
+                  Lipsum generator: Lorem Ipsum
+                </h2>
+                <div class="softx24012021HeadingBottom">
+                  <p>
+                    <span class="softx24012021SKUTEXT">SKU:</span>
+                    <span class="softx24012021SKUCODE">0X67B8E</span>
+                  </p>
+                  <div class="softx24012021Brand">
+                    <span class="softx24012021BrandText">BRAND:</span>
+                    <span>
+                      <a class="softx24012021BrandLink" href="#">Bengal Meat</a>
+                      <a class="softx24012021BrandLink" href="#"
+                        >More Others Frozen Food from Bengal Meat</a
+                      >
+                    </span>
+                  </div>
+                  <div class="softx24012021ProductPrice">
+                    <h2><span>৳</span> 690.00</h2>
+                    <span>Starting price</span>
+                  </div>
+
+                  <div class="softx25012021ProductVariation">
+                    <span class="softx25012021VariationTitle">Variation</span>
+                    <div
+                      class="softx25012021VaritaionItems"
+                      id="softxVariationItems"
+                    >
+                  </div>
+
+                  <div class="softx24012021QuantityArea">
+                    <label for="">Quantity</label>
+                    <div class="softx26012021Quantity">
+                      <div class="softx24012021QuantityInner">
+                        <button id="softx24012021DecrementBtn">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <span id="softx24012021QuantityValue">0</span>
+                        <button id="softx24012021BtnIncrement">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+
+                      <div class="softx24012021AddTopCartBtn">
+                        <button>
+                          <span><i class="fas fa-shopping-cart"></i></span>
+                          <span>Add to Cart</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="softx24012021AnyQuestions">
+                    <p>Have questions about this product (SKU: 0X2E615)</p>
+                    <h3>
+                      <span><i class="fas fa-phone-alt"></i></span>
+                      <span><a href="tel:01700000000">01700000000</a></span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="softx25012021ProductDescriptionArea">
+              <span
+                class="softx24012021InfoTitle"
+                id="softx25012021DescriptionHeading"
+                >Description</span
+              >
+              <div class="softx25012021DescriptionInner" id="bottomToggle">
+                <div class="softx25012021DescriptionInnerTitle">
+                  <h2>
+                    Product details of Fire Proof heavy weight strong big
+                    Locker/Security Safe
+                  </h2>
+                </div>
+                <div class="softx25012021InnerDescription">
+                  <ul>
+                    <li><span>Model:-</span>LB-42</li>
+                    <li>5 YEARS WARRANTY FOR LOCK FREE OF COST</li>
+                    <li>
+                      <span>Size:-:</span>Height 42 inch*Wide 23.5 inch*Deep 22
+                      inch. Thickness:- Door-40-50mm,Body-55-65mm.
+                    </li>
+                    <li>30 diameter bolts</li>
+                    <li>
+                      Gross Weight=260 kgs.Digit lock+master key+emergency key
+                      lock. Alarming system,
+                    </li>
+                    <li>High Security System</li>
+                    <li>Fire Proof</li>
+                    <li>Removable shelf</li>
+                    <li>Password change system</li>
+                    <li>LED Screen</li>
+                    <li>High Quality lock</li>
+                    <li>High quality colour</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const gellaryImages = [
+        "https://i.ibb.co/ypBN5My/soft-X25012021-Product-Single-Page3.jpg",
+        "https://i.ibb.co/DRhPvx8/soft-X25012021-Product-Single-Page1.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+        "https://i.ibb.co/34H4p8m/soft-X25012021-Product-Single-Page5.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+      ];
+      let largeImg = document.getElementById("softx24012021LargeImg");
+      largeImg.innerHTML = "<img src='" + gellaryImages[0] + "'>";
+
+      const arrayImagesElement = document.getElementById(
+        "softx22022021GellaryImage"
+      );
+
+      let gellaryImagesLength = gellaryImages.length;
+      let imagesInnerHtml = "";
+      for (let i = 0; i < gellaryImagesLength; i++) {
+        imagesInnerHtml =
+          imagesInnerHtml +"<div class='softx25012021GalleryItem'><img class = 'galleryImgSigleItem' id ='galleryImgItgem" + (i + 1) + "' src='" + gellaryImages[i] +"'></div>"
+         
+          "<img class = 'galleryImgSigleItem' id ='galleryImgItgem" + (i + 1) + "' src='" + gellaryImages[i] +"'>";
+      }
+      arrayImagesElement.innerHTML = imagesInnerHtml;
+
+      for(let i = 0; i<gellaryImagesLength; i++){
+        let gallerySingle = `galleryImgItgem${i+1}`;
+        document.getElementById(gallerySingle).addEventListener("click", function(){
+          largeImg.innerHTML = "<img src='" + gellaryImages[i] + "'>";
+        })
+      }
+
+   
+      let variationImages = [
+      "https://i.ibb.co/ypBN5My/soft-X25012021-Product-Single-Page3.jpg",
+        "https://i.ibb.co/DRhPvx8/soft-X25012021-Product-Single-Page1.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+        "https://i.ibb.co/34H4p8m/soft-X25012021-Product-Single-Page5.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+      ];
+      let varitaionItems = document.getElementById("softxVariationItems");
+ 
+      let variationImagesLenght = variationImages.length;
+      let variationInnerHtml = "";
+      for (let i = 0; i < variationImagesLenght; i++) {
+        variationInnerHtml =
+          variationInnerHtml +
+          "<div class='softx25012021SingleVariation'> <img src = '"+ variationImages[i] +"' id = 'variationSingleImage"+ (i + 1) +"'></div>";
+      }
+      varitaionItems.innerHTML = variationInnerHtml;
+
+      for(let i = 0; i<variationImagesLenght; i++){
+        let variationSingle = `variationSingleImage${i+1}`;
+         document.getElementById(variationSingle).addEventListener("click", function(){
+          largeImg.innerHTML = "<img src='" + variationImages[i] + "'>";
+         })
+      }
+
+
+    </script>
+  </body>

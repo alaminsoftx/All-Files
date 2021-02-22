@@ -11,34 +11,28 @@ a {
   text-decoration: none;
 }
 ::placeholder {
-  font-size: 15px;
+  font-size: var(--fontSizeXs);
   font-weight: 400;
   color: var(--color4);
 }
 /* button */
-.softx16022021Button {
+.Button {
   border: none;
   background-image: var(--buttonGradient);
-  font-size: var(--fontSize14);
+  font-size: var(--BtnFontSizeXs);
   font-weight: 500;
   font-family: "Montserrat";
-  height: 50px;
+  height: 40px;
   width: 100%;
-  text-align: center;
   color: var(--white);
-  margin-top: 15px;
   outline: none;
   cursor: pointer;
   border-radius: 5px;
   margin-top: 0px;
   text-transform: uppercase;
-  transition: 0.3s;
 }
-
-@media (min-width: 768px) {
-  .softx16022021Button {
-    font-size: var(--fontSize16);
-  }
+.LoginButtonArea {
+  margin-top: 40px;
 }
 /* button */
 
@@ -52,8 +46,35 @@ a {
   border-bottom: 1px solid var(--color5);
   margin-bottom: 20px !important;
   background-color: transparent;
+  font-size: var(--fontSizeXs);
+  color: var(--seconderyColor);
 }
 .softxActiveColor {
   color: var(--activecolor) !important;
+}
+
+@media (min-width: 768px) {
+  .Button {
+    font-size: var(--BtnFontSizeS);
+    height: 45px;
+  }
+  .softXInputField {
+    font-size: var(--fontSizeS);
+  }
+  ::placeholder {
+    font-size: var(--fontSizeS);
+  }
+}
+@media (min-width: 991px) {
+  .Button {
+    font-size: var(--BtnFontSizeM);
+    height: 50px;
+  }
+  .softXInputField {
+    font-size: var(--fontSizeM);
+  }
+  ::placeholder {
+    font-size: var(--fontSizeM);
+  }
 }
 /* end input field */

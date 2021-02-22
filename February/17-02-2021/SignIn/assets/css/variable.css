@@ -6,16 +6,25 @@
   --color5: #d1d8e0;
   --white: #ffffff;
   --borderColor: #707070;
-  --fontSize14: 14px;
-  --fontSize15: 15px;
-  --buttonGradient: linear-gradient(
-    to right top,
-    #00a5ff,
-    #10aaff,
-    #1eafff,
-    #2ab4ff,
-    #36b9ff
-  );
-  --BoxShadowForBoxes: -3px 0px 15px rgba(243px, 61px, 100px, 0.1);
+
+  /*  comon fonts*/
+
+  --fontSizeXs: 13px;
+  --fontSizeS: 14px;
+  --fontSizeM: 15px;
+
+  /* heading fonts */
+  --fontSizeLH: 30px;
+  --fontSizeMH: 25px;
+  --fontSizeSH: 22px;
+
+  /* button fonts */
+  --BtnFontSizeXs: 13px;
+  --BtnFontSizeS: 14px;
+  --BtnFontSizeM: 15px;
+
+  /* gradient and shadow */
+  --buttonGradient: linear-gradient(to right, #00a5ff, #58c5ff);
+  --BoxShadowForBoxes: -3px 0px 15px rgb(108 99 255 / 10%);
   --activecolor: #00a5ff;
 }

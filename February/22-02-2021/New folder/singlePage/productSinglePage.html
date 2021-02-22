@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Single Page</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Tahoma;
+      }
+      .container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .clearFix::before {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .softx24012021ProductSinglePage {
+        padding: 20px 20px;
+      }
+      .softx24012021SinglePageInner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 1140px;
+        width: 100%;
+        margin: 0 auto;
+        align-content: center;
+      }
+
+      .softx24012021SinglePageLeft {
+        max-width: calc(670px - 40px);
+        width: 100%;
+        margin: 20px;
+        margin-top: 0px;
+      }
+
+      .softx24012021LargeImage {
+        height: auto;
+        overflow: hidden;
+        max-width: 580px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .softx24012021SinglePageLeft img {
+        width: 100%;
+        height: 100%;
+      }
+      .softx24012021GalleryImage {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2px !important;
+        max-width: 580px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      .softx25012021GalleryItem {
+        width: calc(20% - 6px);
+        cursor: pointer;
+        margin: 3px;
+        box-shadow: 0px 0px 2px 0px rgb(245 246 250 / 90%);
+        padding: 5px;
+        box-sizing: border-box;
+        max-height: 100px;
+      }
+
+      .softx24012021SinglePageRight {
+        max-width: 580px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+
+      .softx24012021InfoTitle {
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
+        background: rgba(52, 73, 94, 1);
+        border-radius: 3px;
+        color: #fff;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+
+      h2.softx24012021ProductHeading {
+        font-size: 20px;
+        color: rgba(52, 73, 94, 1);
+        margin: 0px;
+        line-height: 30px;
+        margin-top: 15px;
+      }
+
+      .softx24012021HeadingBottom p {
+        color: rgba(149, 165, 166, 1);
+        margin-bottom: 0px;
+      }
+      .softx24012021HeadingBottom p .softx24012021SKUTEXT {
+        font-size: 13px;
+      }
+      .softx24012021HeadingBottom p .softx24012021SKUCODE {
+        font-size: 13px;
+      }
+      .softx24012021Brand .softx24012021BrandText {
+        color: rgba(149, 165, 166, 1);
+        font-size: 13px;
+      }
+      .softx24012021BrandLink {
+        color: rgba(127, 140, 141, 1);
+        font-size: 12px;
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .softx24012021ProductPrice {
+        margin: 30px 0;
+      }
+      .softx24012021ProductPrice h2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(52, 73, 94);
+        margin: 0;
+      }
+      .softx24012021ProductPrice h2 span {
+        color: rgb(52, 73, 94);
+        font-weight: normal;
+      }
+      .softx24012021ProductPrice span {
+        color: rgba(149, 165, 166, 1);
+        font-size: 12px;
+      }
+
+      .softx25012021VaritaionItems {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+      }
+      .softx25012021SingleVariation {
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        margin-right: 5px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 2px 0px rgba(245, 246, 250, 0.9);
+        padding: 2px;
+        border-radius: 3px;
+      }
+      .softx25012021SingleVariation img {
+        width: 100%;
+      }
+      .softx25012021VariationTitle {
+        display: inline-block;
+        color: rgba(149, 165, 166, 1);
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      .softx24012021QuantityInner {
+        display: flex;
+        padding: 8px 10px;
+        border: 1px solid rgba(236, 240, 241, 0.5);
+        border-radius: 3px;
+        width: 100%;
+        justify-content: space-between;
+        box-sizing: border-box;
+      }
+      .softx24012021ProductPrice h2 span {
+        font-size: 18px;
+      }
+      .softx24012021QuantityArea label {
+        font-size: 13px;
+        color: rgba(149, 165, 166, 1);
+        margin-bottom: 6px;
+        display: block;
+        text-transform: uppercase;
+      }
+      .softx24012021QuantityInner #softx24012021DecrementBtn {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: rgba(149, 165, 166, 1);
+        font-weight: 500;
+        font-size: 10px;
+      }
+      .softx24012021QuantityInner #softx24012021BtnIncrement {
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: rgba(149, 165, 166, 1);
+        font-weight: 500;
+        font-size: 10px;
+      }
+
+      .softx24012021QuantityInner #softx24012021QuantityValue {
+        color: rgba(52, 73, 94, 1);
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .softx24012021AddTopCartBtn {
+        margin-top: 24px;
+      }
+      .softx24012021AddTopCartBtn button {
+        outline: none;
+        border: none;
+        background-color: rgba(52, 73, 94, 1);
+        padding: 11px 8px;
+        width: 100%;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+      .softx24012021AddTopCartBtn button span {
+        font-size: 12px;
+      }
+      .softx24012021AddTopCartBtn button span i {
+        font-weight: 16px !important;
+      }
+
+      .softx24012021AnyQuestions {
+        border-top: 1px solid rgba(236, 240, 241, 0.5);
+        border-bottom: 1px solid rgba(236, 240, 241, 0.5);
+        padding: 20px 0 20px 0;
+        margin: 20px 0 20px 0;
+      }
+      .softx24012021AnyQuestions p {
+        font-size: 12px;
+        color: rgba(127, 140, 141, 1);
+        margin: 0;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      .softx24012021AnyQuestions h3 {
+        margin: 0;
+      }
+      .softx24012021AnyQuestions h3 span {
+      }
+      .softx24012021AnyQuestions h3 span i {
+        color: rgba(52, 73, 94, 1);
+        font-size: 14px;
+      }
+      .softx24012021AnyQuestions h3 span a {
+        color: rgba(52, 73, 94, 1);
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .softx25012021DescriptionInnerTitle h2 {
+        font-size: 20px;
+        color: rgba(52, 73, 94, 1);
+        margin: 0px;
+        line-height: 30px;
+        font-weight: bold;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .softx25012021InnerDescription ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .softx25012021InnerDescription ul li {
+        font-size: 13px;
+        line-height: 25px;
+        color: rgb(127, 140, 141);
+      }
+
+      .softx25012021ProductDescriptionArea {
+        margin-top: 6px;
+      }
+
+      .softx25012021DisplayNone {
+        display: none !important;
+      }
+      .softx25012021DisplayNone2 {
+        display: none;
+      }
+      .softx25012021Displayblock {
+        display: block !important;
+      }
+      .softx25012021Displayblock2 {
+        display: block !important;
+      }
+      .softx25012021DescriptionInner {
+        display: none;
+      }
+      .softx26012021Quantity {
+      }
+
+      @media (min-width: 600px) {
+        .softx24012021SinglePageLeft {
+          max-width: calc(670px - 40px);
+          width: 100%;
+          margin: 20px;
+          margin-top: 20px;
+        }
+        .softx24012021SinglePageRight {
+          margin-top: 30px;
+          max-width: 700px;
+          width: 100%;
+        }
+        h2.softx24012021ProductHeading {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        .softx25012021DescriptionInnerTitle h2 {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        .softx26012021Quantity {
+          display: flex;
+        }
+        .softx24012021AddTopCartBtn {
+          margin-top: 0px;
+          max-width: 250px;
+          width: 100%;
+        }
+        .softx24012021QuantityInner {
+          margin-right: 20px;
+        }
+        .softx24012021AddTopCartBtn button span {
+          font-size: 14px;
+          font-weight: bold;
+          margin-right: 5px;
+        }
+      }
+
+      @media (min-width: 991px) {
+        .container {
+          padding: 0 50px;
+        }
+        .softx24012021LargeImage {
+          height: 440px;
+        }
+        .softx24012021SinglePageInner {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .softx24012021SinglePageLeft {
+          max-width: calc(50% - 40px);
+          margin: 20px;
+          margin-top: 20px;
+        }
+        .softx24012021SinglePageRight {
+          max-width: calc(50% - 40px);
+          width: 100%;
+          margin: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="softx24012021ProductSinglePage">
+      <div class="container">
+        <div class="softx24012021SinglePageInner">
+          <!-- left -->
+          <div class="softx24012021SinglePageLeft">
+            <div
+              class="softx24012021LargeImage"
+              id="softx24012021LargeImg"
+            ></div>
+            <div class="softx24012021GalleryImage" id="softx22022021GellaryImage">
+              <div
+                class="softx25012021GalleryItem"
+                id="softx25012021GalleryItem"
+              ></div>
+            </div>
+          </div>
+          <!-- middle -->
+          <div class="softx24012021SinglePageRight">
+            <div class="softx24012021ProductInfo">
+              <span class="softx24012021InfoTitle" id="softx25012021InfoHeading"
+                >Info</span
+              >
+              <div
+                class="softx24012021ProductInfoArea"
+                id="softx17022021topToggle"
+              >
+                <h2 class="softx24012021ProductHeading">
+                  Lipsum generator: Lorem Ipsum
+                </h2>
+                <div class="softx24012021HeadingBottom">
+                  <p>
+                    <span class="softx24012021SKUTEXT">SKU:</span>
+                    <span class="softx24012021SKUCODE">0X67B8E</span>
+                  </p>
+                  <div class="softx24012021Brand">
+                    <span class="softx24012021BrandText">BRAND:</span>
+                    <span>
+                      <a class="softx24012021BrandLink" href="#">Bengal Meat</a>
+                      <a class="softx24012021BrandLink" href="#"
+                        >More Others Frozen Food from Bengal Meat</a
+                      >
+                    </span>
+                  </div>
+                  <div class="softx24012021ProductPrice">
+                    <h2><span>৳</span> 690.00</h2>
+                    <span>Starting price</span>
+                  </div>
+
+                  <div class="softx25012021ProductVariation">
+                    <span class="softx25012021VariationTitle">Variation</span>
+                    <div
+                      class="softx25012021VaritaionItems"
+                      id="softxVariationItems"
+                    >
+                  </div>
+
+                  <div class="softx24012021QuantityArea">
+                    <label for="">Quantity</label>
+                    <div class="softx26012021Quantity">
+                      <div class="softx24012021QuantityInner">
+                        <button id="softx24012021DecrementBtn">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <span id="softx24012021QuantityValue">0</span>
+                        <button id="softx24012021BtnIncrement">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+
+                      <div class="softx24012021AddTopCartBtn">
+                        <button>
+                          <span><i class="fas fa-shopping-cart"></i></span>
+                          <span>Add to Cart</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="softx24012021AnyQuestions">
+                    <p>Have questions about this product (SKU: 0X2E615)</p>
+                    <h3>
+                      <span><i class="fas fa-phone-alt"></i></span>
+                      <span><a href="tel:01700000000">01700000000</a></span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="softx25012021ProductDescriptionArea">
+              <span
+                class="softx24012021InfoTitle"
+                id="softx25012021DescriptionHeading"
+                >Description</span
+              >
+              <div class="softx25012021DescriptionInner" id="bottomToggle">
+                <div class="softx25012021DescriptionInnerTitle">
+                  <h2>
+                    Product details of Fire Proof heavy weight strong big
+                    Locker/Security Safe
+                  </h2>
+                </div>
+                <div class="softx25012021InnerDescription">
+                  <ul>
+                    <li><span>Model:-</span>LB-42</li>
+                    <li>5 YEARS WARRANTY FOR LOCK FREE OF COST</li>
+                    <li>
+                      <span>Size:-:</span>Height 42 inch*Wide 23.5 inch*Deep 22
+                      inch. Thickness:- Door-40-50mm,Body-55-65mm.
+                    </li>
+                    <li>30 diameter bolts</li>
+                    <li>
+                      Gross Weight=260 kgs.Digit lock+master key+emergency key
+                      lock. Alarming system,
+                    </li>
+                    <li>High Security System</li>
+                    <li>Fire Proof</li>
+                    <li>Removable shelf</li>
+                    <li>Password change system</li>
+                    <li>LED Screen</li>
+                    <li>High Quality lock</li>
+                    <li>High quality colour</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const gellaryImages = [
+        "https://i.ibb.co/ypBN5My/soft-X25012021-Product-Single-Page3.jpg",
+        "https://i.ibb.co/DRhPvx8/soft-X25012021-Product-Single-Page1.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+        "https://i.ibb.co/34H4p8m/soft-X25012021-Product-Single-Page5.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+      ];
+      let largeImg = document.getElementById("softx24012021LargeImg");
+      largeImg.innerHTML = "<img src='" + gellaryImages[0] + "'>";
+
+      const arrayImagesElement = document.getElementById(
+        "softx22022021GellaryImage"
+      );
+
+      let gellaryImagesLength = gellaryImages.length;
+      let imagesInnerHtml = "";
+      for (let i = 0; i < gellaryImagesLength; i++) {
+        imagesInnerHtml =
+          imagesInnerHtml +"<div class='softx25012021GalleryItem'><img class = 'galleryImgSigleItem' id ='galleryImgItgem" + (i + 1) + "' src='" + gellaryImages[i] +"'></div>"
+         
+          "<img class = 'galleryImgSigleItem' id ='galleryImgItgem" + (i + 1) + "' src='" + gellaryImages[i] +"'>";
+      }
+      arrayImagesElement.innerHTML = imagesInnerHtml;
+
+      for(let i = 0; i<gellaryImagesLength; i++){
+        let gallerySingle = `galleryImgItgem${i+1}`;
+        document.getElementById(gallerySingle).addEventListener("click", function(){
+          largeImg.innerHTML = "<img src='" + gellaryImages[i] + "'>";
+        })
+      }
+
+   
+      let variationImages = [
+      "https://i.ibb.co/ypBN5My/soft-X25012021-Product-Single-Page3.jpg",
+        "https://i.ibb.co/DRhPvx8/soft-X25012021-Product-Single-Page1.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+        "https://i.ibb.co/34H4p8m/soft-X25012021-Product-Single-Page5.jpg",
+        "https://i.ibb.co/PTfbLFb/soft-X25012021-Product-Single-Page6.jpg",
+      ];
+      let varitaionItems = document.getElementById("softxVariationItems");
+ 
+      let variationImagesLenght = variationImages.length;
+      let variationInnerHtml = "";
+      for (let i = 0; i < variationImagesLenght; i++) {
+        variationInnerHtml =
+          variationInnerHtml +
+          "<div class='softx25012021SingleVariation'> <img src = '"+ variationImages[i] +"' id = 'variationSingleImage"+ (i + 1) +"'></div>";
+      }
+      varitaionItems.innerHTML = variationInnerHtml;
+
+      for(let i = 0; i<variationImagesLenght; i++){
+        let variationSingle = `variationSingleImage${i+1}`;
+         document.getElementById(variationSingle).addEventListener("click", function(){
+          largeImg.innerHTML = "<img src='" + variationImages[i] + "'>";
+         })
+      }
+
+
+    </script>
+  </body>
+</html>

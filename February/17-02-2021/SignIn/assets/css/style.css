@@ -2,18 +2,20 @@
 ============= start sign in page css ==============
 ===================================================*/
 /* start sign in wrapper inner */
-.softx16022021SignInWrapperInner {
+.SignInWrapperInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+
+  padding: 15px;
 }
 @media (min-width: 768px) {
-  .softx16022021SignInWrapperInner {
+  .SignInWrapperInner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     height: 100vh;
+    padding: 0px;
   }
 }
 /* end sign in wrapper inner */
@@ -24,28 +26,28 @@
 /*=================================================
 ============= start sign in left css ==============
 ===================================================*/
-.softx16022021SignInWrapperLeft {
+.SignInWrapperLeft {
   padding: 50px;
   display: none;
 }
-.softx16022021SignInWrapperLeftImg {
+.SignInWrapperLeftImg {
   max-width: 400px;
   width: 100%;
 }
 
-.softx16022021SignInWrapperLeftImg img {
+.SignInWrapperLeftImg img {
   width: 100%;
 }
 
 /* responsive */
 @media (min-width: 768px) {
-  .softx16022021SignInWrapperInner {
+  .SignInWrapperInner {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100vh;
   }
-  .softx16022021SignInWrapperLeft {
+  .SignInWrapperLeft {
     padding: 50px;
     width: calc(100% - 380px);
     display: flex;
@@ -55,19 +57,19 @@
   }
 }
 @media (min-width: 991px) {
-  .softx16022021SignInWrapperLeft {
+  .SignInWrapperLeft {
     padding: 70px;
     width: calc(100% - 480px);
   }
-  .softx16022021SignInWrapperLeftImg {
+  .SignInWrapperLeftImg {
     max-width: 500px;
   }
 }
 @media (min-width: 1366px) {
-  .softx16022021SignInWrapperLeft {
+  .SignInWrapperLeft {
     width: calc(100% - 640px);
   }
-  .softx16022021SignInWrapperLeftImg {
+  .SignInWrapperLeftImg {
     max-width: 650px;
   }
 }
@@ -78,7 +80,7 @@
 /*=================================================
 ============= start sign in right css =============
 ===================================================*/
-.softx16022021SignInWrapperRight {
+.SignInWrapperRight {
   max-width: 640px;
   width: 100%;
   display: flex;
@@ -86,37 +88,41 @@
   background-color: var(--white);
   padding: 20px;
   border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   height: 100vh;
   box-shadow: var(--BoxShadowForBoxes);
+  min-height: 768px;
 }
-.softx16022021SignInRightLogo {
+.SignInRightLogo {
   max-width: 200px;
   width: 100%;
   margin-bottom: 110px;
 }
-.softx16022021SignInRightLogo img {
+.SignInRightLogo img {
   width: 100%;
 }
 
 /* start Login form area*/
-.softx16022021LoginFormMainHeading {
-  font-size: 25px;
+.LoginFormMainHeading {
+  font-size: var(--fontSizeSH);
   font-weight: 600;
   color: var(--seconderyColor);
   margin-bottom: 10px;
 }
-.softx16022021LoginFormSubHeading {
-  font-size: var(--fontSize14);
+.LoginFormSubHeading {
+  font-size: var(--fontSizeXs);
   font-weight: 500;
   color: var(--color3);
   margin-bottom: 60px;
+  line-height: 23px;
 }
 /* sign in and signUp button */
-.softx16022021SignInSignOutButton {
+.SignInSignOutButton {
   margin-bottom: 60px;
 }
-.softx16022021SignInSignOutButtonInner {
+.SignInInnerButton {
   max-width: 180px;
   width: 100%;
   display: flex;
@@ -126,7 +132,7 @@
   padding-top: 12px;
   border-top: 1px solid var(--color5);
 }
-.softx16022021SignInSignOutButtonInner::after {
+.SignInInnerButton::after {
   content: "";
   position: absolute;
   left: 0;
@@ -137,102 +143,111 @@
   z-index: 99;
   box-shadow: 0px 3px 10px rgb(0 165 255 / 30%);
 }
-.softx16022021SignInSignOutButtonInner button {
+.SignInInnerButton button {
   border: navajowhite;
   background: transparent;
   outline: none;
   color: var(--color3);
-  font-size: var(--fontSize14);
+  font-size: var(--fontSizeXs);
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.softx16022021SignInSignOutButtonInner button:hover {
+.SignInInnerButton button:hover {
   color: var(--primaryColor);
 }
 
 /* start remember text */
-.softx16022021LoginButtonArea {
-  margin-top: 40px;
-}
-.softx16022021ForgotPassRemember {
+
+.ForgotPassRemember {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.softx16022021RememberText input {
+.RememberText input {
   margin-right: 8px;
 }
-.softx16022021RememberText label,
-.softx16022021ForgotPass span {
-  font-size: var(--fontSize14);
+.RememberText label,
+.ForgotPass span {
+  font-size: var(--fontSizeXs);
   font-weight: 400;
   color: var(--seconderyColor);
 }
-.softx16022021ForgotPass span a {
+.ForgotPass span a {
   color: var(--seconderyColor);
-  transition:all .3s;
+  transition: all 0.3s;
 }
-.softx16022021ForgotPass span a:hover{
-  color:var(--primaryColor);
+.ForgotPass span a:hover {
+  color: var(--primaryColor);
 }
 /* end remember text */
 
 /*end login form */
 
 /* new on platform */
-.softx17022021NewOnYourPlatForm {
+.NewOnYourPlatForm {
   text-align: center;
   margin-top: 35px;
 }
-.softx17022021NewOnPlatFormText {
-  font-size: var(--fontSize14);
+.NewOnPlatFormText {
+  font-size: var(--fontSizeXs);
   font-weight: 400;
 }
-.softx17022021CreateAccountLink a {
-  font-size: var(--fontSize14);
+.CreateAccountLink a {
+  font-size: var(--fontSizeXs);
   font-weight: 400;
   color: var(--primaryColor);
   display: inline-block;
-  transition:all .3s;
+  transition: all 0.3s;
 }
-.softx17022021CreateAccountLink a:hover {
-  color: var(--seconderyColor);();
+.CreateAccountLink a:hover {
+  color: var(--seconderyColor);
 }
 /* end Login form area */
 
 /* responsive */
 @media (min-width: 768px) {
-  .softx16022021SignInWrapperRight {
+  .SignInWrapperRight {
     max-width: 380px;
     width: 100%;
     padding: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .LoginFormSubHeading,
+  .RememberText label,
+  .ForgotPass span,
+  .NewOnPlatFormText,
+  .CreateAccountLink a {
+    font-size: var(--fontSizeS);
+  }
+  .LoginFormMainHeading {
+    font-size: var(--fontSizeMH);
   }
 }
 @media (min-width: 991px) {
-  .softx16022021SignInWrapperRight {
+  .SignInWrapperRight {
     max-width: 480px;
     width: 100%;
     padding: 50px;
   }
-  .softx16022021LoginFormSubHeading,
-  .softx16022021RememberText label,
-  .softx16022021ForgotPass span,
-  .softx17022021NewOnPlatFormText,
-  .softx17022021CreateAccountLink a {
-    font-size: var(--fontSize15);
+  .LoginFormSubHeading,
+  .RememberText label,
+  .ForgotPass span,
+  .NewOnPlatFormText,
+  .CreateAccountLink a {
+    font-size: var(--fontSizeM);
   }
-  .softx16022021LoginFormMainHeading {
-    font-size: 32px;
+
+  .LoginFormMainHeading {
+    font-size: var(--fontSizeLH);
   }
 }
 @media (min-width: 1366px) {
-  .softx16022021SignInWrapperRight {
-    padding: 70px;
-  }
-  .softx16022021SignInWrapperRight {
+  .SignInWrapperRight {
     max-width: 640px;
+    padding: 70px;
   }
 }
 /*=================================================
