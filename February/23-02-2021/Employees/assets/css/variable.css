@@ -1,0 +1,38 @@
+:root {
+  --primaryColor: #00a5ff;
+  --seconderyColor: #01126c;
+  --color3: #3e5570;
+  --color4: #95afc0;
+  --color5: #d1d8e0;
+  --color6:#2ECC71;
+  --white: #ffffff;
+  --color7:#F5F8FF;
+  --color8:#535C68;
+  --color9:#95AFC0;
+  --borderColor: #707070;
+
+
+  /*  comon fonts*/
+
+  --fontSizeXs: 13px;
+  --fontSizeS: 14px;
+  --fontSizeM: 15px;
+
+  --fontSize24:24px;
+
+  /* heading fonts */
+  --fontSizeLH: 30px;
+  --fontSizeMH: 25px;
+  --fontSizeSH: 22px;
+
+  /* button fonts */
+  --BtnFontSizeXs: 13px;
+  --BtnFontSizeS: 14px;
+  --BtnFontSizeM: 15px;
+
+  /* gradient and shadow */
+  --buttonGradient: linear-gradient(to right, #00a5ff, #58c5ff);
+  --buttonShadow: 0 0 15px rgb(0 165 255 / 30%);
+  --BoxShadowForBoxes: -3px 0px 15px rgb(108 99 255 / 10%);
+  --activecolor: #00a5ff;
+}

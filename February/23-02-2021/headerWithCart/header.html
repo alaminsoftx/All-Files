@@ -25,18 +25,18 @@
         text-decoration: none;
         display: inline-block;
       }
-      .container {
+      .softX28012021container {
         max-width: 1240px;
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
       }
-      .headerSection {
+      .softX28012021headerSection {
         box-shadow: 0px 0px 3px 0px rgb(0 0 0 / 10%);
         border-radius: 5px;
         padding: 10px;
       }
-      .headerInner {
+      .softX28012021headerInner {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -45,36 +45,38 @@
         line-height: 0px;
       }
 
-      .headerLeft {
+      .softX28012021headerLeft {
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .logoSize {
-        width: 35px;
+      .softX28012021logoSize {
+        width: 100px;
       }
-      .headerLeft .logo a {
+      .softX28012021headerLeft .softX28012021logo a {
         display: flex;
         align-items: center;
       }
-      .headerRight {
+      .softX28012021headerRight {
         display: flex;
         align-items: center;
       }
-
-      .cartIcon a i {
+      .softx2112021searchItemsLink{
+        text-decoration: none;
+      }
+      .softX28012021cartIcon a i {
         display: inline-block;
         color: #2f3542;
         font-weight: 500;
         font-size: 17px;
         margin-left: 6px;
       }
-      .searchIcon i {
+      .softX28012021searchIcon i {
         color: #a4b0be;
         font-weight: 500;
         font-size: 13px;
       }
-      .searchIcon {
+      .softX28012021searchIcon {
         display: flex;
         align-items: center;
         position: relative;
@@ -116,13 +118,13 @@
         position: relative;
         z-index: 999;
       }
-      /* ============================== */
-      .autocomplete {
+
+      .softX28012021autocomplete {
         position: relative;
         display: inline-block;
       }
 
-      .autocomplete-items {
+      .softX28012021autocomplete-items {
         position: absolute;
         border: 1px solid #d4d4d4;
         border-bottom: none;
@@ -133,15 +135,12 @@
         right: 0;
       }
 
-      .autocomplete-items div {
+      .softX28012021autocomplete-items div {
         padding: 17px 10px;
         cursor: pointer;
         background-color: #fff;
         border-bottom: 1px solid #d4d4d4;
         font-size: 13px;
-      }
-      .cartIcon {
-        position: relative;
       }
       .softx23022021ShopCount {
         position: absolute;
@@ -157,32 +156,16 @@
         top: -8px;
         right: -8px;
       }
-      /* ============================== */
-      @media (min-width: 320px) {
-        input[type="text"] {
-          width: 150px;
-        }
-      }
-      @media (min-width: 350px) {
-        input[type="text"] {
-          width: 160px;
-        }
-      }
-      @media (min-width: 390px) {
-        input[type="text"] {
-          width: auto;
-        }
-      }
       @media (min-width: 600px) {
-        .searchIcon i {
+        .softX28012021searchIcon i {
           font-size: 14px;
         }
-        .cartIcon a i {
+        .softX28012021cartIcon a i {
           margin-left: 15px;
           font-size: 16px;
         }
-        .logoSize {
-          width: 42px;
+        .softX28012021logoSize {
+          width: 100px;
         }
         input[type="text"] {
           width: 300px;
@@ -196,17 +179,17 @@
       }
 
       @media (min-width: 991px) {
-        .cartIcon a i {
+        .softX28012021cartIcon a i {
           font-size: 20px;
           margin-left: 18px;
         }
-        .searchIcon i {
+        .softX28012021searchIcon i {
           font-size: 16px;
         }
-        .logoSize {
-          width: 45px;
+        .softX28012021logoSize {
+          width: 150px;
         }
-        .container {
+        .softX28012021container {
           padding: 0 50px;
         }
 
@@ -229,46 +212,46 @@
     </style>
   </head>
   <body>
-    <section class="headerSection">
-      <div class="container">
-        <div class="headerInner">
-          <div class="headerLeft">
-            <div class="logo">
-              <a href="#"
+    <section class="softX28012021headerSection">
+      <div class="softX28012021container">
+        <div class="softX28012021headerInner">
+          <div class="softX28012021headerLeft">
+            <div class="softX28012021logo">
+              <a href="http://<{baseUrl}>"
                 ><img
-                  class="logoSize"
-                  src="https://i.ibb.co/SX9sSjd/logo.png"
+                  class="softX28012021logoSize"
+                  src="http://edusea.net/media/images/business/<{logo}>"
                   alt=""
               /></a>
             </div>
           </div>
 
-          <div class="headerRight">
-            <div class="searchIcon">
+          <div class="softX28012021headerRight">
+            <div class="softX28012021searchIcon">
               <div class="softX28012021SearchIconItemColumn1">
                 <a href="#"><i class="fas fa-search"></i></a>
               </div>
               <div class="softX28012021SearchIconItemColumn2">
                 <form autocomplete="off" action="">
-                  <div class="autocomplete">
+                  <div class="softX28012021autocomplete">
                     <input
-                      id="myInput"
+                      id="softx2112021searchInput"
                       type="text"
                       name=""
                       placeholder="Search..."
                     />
                   </div>
+                  <div id="softX28012021autocomplete-items-container">
+                    
+                  </div>
                 </form>
               </div>
             </div>
-            <div class="cartIcon">
-              <a href="#"
-                ><i class="fas fa-cart-plus"></i
-                ><span
-                  class="softx23022021ShopCount"
-                  id="softx23022021cartCount"
-                ></span
-              ></a>
+            <div class="softX28012021cartIcon">
+              <a href="#"><i class="fas fa-cart-plus"></i><span
+                class="softx23022021ShopCount"
+                id="softx23022021cartCount"
+              ></span</a>
             </div>
           </div>
         </div>
@@ -304,123 +287,41 @@
           "block";
       }
 
-      function autocomplete(inp, arr) {
-        var currentFocus;
-        inp.addEventListener("input", function (e) {
-          var a, b, i, m;
-          val = this.value;
-          closeAllLists();
-          if (!val) {
-            return false;
-          }
-          currentFocus = -1;
 
-          a = document.createElement("DIV");
-          a.setAttribute("id", this.id + "autocomplete-list");
-          a.setAttribute("class", "autocomplete-items");
 
-          this.parentNode.appendChild(a);
-          for (i = 0; i < arr.length; i++) {
-            if (
-              arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
-            ) {
-              b = document.createElement("DIV");
-              b.innerHTML =
-                "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-              b.innerHTML += arr[i].substr(val.length);
-              b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-              b.addEventListener("click", function (e) {
-                inp.value = this.getElementsByTagName("input")[0].value;
-                closeAllLists();
-              });
-              a.appendChild(b);
+      let softX28012021searchBar = document.getElementById("softx2112021searchInput");
+      softX28012021searchBar.addEventListener("keyup", function(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            let listShowItems = document.createElement("DIV");
+            listShowItems.setAttribute("class", "softX28012021autocomplete-items");
+            listShowItems.setAttribute("id", "softX28012021autocomplete-items");
+            const productData = JSON.parse(xhttp.responseText);
+            const productdatalength = productData.products.length;
+            let autocompleteitemsinnerHTML = "";
+            if(softX28012021searchBar.value.length > 0 && productdatalength > 0){
+              for(let i = 0; i <productdatalength; i++){
+                autocompleteitemsinnerHTML = autocompleteitemsinnerHTML + "<div><a class='softx2112021searchItemsLink' href='/item/" + productData.products[i]._id + "'>" + productData.products[i].name + "</a></div>";
+              }
+              listShowItems.innerHTML = autocompleteitemsinnerHTML;
+              let prevCont = document.getElementById("softX28012021autocomplete-items");
+              if(prevCont){
+                prevCont.remove();
+              }
+              document.getElementById("softX28012021autocomplete-items-container").appendChild(listShowItems);
+            }else{
+              let prevCont = document.getElementById("softX28012021autocomplete-items");
+              if(prevCont){
+                prevCont.remove();
+              }
             }
           }
-        });
-
-        inp.addEventListener("keydown", function (e) {
-          var x = document.getElementById(this.id + "autocomplete-list");
-          if (x) x = x.getElementsByTagName("div");
-          if (e.keyCode == 40) {
-            currentFocus++;
-
-            addActive(x);
-          } else if (e.keyCode == 38) {
-            currentFocus--;
-
-            addActive(x);
-          } else if (e.keyCode == 13) {
-            e.preventDefault();
-            if (currentFocus > -1) {
-              if (x) x[currentFocus].click();
-            }
-          }
-        });
-        function addActive(x) {
-          if (!x) return false;
-
-          removeActive(x);
-          if (currentFocus >= x.length) currentFocus = 0;
-          if (currentFocus < 0) currentFocus = x.length - 1;
-
-          x[currentFocus].classList.add("autocomplete-active");
-        }
-        function removeActive(x) {
-          for (var i = 0; i < x.length; i++) {
-            x[i].classList.remove("autocomplete-active");
-          }
-        }
-        function closeAllLists(elmnt) {
-          var x = document.getElementsByClassName("autocomplete-items");
-          for (var i = 0; i < x.length; i++) {
-            if (elmnt != x[i] && elmnt != inp) {
-              x[i].parentNode.removeChild(x[i]);
-            }
-          }
-        }
-        document.addEventListener("click", function (e) {
-          closeAllLists(e.target);
-        });
-      }
-
-      var countries = [
-        "Fahmid",
-        "Zahid",
-        "Ashad",
-        "Ruhin",
-        "Estiak",
-        "Al-Amin",
-        "Pappu",
-        "Siyam",
-        "Jueal",
-        "Istiak",
-        "Soikot",
-        "Saima",
-        "bangladesh",
-        "Cat",
-        "DOHS",
-        "Furniture",
-        "Game",
-        "Hello",
-        "Jim",
-        "Kafi",
-        "Laxmir",
-        "Mango",
-        "Napa",
-        "Orange",
-        "Potato",
-        "Queue",
-        "Rate",
-        "Tomato",
-        "U",
-        "Vanila",
-        "wow",
-        "x-ray",
-        "Yoo",
-        "Zoo",
-      ];
-
-      autocomplete(document.getElementById("myInput"), countries);
+        };
+        xhttp.open("GET", "http://api.edusea.net/dashboard/product/public/search/<{businessId}>", true);
+        xhttp.setRequestHeader("search", softX28012021searchBar.value);
+        xhttp.send();
+      });
     </script>
   </body>
 </html>
