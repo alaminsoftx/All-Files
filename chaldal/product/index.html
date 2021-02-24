@@ -6,15 +6,597 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Product</title>
         <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                font-family: sans-serif;
+            }
+            :root{
+                --color1: #1a1a1ad1;
+                --color2: #333333db;
+                --color3:#615e58;
+                --color4:#fe8280;
+            }
+            .productItemsArea {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .singleProduct {
+                width: calc(50% - 10px);
+                margin: 5px;
+                height: auto;
+                text-align: center;
+                padding: 5px;
+                border-radius: 4px;
+                overflow: hidden;
+                transition:all .3s;
+            }
 
+            .sinlgeProductTop {
+                position: relative;
+                height: auto;
+            }
+                        
+            .productTopCol2 {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+                background-color: rgb(13 15 19 / 66%);
+                border-radius: 4px;
+            }
+            .productTopCol2 p {
+                color: #fff;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .singleProduct:hover .sinlgeProductTop .productTopCol2{
+                visibility: visible;
+            }
+            .productTopCol1 {
+                overflow: hidden;
+            }
+            .details {
+                position: absolute;
+                bottom: 0;
+                background: #fff;
+                color: #333 !important;
+                width: 100%;
+                border: 1px solid rgb(223, 228, 234) !important;
+                padding: 5px 0;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+            .details p{
+                color:var(--color3);
+            }
+            .productImage {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }       
+            .productImage img{
+                max-width: 200px;
+                max-height: 200px;
+            }
+            .productName{
+                margin-bottom:40px;
+            }   
+            p.producTitle {
+                font-size: 14px;
+                padding-top: 5px;
+                line-height: 24px;
+                color:var(--color1);
+            }
+            .productSubText{
+                margin-bottom: 8px;
+            }
+            p.productUnit {
+                font-size: 12px;
+                color:var(--color2);
+            }
+            span.moneyDigit {
+                font-size: 18px;
+                font-weight: bold;
+                color:var(--color3);
+            }
+            .moneySign img{
+                width:10px;
+            }
+            .sinlgeProductBottom {
+                margin-top: 3px;
+            }
+            p.addToCartBtn {
+                cursor: pointer;
+                background-color: #fff;
+                border: 1px solid #ebebeb;
+                padding: 9px 0;
+                text-align: center;
+                transition: all ease-in-out .15s;
+                color: var(--color4);
+                font-weight: bold;
+                font-size: 14px;
+                border-radius: 3px;
+            }
+
+            @media(min-width:600px){
+                .singleProduct {
+                    width: calc(33.33% - 10px);
+                }
+            }
+            @media(min-width:768px){
+                .singleProduct {
+                    width: calc(25% - 10px);
+                }
+            }
+            @media(min-width:991px){
+                .singleProduct {
+                    width: calc(20% - 10px);
+                }
+            }
+            @media(min-width:1100px){
+                .singleProduct {
+                    width: calc(16.66% - 10px);
+                }
+            }
+            @media(min-width:1366px){
+                .singleProduct {
+                width: calc(14.2856% - 10px);
+            }
+
+            }
         </style>
     </head>
     <body>
         <div class="productSection">
-            <div class="productItems">
+            <div class="productItemsArea">
+                <!-- single product -->
                 <div class="singleProduct">
-                    
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
                 </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+                <!-- single product -->
+                <div class="singleProduct">
+                    <div class="sinlgeProductTop">
+                        <!-- col 1 -->
+                        <div class="productTopCol1">
+                            <div class="productImage">
+                                <img src="https://cdn.chaldal.net/_mpimage/pran-drinko-litchi-juice-250-ml?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D72044&q=low&v=1&m=400&w=200&webp=1" alt="">
+                            </div>
+                            <div class="productName">
+                                <p class="producTitle" >Pran Drinko Litchi Juice</p>
+                            </div>
+                            <div class="productSubText">
+                                <p class="productUnit">12pc</p>
+                            </div>
+                            <div class="productPrice">
+                                <span class="moneySign"><img src="taka.svg" alt=""></span>
+                                <span class="moneyDigit">50</span>
+                            </div>
+                        </div>
+                        <!-- col2 -->
+                        <div class="productTopCol2">
+                            <p>Add to shopping cart</p>
+                            <div class="details">
+                                <p>Details</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sinlgeProductBottom">
+                        <p class="addToCartBtn">Add to cart</p>
+                    </div>
+                </div>
+               
             </div>
         </div>
     </body>

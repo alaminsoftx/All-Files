@@ -1,0 +1,265 @@
+/*start admin pannel left css */
+.adminPannelLeft {
+  max-width: 270px;
+  width: 100%;
+  background-color: var(--white);
+  height: 100vh;
+  padding: 0 15px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: var(--BoxShadowForBoxes);
+  position: fixed;
+  left: 0;
+  overflow-y: scroll;
+}
+
+/* top; */
+.dashNavtop {
+  /* height: 80vh;
+  min-height: 600px; */
+}
+.adminPannelLogo {
+  height: 85px;
+  position: sticky;
+  top: 0;
+  background: #fff !important;
+  width: calc(270px + 0px );
+  margin-left: -15px;
+  padding: 0 15px;
+  z-index: 99;
+  display: flex;
+  align-items: flex-end;
+}
+.pannelItems {
+  height: calc(80vh - 120px);
+  min-height: 600px;
+  margin-top: 35px;
+}
+
+.dashNavText {
+  font-size: var(--fontSizeM);
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color3);
+}
+.dashNavItem:nth-child(2) {
+  background-color:var(--activecolor);
+  box-shadow: var( --buttonShadow);
+}
+.dashNavItem:nth-child(2) .dashNavText {
+  color:var(--white);
+}
+.dashNavItem:nth-child(2) .dashNavIcon{
+  filter: brightness(0) invert(1);
+}
+.dashNavItem {
+  padding: 10px 20px;
+  display: flex;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.dashNavItem:not(:last-child){
+  margin-bottom: 10px;
+}
+.dashNavItem:hover {
+  background-image: var(--buttonGradient);
+  box-shadow: var( --buttonShadow);
+}
+.dashNavItem:hover .dashNavIcon {
+  filter: brightness(0) invert(1);
+}
+.dashNavItem:hover .dashNavText {
+  color: var(--white);
+}
+.dashNavIcon {
+  margin-right: 15px;
+}
+.settingsItem{
+  margin-top:115px;
+}
+/* bottom */
+.dashNavbottom {
+  height: 15vh;
+  min-height: 156px;
+  display: flex;
+  align-items: flex-end;
+}
+.dashNavbottom ul {
+  width: 100%;
+}
+
+/* scrollbar */
+.adminPannelLeft::-webkit-scrollbar {
+  display: none;
+}
+
+.adminPannelLeft.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/*end admin pannel left css */
+
+/*start admin pannel right css */
+.adminPannelRight {
+  width: calc(100% - 270px);
+  padding: 30px;
+  margin-left: 270px;
+  height: 100vh;
+  min-height: 778px;
+}
+
+/* right nav */
+.employeeListSticky{
+  position: relative;
+  z-index: -2;
+}
+.adminPannelRight::after {
+  content: '';
+  height: 110px;
+  width: 100%;
+  background: #f1f5ff;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.adminPannelRightNav {
+  background: var(--white);
+  height: 90px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  box-shadow: var(--BoxShadowForBoxes);
+  position:sticky;
+  top:31px;
+}
+.rightNavUser {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  flex-wrap: wrap;
+}
+.userImage img {
+  width: 90px;
+}
+.userName{
+  font-size:var(--fontSizeM);
+  color:var(--color3);
+}
+.userImage {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userActive {
+  width: 14px;
+  height: 14px;
+  background: var(--color6);
+  position: absolute;
+  border-radius: 50%;
+  top: 55px;
+  right: 16px;
+  border: 2px solid var(--white);
+}
+
+/* start add employees area */
+.addEmployeesAreaInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.addEmployeesArea {
+  margin: 25px 0;
+} 
+.addEmployeesText{
+  font-size:var(--fontSize24);
+  color:var(--seconderyColor);
+  font-weight: 600;
+}
+.addEmployeeRight {
+  background-image: var(--buttonGradient);
+  display: flex;
+  align-items: center;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--buttonShadow);
+}
+.addEmployeeIcon {
+  width: 13px;
+  filter: brightness(0) invert(1);
+  margin-right: 10px;
+}
+.addEmployeesBtnText {
+  font-size:var(--fontSizeM);
+  color:var(--color3);
+  color:var(--white);
+}
+/* end add employees area */
+
+/* start employee list area */
+.employeeListArea{
+  background-color:var(--white);
+  border-radius: 15px;
+  box-shadow: var(--BoxShadowForBoxes);
+  overflow: hidden;
+}
+
+.employeeListTile{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color7);
+  justify-content: space-between;
+  padding: 11px 50px;
+  align-items: center;
+}
+.employeeListHeader li{
+  font-size:var(--fontSizeM);
+  font-weight: 600;
+  color:var( --color3)
+}
+.employeeItem {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--white);
+  justify-content: space-between;
+  padding: 2px 50px;
+  align-items: center;
+}
+.employeeItem li{
+  font-size:var(--fontSizeM);
+  font-weight: 400;
+  color:var(--color8);
+}
+.employeeName{
+  font-weight: 500;
+}
+.employeePosition{
+  color:var(--color9);
+  margin-top:3px;
+}
+.employeeRow {
+  display: flex;
+  align-items: center;
+}
+.employeeImg {
+  margin-right: 10px;
+}
+.employeeNamePos {
+  display: flex;
+  flex-direction: column;
+}
+.allEmployeeList:not(:last-child){
+  border-bottom:1px solid  rgb(209 216 224 / 50%);
+}
+/* end employee list area */
+/*end admin pannel right css */
