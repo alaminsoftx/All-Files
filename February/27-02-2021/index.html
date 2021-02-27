@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        :root {
+            --primaryColor: rgba(52, 73, 94, 1);
+            --seconderColor: rgb(99, 110, 114);
+            --textHeadingColor1: #212121e0;
+            --textBodyColor1: rgba(52, 73, 94, 1);
+            --editColor: #4AA085;
+            --white: #fff;
+            --inputColor: #212121;
+            --selectFieldTextColor: #656667;
+            --homeOrOfficeBg: #dfe6e942;
+
+
+            --iconFontsize11: 11px;
+            --headingFontSize12: 12px;
+            --headingFontSize13: 13px;
+            --headingFontSize14: 14px;
+            --headingFontSize15: 15px;
+            --headingFontSize16: 16px;
+            --headingFontSize17: 17px;
+
+            --bodyFontSize11: 11px;
+            --bodyFontSize12: 12px;
+            --bodyFontSize13: 13px;
+            --bodyFontSize14: 14px;
+            --bodyFontSize15: 15px;
+
+            --placeHolderFontSize12: 12px;
+            --placeHolderFontSize13: 13px;
+            --placeHolderFontSize14: 14px;
+
+            --buttonFontsize12: 12px;
+            --buttonFontsize13: 13px;
+            --buttonFontsize14: 14px;
+            --buttonFontsize15: 15px;
+            --buttonFontsize16: 16px;
+
+
+            --inputfieldBorder: 1px solid #dfe4ea;
+        }
+
+        .cartTab {
+            background-color: var(--white);
+        }
+
+        .softx25022021CartArea {
+            margin-bottom: 15px;
+        }
+
+        .softx25022021CheckoutInfo {
+            padding: 10px;
+            background-color: var(--white);
+        }
+
+        .softx25022021CheckoutInfoTitle p {
+            font-size: var(--headingFontSize13);
+            font-weight: bold;
+            color: var(--seconderColor)
+        }
+
+
+        .softx25022021InfoBody {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .softx25022021InfoBodyLeft {
+            width: 100%;
+        }
+
+        .softx25022021InfoBodyRight {
+            width: 100%;
+        }
+
+
+        .softx25022021InfoLeftInput input,
+        .softx25022021InfoLeftInput select {
+            border: var(--inputfieldBorder);
+            height: 35px;
+            line-height: 35px;
+            padding: 5px 7px;
+            border-radius: 2px;
+            width: 100%;
+            outline: none;
+            color: var(--inputColor) !important;
+            opacity: 1;
+            font-size: var(--bodyFontSize12);
+
+        }
+
+        input::placeholder {
+            font-size: var(--placeHolderFontSize12);
+        }
+
+        .softx25022021InfoLeftInput select {
+            color: var(--selectFieldTextColor) !important;
+            opacity: 1;
+        }
+
+        .softx25022021InfoLeftInput label {
+            font-size: var(--bodyFontSize12);
+            margin-bottom: 5px !important;
+            display: inline-block;
+            color: var(--textBodyColor1)
+        }
+
+        .softx25022021InfoLeftInput {
+            margin-bottom: 15px;
+        }
+
+        .softx25022021CheckoutInfoTitle {
+            margin-bottom: 15px;
+        }
+
+        .softx25022021InfoLeftInput.effectiveDelivery p {
+            font-size: var(--bodyFontSize12);
+            margin-bottom: 15px;
+            color: var(--textBodyColor1);
+        }
+
+        .softx25022021EffectiveContent {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .softx25022021WorkIcon i {
+            font-size: var(--iconFontsize11);
+        }
+
+        .softx25022021WorkText {
+            font-size: var(--bodyFontSize12);
+        }
+
+        .softx25022021EffectiveContentWork,
+        .softx25022021EffectiveContentHome {
+            border: var(--inputfieldBorder);
+            padding: 10px 20px;
+            border-radius: 3px;
+            background: var(--homeOrOfficeBg);
+            margin-right: 12px;
+            margin-bottom: 10px;
+            color: var(--primaryColor);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .softx25022021ActionButton {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .softx25022021ActionButton button {
+            height: 35px;
+            border: 1px solid transparent;
+            outline: none;
+            font-size: var(--buttonFontsize12);
+            padding: 0px 45px;
+            box-sizing: border-box;
+            border-radius: 2px;
+            margin-top: 10px;
+            line-height: 1;
+            margin-right: 10px;
+            cursor: pointer;
+            color: var(--textBodyColor1)
+        }
+
+        .softx25022021CartItemsHeader {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background: #FAFAFA;
+            padding: 15px 9px;
+            border-radius: 3px;
+        }
+
+        .softx25022021CartHeaderCol1 {
+            width: 50%;
+        }
+
+        .softx25022021CartHeaderCol1 span,
+        .softx25022021CartHeaderCol2 span,
+        .softx25022021CartHeaderCol3 span {
+            color: var(--seconderColor);
+            font-size: var(--bodyFontSize11);
+            text-transform: uppercase;
+        }
+
+        .softx25022021CartHeaderCol2 {
+            width: 25%;
+        }
+
+        .softx25022021CartHeaderCol3 {
+            width: 25%;
+            text-align: right;
+        }
+
+
+
+        .softx25022021SingleCartItem {
+            background: #fff;
+            padding: 10px;
+        }
+
+        .dollerSign i {
+            font-size: 12px;
+            font-weight: 400;
+            color: #202020;
+
+        }
+
+        .softx25022021DeliveryMoney {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .softx25022021HomeDeliveryText {
+            font-size: 12px;
+            color: #202020;
+            margin-top: 10px;
+            line-height: 12px;
+            margin-bottom: 4px;
+        }
+
+        .softx1102201CartItem {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .softx1102201CartItem:not(:first-child) {
+            margin-top: 15px;
+        }
+
+        .softx1102201LeftCartItem {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .softx1102201CartLeftImg {
+            width: 60px;
+        }
+
+        .softx1102201CartLeftImg img {
+            width: 100%;
+        }
+
+        .softx1102201CartItemInnerHead {
+            font-size: var(--headingFontSize12);
+            display: block;
+            color: var(--textBodyColor1);
+        }
+
+        .softx1102201CartItemInnerSubHead {
+            font-size: var(--bodyFontSize11);
+            display: block;
+            color: var(--seconderColor);
+            margin-top: 4px;
+            line-height: 20px;
+        }
+
+        .softx1102201CartLeftContent {
+            margin-top: 5px;
+        }
+
+        .softx1102201CartItemMiddle {
+            width: 25%;
+        }
+
+        .softx25022021InnerCpDollerSign i {
+            font-size: var(--bodyFontSize11);
+        }
+
+        .softx25022021InnerCpMoney {
+            font-size: var(--bodyFontSize12);
+            font-weight: bold;
+        }
+
+        .softx1102201CartItemRightQtyInner p {
+            font-size: var(--bodyFontSize12);
+        }
+
+        .softx1102201CartItemRight {
+            width: 25%;
+            text-align: right;
+        }
+
+        .softx25022021CheckoutRight {
+            background: var(--white);
+            margin-top: 15px;
+        }
+
+
+        .softx25022021TopProcessToPay a {
+            background: var(--primaryColor);
+            display: block;
+            text-align: center;
+            font-size: var(--bodyFontSize13);
+            color: var(--white);
+            padding: 8px 2px;
+            border-radius: 2px;
+            transition: all .3s;
+        }
+
+        .softx25022021TopProcessToPay a:hover {
+            background: rgb(17 38 60);
+        }
+
+
+        .softx25022021CheckoutRightMainAddress {
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+
+        .softx25022021CheckoutRightMainATitle {
+            margin-bottom: 10px;
+        }
+
+        .softx25022021SummaryTitle p,
+        .softx25022021CheckoutRightMainATitle p {
+            font-size: var(--headingFontSize13);
+            color: var(--textHeadingColor1);
+            font-weight: bold;
+        }
+
+        .softx11022021EmailArea,
+        .softx11022021BillingAddress,
+        .softx11022021PhoneNumberArea,
+        .softx1102021CheckOutBodyRightAddressMain {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 15px;
+            margin-top: 15px;
+        }
+
+        .softx11022021AddressMainitem1 i {
+            font-size: var(--bodyFontSize12);
+            color: var(--editColor);
+        }
+
+        .softx11022021PhoneNumber a,
+        .softx11022021BillingAddressInfo,
+        .softx11022021AddressMainitem2 {
+            font-size: var(--bodyFontSize12);
+            color: var(--textBodyColor1);
+        }
+
+        .softx11022021AddressMainitem3 a {
+            font-size: var(--bodyFontSize11);
+            text-transform: uppercase;
+            color: var(--editColor);
+        }
+
+
+        .softx25022021CheckoutRightMainAddressVal {
+            margin-top: 15px;
+        }
+
+        .softx25022021CheckoutRightInfo {
+            padding: 10px;
+        }
+
+        .softx25022021AddressValItemText {
+            background: var(--primaryColor);
+            font-size: var(--bodyFontSize12);
+            padding: 5px 19px;
+            border-radius: 15px;
+            color: var(--white);
+            line-height: 26px;
+        }
+
+        .softx25022021AddressValText {
+            font-size: 12px;
+            color: var(--primaryColor);
+        }
+
+        .softx25022021PhoneNumber a {
+            color: var(--textBodyColor1);
+        }
+
+        .softx25022021CheckOutSummaryArea {
+            margin-top: 15px;
+            padding: 10px;
+        }
+
+
+        .softx25022021ShippingLeft span,
+        .softx25022021SubtotalLeft span {
+            font-size: var(--bodyFontSize12);
+            color: var(--textBodyColor1);
+        }
+
+        .softx25022021TotalRightDlrIcon i,
+        .softx25022021Shippingdolr i,
+        .softx25022021Subtotaldolr i {
+            font-size: 12px;
+        }
+
+        .softx25022021TotalRightNum,
+        .softx25022021ShippingNum,
+        .softx25022021SubtotalNum {
+            font-size: var(--bodyFontSize12);
+            font-weight: bold;
+        }
+
+
+        .softx25022021ShippingTitle p {
+            font-size: 14px;
+            color: #212121;
+
+        }
+
+
+
+
+
+
+        .softx25022021SubtotalItem,
+        .softx25022021ShippingItem {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+
+
+        .softx25022021VoucherInput input[type="text"] {
+            border: 1px solid #dfe4ea;
+            height: 35px;
+            line-height: 35px;
+            padding: 5px 7px;
+            border-radius: 2px;
+            width: 100%;
+            outline: none;
+        }
+
+        .softx25022021VoucherInput form span {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .softx25022021CheckoutRightAddressMain {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .softx25022021VoucherInput input[type="text"]::placeholder {
+            font-size: 12px;
+        }
+
+        .softx25022021ApplyButton {
+            height: 35px;
+            border: 1px solid transparent;
+            outline: none;
+            font-size: 12px;
+            padding: 2px 20px;
+            box-sizing: border-box;
+            background: var(--primaryColor);
+            border-radius: 2px;
+            color: var(--white);
+            width: 100%;
+            margin-top: 10px;
+            line-height: 1;
+            transition: all .3s;
+        }
+
+        .softx25022021ApplyButton:hover {
+            background: rgb(17 38 60);
+        }
+
+        .softx25022021VoucherInput form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .softx25022021TotalPriceArea {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .softx25022021TotalLeft span {
+            font-size: var(--bodyFontSize12);
+            color: var(--textHeadingColor1);
+            font-weight: bold;
+        }
+
+        .softx25022021PorceedToPayBottom {
+            margin-top: 15px;
+        }
+
+        .sfotx11022021TotalRighttop {
+            text-align: right;
+            line-height: 25px;
+        }
+
+        .sfotx11022021TotalRighttop p {
+            font-size: var(--bodyFontSize12);
+            color: var(--textBodyColor1)
+        }
+
+        /* tabs */
+
+
+        .cartTabText {
+            color: var(--white);
+            font-size: var(--bodyFontSize12);
+            font-weight: bold;
+            padding: 8px 30px;
+            cursor: pointer;
+            background: var(--primaryColor);
+            border-radius: 3px;
+        }
+
+
+        div#softx25022021CuponArea {
+            background: var(--white);
+            padding: 10px;
+        }
+
+        @media (min-width: 600px) {
+            .cartTabText {
+                padding: 9px 30px;
+                font-size: var(--bodyFontSize14);
+            }
+
+            .softx11022021AddressMainitem1 i {
+                font-size: var(--bodyFontSize14);
+            }
+
+            .softx25022021CheckoutInner {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .softx25022021CheckoutLeft {
+                width: calc(60% - 10px);
+            }
+
+            .softx25022021CheckoutRight {
+                width: calc(40% - 10px);
+                margin-top: 0px;
+            }
+
+            .softx25022021SummaryTitle p,
+            .softx25022021CheckoutRightMainATitle p {
+                font-size: var(--headingFontSize14);
+            }
+
+            .softx25022021PhoneNumber a,
+            .softx25022021BillingAddressInfo,
+            .softx25022021AddressMainitem2 {
+                font-size: 14px;
+            }
+
+            .softx25022021TotalRightNum,
+            .softx25022021ShippingNum,
+            .softx25022021SubtotalNum {
+                font-size: var(--bodyFontSize13);
+            }
+
+            .softx25022021CartHeaderCol1 span,
+            .softx25022021CartHeaderCol2 span,
+            .softx25022021CartHeaderCol3 span {
+                font-size: var(--bodyFontSize12);
+            }
+
+            .sfotx11022021DeliveryOptionsText {
+                font-size: 14px;
+            }
+
+            .softx25022021HomeDeliveryText {
+                font-size: 14px;
+            }
+
+            .softx1102201CartItemInnerSubHead {
+                font-size: var(--bodyFontSize12);
+                margin-top: 5px;
+            }
+
+            .softx25022021InnerCpMoney {
+                font-size: var(--bodyFontSize14);
+            }
+
+            .softx1102201CartItemRightQtyInner p {
+                font-size: var(--bodyFontSize13);
+            }
+
+            .softx1102201LeftCartItem {
+                width: 60%;
+            }
+
+            .softx1102201CartItemMiddle {
+                width: 20%;
+            }
+
+            .softx1102201CartItemRight {
+                width: 20%;
+            }
+
+            .softx25022021PhoneNumberArea,
+            .softx25022021CheckoutRightAddressMain {
+                margin-top: 20px;
+            }
+
+            .softx25022021TopProcessToPay a {
+                padding: 9px 2px;
+                font-size: var(--buttonFontsize14);
+            }
+
+            .softx25022021ApplyButton {
+                font-size: var(--buttonFontsize12);
+                cursor: pointer;
+            }
+
+            .softx25022021VoucherInput input[type="text"] {
+                height: 37px;
+                line-height: 37px;
+            }
+
+            .softx1102201CartItemInnerHead {
+                font-size: var(--bodyFontSize14);
+            }
+
+            .softx25022021InfoBodyRight,
+            .softx25022021InfoBodyLeft {
+                width: calc(50% - 10px);
+            }
+
+            .softx25022021InfoLeftInput input,
+            .softx25022021InfoLeftInput select {
+                height: 37px;
+                line-height: 37px;
+            }
+
+            .softx25022021CartHeaderCol1 {
+                width: 60%;
+            }
+
+            .softx25022021CartHeaderCol2 {
+                width: 20%;
+            }
+
+            .softx25022021CartHeaderCol3 {
+                width: 20%;
+            }
+        }
+
+        @media (min-width: 991px) {
+            .container {
+                padding: 0 50px;
+            }
+
+            .softx25022021CheckoutLeft {
+                width: calc(100% - 400px);
+            }
+
+            .softx25022021CheckoutRight {
+                width: 380px;
+            }
+
+
+            .softx1102201LeftCartItem {
+                width: 66%;
+            }
+
+            .softx1102201CartItemMiddle {
+                width: 17%;
+            }
+
+            .softx1102201CartItemRight {
+                width: 17%;
+            }
+
+            .softx1102201CartLeftImg {
+                width: 90px;
+            }
+
+            .softx1102201CartLeftContent {
+                margin-top: 0px;
+                margin-left: 10px;
+            }
+
+            .softx25022021SingleCartItem {
+                padding: 15px;
+            }
+
+            .softx25022021InfoLeftInput label {
+                font-size: var(--bodyFontSize14)
+            }
+
+            .softx25022021WorkText {
+                font-size: var(--bodyFontSize13);
+            }
+
+            .softx25022021CheckoutInfoTitle p {
+                font-size: var(--headingFontSize15)px;
+            }
+
+            .softx25022021ActionButton button {
+                height: 40px;
+                font-size: 13px;
+            }
+
+            .softx25022021CheckoutInfo {
+                padding: 15px;
+            }
+
+            .softx25022021CartHeaderCol1 {
+                width: 66%;
+            }
+
+            .softx25022021CartHeaderCol2 {
+                width: 17%;
+            }
+
+            .softx25022021CartHeaderCol3 {
+                width: 17%;
+            }
+
+            .softx25022021TopProcessToPay a {
+                padding: 11px 2px;
+            }
+
+            .cartTabText {
+                padding: 11px 30px;
+            }
+
+            .softx25022021SingleCartItem,
+            div#softx25022021CuponArea,
+            .softx25022021CheckoutRightInfo,
+            .softx25022021CheckOutSummaryArea {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="softx25022021CheckoutSection">
+        <div class="container">
+            <div class="softx25022021CheckoutInner">
+                <!-- checkout left -->
+                <div class="softx25022021CheckoutLeft">
+                    <!-- cart -->
+                    <div class="cartTab">
+                        <p class="cartTabText" id="softx25022021CartText1">Cart</p>
+
+                        <div class="softx25022021CartArea" id="softx25022021CartArea">
+
+                            <div class="softx25022021CartItemsHeader">
+                                <div class="softx25022021CartHeaderCol1">
+                                    <span class="softx11022021ItemNumberHeading"
+                                        id="softx11022021ItemNumberHeading"></span>
+                                    <span class="softx11022021ItemTextHeading">Items</span>
+                                </div>
+
+
+                                <div class="softx25022021CartHeaderCol2">
+                                    <span class="softx110220221PriceHeading">Price</span>
+                                </div>
+
+
+                                <div class="softx25022021CartHeaderCol3">
+                                    <span class="softx11022021QuantityHeading">Quantity</span>
+                                </div>
+                            </div class="softx25022021CartItems">
+                            <div class="softx25022021CartItemsInner">
+                                <div class="softx25022021SingleCartItem" id="softx25022021CartItemID">
+                                    <!-- <div class="softx1102201CartItem">
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- checkout info -->
+                    <div class="cartTab">
+                        <p class="cartTabText" id="softx25022021CartText2">Delivery Information</p>
+                        <div class="softx25022021CheckoutInfo" id="softx25022021InfoArea">
+                            <div class="softx25022021CheckoutInfoTitle">
+                                <p>Delivery Information</p>
+                            </div>
+                            <form action="#">
+                                <div class="softx25022021InfoBody">
+                                    <div class="softx25022021InfoBodyLeft">
+
+                                        <div class="softx25022021InfoLeftInput">
+                                            <label for="softx27022021CustomerFullName">Full Name</label>
+                                            <input id="softx27022021CustomerFullName" type="text"
+                                                placeholder="Enter your and last name" name="fullName">
+                                        </div>
+
+                                        <div class="softx25022021InfoLeftInput">
+                                            <label for="softx27022021CustomerPhoneNumber">Phone Number</label>
+                                            <input id="softx27022021CustomerPhoneNumber" type="tel"
+                                                placeholder="Enter your phone number" name="phoneNumber">
+                                        </div>
+                                    </div>
+                                    <div class="softx25022021InfoBodyRight">
+
+                                        <div class="softx25022021InfoLeftInput region">
+                                            <label for="region">Region</label>
+                                            <select name="" id="softx27022021region">
+                                            </select>
+                                        </div>
+
+                                        <div class="softx25022021InfoLeftInput city">
+                                            <label for="city">City</label>
+                                            <select name="" id="softx27022021city">
+                                            </select>
+                                        </div>
+
+                                        <div class="softx25022021InfoLeftInput area">
+                                            <label for="area">Area</label>
+                                            <select name="" id="softx27022021Area">
+                                            </select>
+                                        </div>
+
+                                        <div class="softx25022021InfoLeftInput address">
+                                            <label for="softx25022021CustomerAddress">Address</label>
+                                            <input type="text" id="softx25022021CustomerAddress"
+                                                placeholder="For Example: house#89,Stret#09,ABC Road">
+                                        </div>
+
+                                        <div class="softx25022021InfoLeftInput effectiveDelivery">
+                                            <p>Select a label for effective delivery:</p>
+                                            <div class="softx25022021EffectiveContent">
+                                                <div class="softx25022021EffectiveContentWork"
+                                                    id="softx27022021EffectiveDeliveryOffice">
+                                                    <span class="softx25022021WorkIcon"><i
+                                                            class="fas fa-briefcase"></i></span>
+                                                    <span class="softx25022021WorkText">Office</span>
+                                                </div>
+                                                <div class="softx25022021EffectiveContentHome"
+                                                    id="softx27022021EffectiveDeliveryHome">
+                                                    <span class="softx25022021WorkIcon"><i
+                                                            class="fas fa-clinic-medical"></i></span>
+                                                    <span class="softx25022021WorkText">Home</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="softx25022021ActionButton">
+                                    <button type="button" class="">Cancel</button>
+                                    <button type="button" class="">Save</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    <!-- cupon -->
+                    <!-- checkout info -->
+                    <div class="cartTab">
+                        <p class="cartTabText" id="softx25022021Cupon">Cupon</p>
+                        <div class="softx25022021CuponArea" id="softx25022021CuponArea">
+                            <div class="softx25022021VoucherInputArea">
+                                <div class="softx25022021VoucherInput">
+                                    <form action="#">
+                                        <span>
+                                            <input type="text" placeholder="Enter Voucher Code">
+                                        </span>
+                                        <span>
+                                            <button class="softx25022021ApplyButton" type="button">Apply</button>
+                                        </span>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- checkout right -->
+
+                <div class="softx25022021CheckoutRight">
+                    <div class="softx25022021TopProcessToPay">
+                        <a href="#">Proceed to checkout</a>
+                    </div>
+
+                    <div class="softx25022021CheckoutRightInfo">
+                        <div class="softx25022021CheckoutRightMainAddress">
+
+                            <div class="softx25022021CheckoutRightMainATitle">
+                                <p>Shipping &amp; Billing</p>
+                            </div>
+                            <div class="softx25022021CheckoutRightAddressMain"
+                                id="softx25022021CheckoutRightAddressMain">
+                                <div class="softx25022021CheckoutRightAddressMainTop">
+                                    <span class="softx11022021AddressMainitem1"></span>
+                                    <span class="softx11022021AddressMainitem2"
+                                        id="softx11022021CustomerNameShow"></span>
+                                </div>
+                                <div class="softx25022021CheckoutRightAddressMainBottom">
+                                    <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+                                </div>
+
+                            </div>
+
+                            <div class="softx25022021CheckoutRightMainAddressVal"
+                                id="softx25022021CheckoutRightMainAddressVal">
+                                <div class="softx25022021AddressValItem">
+                                    <span class="softx25022021AddressValItemText"
+                                        id="softx27022021ShowEffective">Home</span>
+                                    <span class="softx25022021AddressValText"
+                                        id="softx25022021CustomerAddressShow"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="softx11022021BillingAddress">
+                            <div class="softx11022021BillingAddressLeft">
+                                <span class="softx11022021AddressMainitem1"><i class="fas fa-map-marker-alt"></i></span>
+                                <span class="softx11022021BillingAddressInfo">Bill to the same address</span>
+                            </div>
+                            <div class="softx11022021BillingAddressRight">
+                                <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+                            </div>
+                        </div>
+
+                        <div class="softx11022021PhoneNumberArea" id="softx11022021PhoneNumberArea">
+                            <div class="softx11022021BillingAddressLeft">
+                                <span class="softx11022021AddressMainitem1"><i class="fas fa-phone-alt"></i></i></span>
+                                <span class="softx11022021PhoneNumber"><a id="softx27022021CustomerPhoneNumberShow"
+                                        href=""> </a></span>
+                            </div>
+                            <div class="softx11022021BillingAddressRight">
+                                <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+                            </div>
+                        </div>
+
+                        <div class="softx11022021EmailArea">
+                            <div class="softx11022021BillingAddressLeft">
+                                <span class="softx11022021AddressMainitem1"><i class="fas fa-envelope"></i></span>
+                                <span class="softx11022021PhoneNumber"><a href=""
+                                        id="softx27022021CustomerEmail"></a></span>
+                            </div>
+                            <div class="softx11022021BillingAddressRight">
+                                <span class="softx11022021AddressMainitem3"><a href="#">edit</a></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="softx25022021CheckOutSummaryArea">
+                        <div class="softx25022021SummaryTitle">
+                            <p>Order Summary</p>
+                        </div>
+
+                        <div class="softx25022021SubtotalItem">
+                            <div class="softx25022021SubtotalLeft">
+                                <span id="softx25022021SubtotalItemTitle"> </span>
+                            </div>
+                            <div class="softx25022021SubtotalRight">
+                                <span class="softx25022021Subtotaldolr"><i class="fas fa-dollar-sign"></i></span>
+                                <span class="softx25022021SubtotalNum" id="softx25022021SubtotalNum"> </span>
+                            </div>
+                        </div>
+
+                        <div class="softx25022021ShippingItem">
+                            <div class="softx25022021ShippingLeft">
+                                <span> Shipping Price</span>
+                            </div>
+                            <div class="softx25022021ShippingRight">
+                                <span class="softx25022021Shippingdolr"><i class="fas fa-dollar-sign"></i></span>
+                                <span class="softx25022021ShippingNum" id="softx25022021ShippingPrice"></span>
+                            </div>
+                        </div>
+
+                        <div class="softx25022021TotalPriceArea">
+                            <div class="softx25022021TotalLeft">
+                                <span>Total:</span>
+                            </div>
+                            <div class="softx25022021TotalRight">
+                                <div class="sfotx11022021TotalRighttop">
+                                    <span class="softx25022021TotalRightDlrIcon"><i
+                                            class="fas fa-dollar-sign"></i></span>
+                                    <span class="softx25022021TotalRightNum" id="softx25022021TotalRightNum">00</span>
+                                    <p>VAT included, where applicable</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="softx25022021PorceedToPayBottom">
+                        <div class="softx25022021TopProcessToPay">
+                            <a href="#">Proceed to checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script>
+        // customer name handle
+        let softx11022021CustomerNameShow = document.getElementById("softx11022021CustomerNameShow");
+        let softx27022021CustomerFullName = document.getElementById("softx27022021CustomerFullName");
+        let softx25022021CheckoutRightAddressMain = document.getElementById("softx25022021CheckoutRightAddressMain");
+        softx25022021CheckoutRightAddressMain.style.display = "none"
+        softx27022021CustomerFullName.addEventListener("change", function (e) {
+            softx11022021CustomerNameShow.innerHTML = e.target.value
+            if (softx11022021CustomerNameShow.innerHTML = e.target.value) {
+                softx25022021CheckoutRightAddressMain.style.display = "flex"
+            }
+
+        })
+
+        // customer phone number handle
+        let softx27022021CustomerPhoneNumberShow = document.getElementById("softx27022021CustomerPhoneNumberShow");
+        let softx27022021CustomerPhoneNumber = document.getElementById("softx27022021CustomerPhoneNumber");
+        let softx11022021PhoneNumberArea = document.getElementById("softx11022021PhoneNumberArea");
+        softx11022021PhoneNumberArea.style.display = "none"
+        softx27022021CustomerPhoneNumber.addEventListener("change", function (e) {
+            softx27022021CustomerPhoneNumberShow.innerHTML = e.target.value;
+            softx27022021CustomerPhoneNumberShow.setAttribute("href", "tel:" + e.target.value);
+            if (softx27022021CustomerPhoneNumberShow.innerHTML == e.target.value) {
+                softx11022021PhoneNumberArea.style.display = "flex"
+            }
+        })
+
+        // customer email handle
+        let softx27022021CustomerEmail = document.getElementById("softx27022021CustomerEmail");
+        let softx27022021CustomerEmailAddress = "test.softx@gmail.com";
+        softx27022021CustomerEmail.innerHTML = softx27022021CustomerEmailAddress;
+        softx27022021CustomerEmail.setAttribute("href", "mailto:" + softx27022021CustomerEmailAddress);
+
+        // cusomer address showing handler
+        let softx25022021CustomerAddressShow = document.getElementById("softx25022021CustomerAddressShow");
+        let softx25022021CustomerAddress = document.getElementById("softx25022021CustomerAddress");
+        let softx25022021CheckoutRightMainAddressVal = document.getElementById("softx25022021CheckoutRightMainAddressVal");
+        softx25022021CheckoutRightMainAddressVal.style.display = "none"
+        softx25022021CustomerAddress.addEventListener("change", function (e) {
+            softx25022021CustomerAddressShow.innerHTML = e.target.value;
+            if (softx25022021CustomerAddressShow.innerHTML = e.target.value) {
+                softx25022021CheckoutRightMainAddressVal.style.display = "flex"
+            }
+        })
+
+        //home or office
+        let softx27022021EffectiveDeliveryHome = document.getElementById("softx27022021EffectiveDeliveryHome");
+        softx27022021EffectiveDeliveryHome.addEventListener("click", function () {
+            softx27022021ShowEffective.innerText = "Home"
+        })
+        let softx27022021EffectiveDeliveryOffice = document.getElementById("softx27022021EffectiveDeliveryOffice");
+        softx27022021EffectiveDeliveryOffice.addEventListener("click", function () {
+            softx27022021ShowEffective.innerText = "Office";
+        })
+
+
+
+
+
+        // card dynamic
+        let softx25022021CartItems = [
+            {
+                productImg: "https://i.ibb.co/GTdh8CH/b677601a70d4d080e1dfbc0b32d6e28e.jpg",
+                productTitle: "Winter Cap for men",
+                productSubTitle: "Icon Fashion BD, Color Family:Lite Navy, Size:Int:XL",
+                productPrice: "96",
+                productQty: "Qty",
+                productQuantity: '1'
+            },
+            {
+                productImg: "https://i.ibb.co/TkR4LBH/ac7d27be8aef069d57fbfb0915c61cd5.jpg",
+                productTitle: "T-shirt for men",
+                productSubTitle: "Icon Fashion BD, Color Family:Lite Navy, Size:Int:XL",
+                productPrice: "399",
+                productQty: "Qty",
+                productQuantity: '1'
+            },
+            {
+                productImg: "https://i.ibb.co/mH208BZ/ezgif-com-gif-maker.jpg",
+                productTitle: "Salt",
+                productSubTitle: "Iodin BD, Weight:1kg",
+                productPrice: "55",
+                productQty: "Qty",
+                productQuantity: '1'
+            }
+
+        ];
+
+
+        // shipping price
+        let softx25022021ShippingPrice = document.getElementById("softx25022021ShippingPrice");
+        let softx25022021ShippingRate = 15;
+        softx25022021ShippingPrice.innerHTML = softx25022021ShippingRate;
+
+        // total price
+        let softx25022021TotalPrice = document.getElementById("softx25022021TotalRightNum");
+
+
+        // subtotal price
+        let subtotalPrice = 0;
+        let softx25022021CartItem = document.getElementById("softx25022021CartItemID");
+        let softx25022021SubtotalPrice = document.getElementById("softx25022021SubtotalNum");
+        let softx25022021SubtotalItemTitle = document.getElementById("softx25022021SubtotalItemTitle");
+
+        let softx25022021CartItemsLength = softx25022021CartItems.length;
+        let softx25022021CartItemsInnerHtml = "";
+
+        let softx11022021ItemNumberHeading = document.getElementById("softx11022021ItemNumberHeading");
+        softx11022021ItemNumberHeading.innerHTML = softx25022021CartItemsLength;
+
+
+        for (let i = 0; i < softx25022021CartItemsLength; i++) {
+            subtotalPrice = parseFloat(subtotalPrice) + parseFloat(softx25022021CartItems[i].productPrice);
+            softx25022021CartItemsInnerHtml = softx25022021CartItemsInnerHtml + "<div class='softx1102201CartItem'><div class='softx1102201LeftCartItem'> <div class='softx1102201CartLeftImg'><a href=''><img src='" + softx25022021CartItems[i].productImg + "'></a></div> <div class='softx1102201CartLeftContent'> <a href='' class='softx1102201CartItemInnerHead'>" + softx25022021CartItems[i].productTitle + "</a> <a href='' class='softx1102201CartItemInnerSubHead'>" + softx25022021CartItems[i].productSubTitle + "</a></div> </div> <div class='softx1102201CartItemMiddle'> <div class='softx1102201CartItemMiddleInner'><div class='softx1102201CartItemMiddleInnerCP'> <span class='softx25022021InnerCpDollerSign'> <i class='fas fa-dollar-sign'></i> </span> <span class='softx25022021InnerCpMoney'>" + softx25022021CartItems[i].productPrice + "</span> </div></div> </div> <div class='softx1102201CartItemRight'> <div class='softx1102201CartItemRightQtyInner'> <p> <span class='softx25022021InnerQtyText'>" + softx25022021CartItems[i].productQty + "</span> <span class='softx25022021RightQtyInnerQtyNumber'>" + softx25022021CartItems[i].productQuantity + "</span> </p> </div> </div></div>"
+
+        }
+        softx25022021CartItem.innerHTML = softx25022021CartItemsInnerHtml;
+        softx25022021SubtotalPrice.innerText = subtotalPrice;
+        softx25022021SubtotalItemTitle.innerHTML = "Subtotal price ( " + softx25022021CartItemsLength + " items )";
+        softx25022021TotalPrice.innerHTML = subtotalPrice + softx25022021ShippingRate;
+
+
+
+
+        // region
+        let softx27022021region = document.getElementById("softx27022021region");
+        let softx27022021regionInnerHtml = "";
+
+        let softx27022021regionContent = [
+            {
+                key: 'Please choose your region',
+                value: ''
+            },
+            {
+                key: 'barishal',
+                value: 'Barishal'
+            },
+            {
+                key: 'chattogram',
+                value: 'Chattogram'
+            },
+            {
+                key: 'khulna',
+                value: 'Khulna'
+            },
+            {
+                key: 'mymensingh',
+                value: 'Mymensingh'
+            },
+            {
+                key: 'rahshahi',
+                value: 'Rahshahi'
+            },
+            {
+                key: 'rangpur',
+                value: 'Rangpur'
+            },
+            {
+                key: 'sylhet',
+                value: 'Sylhet'
+            }
+        ]
+
+        let softx27022021regionContentLenght = softx27022021regionContent.length;
+        for (let i = 0; i < softx27022021regionContentLenght; i++) {
+            softx27022021regionInnerHtml = softx27022021regionInnerHtml + "<option value='" + softx27022021regionContent[i].value + "'>" + softx27022021regionContent[i].key + "</options>"
+        }
+        softx27022021region.innerHTML = softx27022021regionInnerHtml;
+
+
+        // city
+        let softx27022021city = document.getElementById("softx27022021city");
+        let softx27022021cityInnerHtml = "";
+        let softx27022021cityContent = [
+            {
+                key: 'Please choose your city',
+                value: ''
+            },
+            {
+                key: 'barishal',
+                value: 'Barishal'
+            },
+            {
+                key: 'chattogram',
+                value: 'Chattogram'
+            },
+            {
+                key: 'khulna',
+                value: 'Khulna'
+            },
+            {
+                key: 'mymensingh',
+                value: 'Mymensingh'
+            },
+            {
+                key: 'rahshahi',
+                value: 'Rahshahi'
+            },
+            {
+                key: 'rangpur',
+                value: 'Rangpur'
+            },
+            {
+                key: 'sylhet',
+                value: 'Sylhet'
+            }
+        ]
+        let softx27022021cityContentLength = softx27022021cityContent.length;
+
+        for (let i = 0; i < softx27022021cityContentLength; i++) {
+            softx27022021cityInnerHtml = softx27022021cityInnerHtml + "<option value='" + softx27022021cityContent[i].value + "'>" + softx27022021cityContent[i].key + "</option>";
+        }
+        softx27022021city.innerHTML = softx27022021cityInnerHtml;
+
+
+
+        // area
+        let softx27022021Area = document.getElementById("softx27022021Area");
+        let softx27022021AreaInnerHtml = "";
+        let softx27022021AreaContent = [
+            {
+                key: 'Please choose your city',
+                value: ''
+            },
+            {
+                key: 'barishal',
+                value: 'Barishal'
+            },
+            {
+                key: 'chattogram',
+                value: 'Chattogram'
+            },
+            {
+                key: 'khulna',
+                value: 'Khulna'
+            },
+            {
+                key: 'mymensingh',
+                value: 'Mymensingh'
+            },
+            {
+                key: 'rahshahi',
+                value: 'Rahshahi'
+            },
+            {
+                key: 'rangpur',
+                value: 'Rangpur'
+            },
+            {
+                key: 'sylhet',
+                value: 'Sylhet'
+            }
+        ]
+
+        let softx27022021AreaContentLenght = softx27022021AreaContent.length;
+        for (i = 0; i < softx27022021AreaContentLenght; i++) {
+            softx27022021AreaInnerHtml = softx27022021AreaInnerHtml + "<option value='" + softx27022021AreaContent[i].value + "'>" + softx27022021AreaContent[i].key + "</option>"
+        }
+        softx27022021Area.innerHTML = softx27022021AreaInnerHtml;
+
+
+
+
+
+
+
+
+
+        // tabs
+        let softx25022021CartHead = document.getElementById("softx25022021CartText1");
+        let softx25022021CartArea = document.getElementById("softx25022021CartArea");
+
+        let softx25022021InfoHead = document.getElementById("softx25022021CartText2");
+        let softx25022021InfoArea = document.getElementById("softx25022021InfoArea");
+
+        let softx25022021CuponHead = document.getElementById("softx25022021Cupon");
+        let softx25022021CuponArea = document.getElementById("softx25022021CuponArea");
+
+
+        softx25022021InfoArea.style.display = "none";
+        softx25022021CuponArea.style.display = "none";
+        softx25022021CuponHead.style.marginTop = "15px"
+        softx25022021InfoHead.style.marginTop = "15px"
+
+        softx25022021InfoHead.addEventListener("click", function () {
+            softx25022021InfoArea.style.display = "block"
+            softx25022021CartArea.style.display = "none"
+            softx25022021CuponArea.style.display = "none"
+            softx25022021CartHead.style.marginBottom = "15px"
+
+        })
+        softx25022021CartHead.addEventListener("click", function () {
+            softx25022021InfoArea.style.display = "none"
+            softx25022021CartArea.style.display = "block"
+            softx25022021CuponArea.style.display = "none"
+            softx25022021InfoArea.style.marginBottom = "15px"
+            softx25022021CuponHead.style.marginTop = "15px"
+        })
+        softx25022021CuponHead.addEventListener("click", function () {
+            softx25022021InfoArea.style.display = "none"
+            softx25022021CartArea.style.display = "none"
+            softx25022021CuponArea.style.display = "block"
+            softx25022021CuponHead.style.marginTop = "15px"
+
+        })
+
+    </script>
+</body>
+
+</html>
